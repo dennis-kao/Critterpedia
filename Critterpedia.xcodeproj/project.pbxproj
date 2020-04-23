@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4521698924525207007A808B /* HemisphereViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4521698824525207007A808B /* HemisphereViewController.swift */; };
+		4521698C24525340007A808B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4521698E24525340007A808B /* Localizable.strings */; };
+		4521699024525448007A808B /* HemispherePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4521698F24525448007A808B /* HemispherePicker.swift */; };
 		45ED846D24510F2D00B1BB2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED846C24510F2D00B1BB2C /* AppDelegate.swift */; };
 		45ED846F24510F2D00B1BB2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED846E24510F2D00B1BB2C /* SceneDelegate.swift */; };
 		45ED847624510F2D00B1BB2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45ED847524510F2D00B1BB2C /* Assets.xcassets */; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4521698824525207007A808B /* HemisphereViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HemisphereViewController.swift; sourceTree = "<group>"; };
+		4521698D24525340007A808B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4521698F24525448007A808B /* HemispherePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HemispherePicker.swift; sourceTree = "<group>"; };
 		45ED846924510F2D00B1BB2C /* Critterpedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Critterpedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45ED846C24510F2D00B1BB2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45ED846E24510F2D00B1BB2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +117,7 @@
 				45ED847524510F2D00B1BB2C /* Assets.xcassets */,
 				45ED847724510F2D00B1BB2C /* LaunchScreen.storyboard */,
 				45ED847A24510F2D00B1BB2C /* Info.plist */,
+				4521698E24525340007A808B /* Localizable.strings */,
 			);
 			path = Critterpedia;
 			sourceTree = "<group>";
@@ -137,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				45ED849F2451103F00B1BB2C /* SplashViewController.swift */,
+				4521698824525207007A808B /* HemisphereViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -144,6 +152,7 @@
 		45ED849D2451100500B1BB2C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4521698F24525448007A808B /* HemispherePicker.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -275,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4521698C24525340007A808B /* Localizable.strings in Resources */,
 				45ED847924510F2D00B1BB2C /* LaunchScreen.storyboard in Resources */,
 				45ED84A52451112000B1BB2C /* SplashScreenBackground.png in Resources */,
 				45ED84A8245119E800B1BB2C /* FinkHeavy.ttf in Resources */,
@@ -303,8 +313,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4521699024525448007A808B /* HemispherePicker.swift in Sources */,
 				45ED84A02451103F00B1BB2C /* SplashViewController.swift in Sources */,
 				45ED846D24510F2D00B1BB2C /* AppDelegate.swift in Sources */,
+				4521698924525207007A808B /* HemisphereViewController.swift in Sources */,
 				45ED846F24510F2D00B1BB2C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +353,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		4521698E24525340007A808B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4521698D24525340007A808B /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		45ED847724510F2D00B1BB2C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

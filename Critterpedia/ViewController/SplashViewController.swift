@@ -20,13 +20,13 @@ final class SplashViewController: UIViewController {
         let button = UIButton()
         button.backgroundColor = #colorLiteral(red: 0.8431372549, green: 0.8666666667, blue: 0.5333333333, alpha: 1)
         button.setTitleColor(.black, for: .normal)
-        button.setTitle("Get started", for: .normal)
+        button.setTitle(NSLocalizedString("Go", comment: "Proceed to the next screen"), for: .normal)
         button.titleLabel?.font = UIFont(name: "FinkHeavy", size: 24)
         return button
     }()
     fileprivate let critterpediaLabel: UILabel = {
         let label = UILabel()
-        label.text = "CRITTERPEDIA"
+        label.text = NSLocalizedString("App", comment: "The name of the app")
         label.font = UIFont(name: "FinkHeavy", size: 50)
         label.textColor = .black
         label.textAlignment = .center
@@ -37,6 +37,7 @@ final class SplashViewController: UIViewController {
     }()
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         
         self.view.backgroundColor = #colorLiteral(red: 0.9794296622, green: 0.9611505866, blue: 0.882307291, alpha: 1)
         
