@@ -68,5 +68,12 @@ final class SplashViewController: UIViewController {
             getStartedButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 40),
             getStartedButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
+        getStartedButton.addTarget(self, action: #selector(goToHemispherePicker), for: .touchUpInside)
+    }
+        
+    @objc func goToHemispherePicker() {
+        let viewController = HemisphereViewController()
+        viewController.modalPresentationStyle = .fullScreen
+        self.present(viewController, animated: true, completion: nil)
     }
 }
