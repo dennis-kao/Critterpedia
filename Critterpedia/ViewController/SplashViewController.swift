@@ -22,6 +22,7 @@ final class SplashViewController: UIViewController {
         button.setTitleColor(.black, for: .normal)
         button.setTitle(NSLocalizedString("Go", comment: "Proceed to the next screen"), for: .normal)
         button.titleLabel?.font = UIFont(name: "FinkHeavy", size: 24)
+        button.startAnimatingPressActions()
         return button
     }()
     fileprivate let critterpediaLabel: UILabel = {
@@ -74,6 +75,7 @@ final class SplashViewController: UIViewController {
     @objc func goToHemispherePicker() {
         let viewController = HemisphereViewController()
         viewController.modalPresentationStyle = .fullScreen
+        viewController.modalTransitionStyle = .flipHorizontal
         self.present(viewController, animated: true, completion: nil)
     }
 }

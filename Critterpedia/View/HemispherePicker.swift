@@ -20,6 +20,7 @@ final class HemispherePicker: UIStackView {
         button.titleLabel?.numberOfLines = 2;
         button.titleLabel?.minimumScaleFactor = 0.7;
         button.titleLabel?.adjustsFontSizeToFitWidth = true;
+        button.startAnimatingPressActions()
         return button
     }()
     
@@ -33,6 +34,7 @@ final class HemispherePicker: UIStackView {
         button.titleLabel?.numberOfLines = 2;
         button.titleLabel?.minimumScaleFactor = 0.7;
         button.titleLabel?.adjustsFontSizeToFitWidth = true;
+        button.startAnimatingPressActions()
         return button
     }()
     
