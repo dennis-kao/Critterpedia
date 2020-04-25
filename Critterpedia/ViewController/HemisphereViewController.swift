@@ -46,5 +46,14 @@ final class HemisphereViewController: UIViewController {
             hemispherePicker.heightAnchor.constraint(equalToConstant: 130),
             hemispherePicker.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
+        
+        hemispherePicker.addTargets(sender: self, northAction: #selector(goToCritterListing), southAction:  #selector(goToCritterListing), event: .touchUpInside)
+    }
+    
+    @objc func goToCritterListing() {
+        let viewController = CritterListingViewController()
+        viewController.modalPresentationStyle = .fullScreen
+        viewController.modalTransitionStyle = .flipHorizontal
+        self.present(viewController, animated: true, completion: nil)
     }
 }

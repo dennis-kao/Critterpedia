@@ -10,7 +10,7 @@ import UIKit
 
 final class HemispherePicker: UIStackView {
     
-    let northernHemisphereLabel: UIButton = {
+    fileprivate let northernHemisphereButton: UIButton = {
         let button = UIButton()
         button.setTitle(NSLocalizedString("North", comment: "North hemisphere"), for: .normal)
         button.titleLabel?.font = UIFont(name: "FinkHeavy", size: 24)
@@ -24,7 +24,7 @@ final class HemispherePicker: UIStackView {
         return button
     }()
     
-    let southernHemisphereLabel: UIButton = {
+    fileprivate let southernHemisphereButton: UIButton = {
         let button = UIButton()
         button.setTitle(NSLocalizedString("South", comment: "South hemisphere"), for: .normal)
         button.titleLabel?.font = UIFont(name: "FinkHeavy", size: 24)
@@ -40,8 +40,8 @@ final class HemispherePicker: UIStackView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.addArrangedSubview(northernHemisphereLabel)
-        self.addArrangedSubview(southernHemisphereLabel)
+        self.addArrangedSubview(northernHemisphereButton)
+        self.addArrangedSubview(southernHemisphereButton)
         self.spacing = 20
         self.axis = .horizontal
         self.distribution = .fillEqually
@@ -49,5 +49,10 @@ final class HemispherePicker: UIStackView {
     
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func addTargets(sender: Any?, northAction: Selector, southAction: Selector, event: UIControl.Event) {
+        northernHemisphereButton.addTarget(sender, action: northAction, for: event)
+        southernHemisphereButton.addTarget(sender, action: southAction, for: event)
     }
 }
