@@ -30,6 +30,8 @@ final class HemisphereViewController: UIViewController {
         
         self.view.backgroundColor = #colorLiteral(red: 0.9794296622, green: 0.9611505866, blue: 0.882307291, alpha: 1)
         
+        self.navigationController?.navigationBar.transparent()
+        
         view.addSubview(whichHemisphereLabel)
         whichHemisphereLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -53,7 +55,6 @@ final class HemisphereViewController: UIViewController {
     @objc func goToCritterListing() {
         let viewController = CritterListingViewController()
         viewController.modalPresentationStyle = .fullScreen
-        viewController.modalTransitionStyle = .flipHorizontal
-        self.present(viewController, animated: true, completion: nil)
+        self.navigationController?.show(viewController, sender: self)
     }
 }

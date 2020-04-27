@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		451E5ED02454C0F40065F4E6 /* UIButtonAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E5ECF2454C0F40065F4E6 /* UIButtonAnimations.swift */; };
+		451E5ED02454C0F40065F4E6 /* UIButton+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E5ECF2454C0F40065F4E6 /* UIButton+Animations.swift */; };
 		451E5ED22454C3920065F4E6 /* CritterPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E5ED12454C3920065F4E6 /* CritterPicker.swift */; };
 		451E5ED42454C6B90065F4E6 /* CritterListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E5ED32454C6B90065F4E6 /* CritterListingViewController.swift */; };
+		451E5ED62457A5840065F4E6 /* UINavigationBar+Transparent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E5ED52457A5840065F4E6 /* UINavigationBar+Transparent.swift */; };
 		4521698924525207007A808B /* HemisphereViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4521698824525207007A808B /* HemisphereViewController.swift */; };
 		4521698C24525340007A808B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4521698E24525340007A808B /* Localizable.strings */; };
 		4521699024525448007A808B /* HemispherePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4521698F24525448007A808B /* HemispherePicker.swift */; };
@@ -42,9 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		451E5ECF2454C0F40065F4E6 /* UIButtonAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonAnimations.swift; sourceTree = "<group>"; };
+		451E5ECF2454C0F40065F4E6 /* UIButton+Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Animations.swift"; sourceTree = "<group>"; };
 		451E5ED12454C3920065F4E6 /* CritterPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CritterPicker.swift; sourceTree = "<group>"; };
 		451E5ED32454C6B90065F4E6 /* CritterListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CritterListingViewController.swift; sourceTree = "<group>"; };
+		451E5ED52457A5840065F4E6 /* UINavigationBar+Transparent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Transparent.swift"; sourceTree = "<group>"; };
 		4521698824525207007A808B /* HemisphereViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HemisphereViewController.swift; sourceTree = "<group>"; };
 		4521698D24525340007A808B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4521698F24525448007A808B /* HemispherePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HemispherePicker.swift; sourceTree = "<group>"; };
@@ -159,7 +161,8 @@
 		45ED849D2451100500B1BB2C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				451E5ECF2454C0F40065F4E6 /* UIButtonAnimations.swift */,
+				451E5ECF2454C0F40065F4E6 /* UIButton+Animations.swift */,
+				451E5ED52457A5840065F4E6 /* UINavigationBar+Transparent.swift */,
 				4521698F24525448007A808B /* HemispherePicker.swift */,
 				451E5ED12454C3920065F4E6 /* CritterPicker.swift */,
 			);
@@ -324,10 +327,11 @@
 			files = (
 				4521699024525448007A808B /* HemispherePicker.swift in Sources */,
 				45ED84A02451103F00B1BB2C /* SplashViewController.swift in Sources */,
-				451E5ED02454C0F40065F4E6 /* UIButtonAnimations.swift in Sources */,
+				451E5ED02454C0F40065F4E6 /* UIButton+Animations.swift in Sources */,
 				451E5ED22454C3920065F4E6 /* CritterPicker.swift in Sources */,
 				45ED846D24510F2D00B1BB2C /* AppDelegate.swift in Sources */,
 				4521698924525207007A808B /* HemisphereViewController.swift in Sources */,
+				451E5ED62457A5840065F4E6 /* UINavigationBar+Transparent.swift in Sources */,
 				45ED846F24510F2D00B1BB2C /* SceneDelegate.swift in Sources */,
 				451E5ED42454C6B90065F4E6 /* CritterListingViewController.swift in Sources */,
 			);

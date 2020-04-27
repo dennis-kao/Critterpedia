@@ -73,9 +73,9 @@ final class SplashViewController: UIViewController {
     }
         
     @objc func goToHemispherePicker() {
-        let viewController = HemisphereViewController()
-        viewController.modalPresentationStyle = .fullScreen
-        viewController.modalTransitionStyle = .flipHorizontal
-        self.present(viewController, animated: true, completion: nil)
+        let navController = UINavigationController(rootViewController: HemisphereViewController())
+        navController.modalPresentationStyle = .fullScreen
+        navController.modalTransitionStyle = .flipHorizontal
+        self.present(navController, animated: true, completion: nil)
     }
 }
