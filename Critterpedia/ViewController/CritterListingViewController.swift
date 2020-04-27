@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class CritterListingViewController: UIViewController {
+final class CritterListingViewController: UIViewController {
     
     let critterPicker = CritterPicker()
     
@@ -21,9 +21,9 @@ class CritterListingViewController: UIViewController {
         view.addSubview(critterPicker)
         critterPicker.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            critterPicker.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            critterPicker.heightAnchor.constraint(equalToConstant: 200),
-            critterPicker.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
+            critterPicker.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            critterPicker.heightAnchor.constraint(equalToConstant: 300),
+            critterPicker.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
             critterPicker.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
     }
