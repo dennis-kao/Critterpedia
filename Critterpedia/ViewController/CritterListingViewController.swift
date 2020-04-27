@@ -22,7 +22,7 @@ final class CritterListingViewController: UIViewController {
         critterPicker.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             critterPicker.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            critterPicker.heightAnchor.constraint(equalToConstant: 300),
+            critterPicker.heightAnchor.constraint(equalToConstant: 200),
             critterPicker.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
             critterPicker.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])

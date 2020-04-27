@@ -176,13 +176,13 @@ final class CritterPicker: UIControl {
         updateBackgroundCircleLayer()
         updateShapeLayer(shape: insectShape, layer: insectsLayer, circleCenter: circleCenter1, fillColor: selectedColor.cgColor)
         updateTextLayer(textLayer: insectsTextLayer, point: CGPoint(x: insectsLayer.frame.midX, y: insectsLayer.frame.maxY + textYOffset), text: NSLocalizedString("Insects", comment: "Critter type Insects"), color: selectedColor.cgColor)
-        updateShapeLayer(shape: fishShape, layer: fishLayer, circleCenter: circleCenter2, fillColor: unselectedColor.cgColor)
+        updateShapeLayer(shape: fishShape, layer: fishLayer, circleCenter: CGPoint(x: circleCenter2.x, y: circleCenter2.y + insectsLayer.bounds.height * 0.125), fillColor: unselectedColor.cgColor)
         updateTextLayer(textLayer: fishTextLayer, point: CGPoint(x: fishLayer.frame.midX, y: insectsLayer.frame.maxY + textYOffset), text: NSLocalizedString("Fish", comment: "Critter type Fish"), color: unselectedColor.cgColor)
     }
     
     fileprivate func updateBackgroundCircleLayer() {
                 
-        self.radius = min(bounds.width, bounds.height) / 4
+        self.radius = min(bounds.width, bounds.height) / 2.5
         let circleGap: CGFloat = self.radius * 0.80
 
         self.circleCenter1 = CGPoint(x: bounds.midX - circleGap, y: bounds.midY)
