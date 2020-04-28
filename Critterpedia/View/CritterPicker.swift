@@ -8,7 +8,29 @@
 
 import UIKit
 
+enum CritterType: String {
+    case Insects
+    case Fish
+}
+
 final class CritterPicker: UIControl {
+    
+    var selectedCritter: CritterType {
+        didSet {
+            switch(selectedCritter) {
+                case .Insects:
+                    insectsLayer.fillColor = selectedColor.cgColor
+                    insectsTextLayer.foregroundColor = selectedColor.cgColor
+                    fishLayer.fillColor = unselectedColor.cgColor
+                    fishTextLayer.foregroundColor = unselectedColor.cgColor
+                case .Fish:
+                    fishLayer.fillColor = selectedColor.cgColor
+                    fishTextLayer.foregroundColor = selectedColor.cgColor
+                    insectsLayer.fillColor = unselectedColor.cgColor
+                    insectsTextLayer.foregroundColor = unselectedColor.cgColor
+            }
+        }
+    }
     
     fileprivate let circleFillColor: UIColor = .white
     fileprivate let selectedColor: UIColor = #colorLiteral(red: 0.9764705882, green: 0.7921568627, blue: 0.3921568627, alpha: 1)
@@ -28,6 +50,9 @@ final class CritterPicker: UIControl {
         layer.transform = CATransform3DMakeRotation(.pi, 1, 0, 0)
         return layer
     }()
+    
+    fileprivate let insectsTextLayer = CATextLayer()
+    fileprivate let fishTextLayer = CATextLayer()
     
     fileprivate var insectShape: UIBezierPath = {
         let shape = UIBezierPath()
@@ -149,15 +174,14 @@ final class CritterPicker: UIControl {
         return shape
     }()
     
-    fileprivate let insectsTextLayer = CATextLayer()
-    fileprivate let fishTextLayer = CATextLayer()
-
     override init(frame: CGRect) {
+        selectedCritter = .Insects
         super.init(frame: frame)
         commonInit()
     }
     
     required init?(coder: NSCoder) {
+        selectedCritter = .Insects
         super.init(coder: coder)
         commonInit()
     }
@@ -233,5 +257,25 @@ final class CritterPicker: UIControl {
         textLayer.foregroundColor = color
         textLayer.contentsScale = UIScreen.main.scale
         textLayer.alignmentMode = .center
+    }
+    
+    override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
+        func layerFor(_ touch: UITouch) -> CALayer? {
+            let touchLocation = touch.location(in: self)
+            let locationInView = self.convert(touchLocation, to: nil)
+
+            let hitPresentationLayer = self.layer.presentation()?.hitTest(locationInView)
+            return hitPresentationLayer?.model()
+        }
+        
+        guard let touch = touch, let layer = layerFor(touch) else {
+            return
+        }
+        
+        if layer == insectsLayer {
+            selectedCritter = .Insects
+        } else if layer == fishLayer {
+            selectedCritter = .Fish
+        }
     }
 }
