@@ -11,6 +11,9 @@
 		451E5ED22454C3920065F4E6 /* CritterPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E5ED12454C3920065F4E6 /* CritterPicker.swift */; };
 		451E5ED42454C6B90065F4E6 /* CritterListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E5ED32454C6B90065F4E6 /* CritterListingViewController.swift */; };
 		451E5ED62457A5840065F4E6 /* UINavigationBar+Transparent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E5ED52457A5840065F4E6 /* UINavigationBar+Transparent.swift */; };
+		451E5EDA245A37C80065F4E6 /* Fish.json in Resources */ = {isa = PBXBuildFile; fileRef = 451E5ED8245A37C80065F4E6 /* Fish.json */; };
+		451E5EDB245A37C80065F4E6 /* Insects.json in Resources */ = {isa = PBXBuildFile; fileRef = 451E5ED9245A37C80065F4E6 /* Insects.json */; };
+		451E5EDD245A3D170065F4E6 /* Critter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E5EDC245A3D170065F4E6 /* Critter.swift */; };
 		4521698924525207007A808B /* HemisphereViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4521698824525207007A808B /* HemisphereViewController.swift */; };
 		4521698C24525340007A808B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4521698E24525340007A808B /* Localizable.strings */; };
 		4521699024525448007A808B /* HemispherePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4521698F24525448007A808B /* HemispherePicker.swift */; };
@@ -47,6 +50,9 @@
 		451E5ED12454C3920065F4E6 /* CritterPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CritterPicker.swift; sourceTree = "<group>"; };
 		451E5ED32454C6B90065F4E6 /* CritterListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CritterListingViewController.swift; sourceTree = "<group>"; };
 		451E5ED52457A5840065F4E6 /* UINavigationBar+Transparent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Transparent.swift"; sourceTree = "<group>"; };
+		451E5ED8245A37C80065F4E6 /* Fish.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Fish.json; sourceTree = "<group>"; };
+		451E5ED9245A37C80065F4E6 /* Insects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Insects.json; sourceTree = "<group>"; };
+		451E5EDC245A3D170065F4E6 /* Critter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Critter.swift; sourceTree = "<group>"; };
 		4521698824525207007A808B /* HemisphereViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HemisphereViewController.swift; sourceTree = "<group>"; };
 		4521698D24525340007A808B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4521698F24525448007A808B /* HemispherePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HemispherePicker.swift; sourceTree = "<group>"; };
@@ -92,6 +98,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		451E5ED7245A37B70065F4E6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				451E5ED8245A37C80065F4E6 /* Fish.json */,
+				451E5ED9245A37C80065F4E6 /* Insects.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		45ED846024510F2C00B1BB2C = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +130,7 @@
 		45ED846B24510F2D00B1BB2C /* Critterpedia */ = {
 			isa = PBXGroup;
 			children = (
+				451E5ED7245A37B70065F4E6 /* Data */,
 				45ED84A62451115900B1BB2C /* Fonts */,
 				45ED84A32451110900B1BB2C /* Images */,
 				45ED849E2451100900B1BB2C /* Model */,
@@ -172,6 +188,7 @@
 		45ED849E2451100900B1BB2C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				451E5EDC245A3D170065F4E6 /* Critter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -297,6 +314,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4521698C24525340007A808B /* Localizable.strings in Resources */,
+				451E5EDB245A37C80065F4E6 /* Insects.json in Resources */,
+				451E5EDA245A37C80065F4E6 /* Fish.json in Resources */,
 				45ED847924510F2D00B1BB2C /* LaunchScreen.storyboard in Resources */,
 				45ED84A52451112000B1BB2C /* SplashScreenBackground.png in Resources */,
 				45ED84A8245119E800B1BB2C /* FinkHeavy.ttf in Resources */,
@@ -326,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4521699024525448007A808B /* HemispherePicker.swift in Sources */,
+				451E5EDD245A3D170065F4E6 /* Critter.swift in Sources */,
 				45ED84A02451103F00B1BB2C /* SplashViewController.swift in Sources */,
 				451E5ED02454C0F40065F4E6 /* UIButton+Animations.swift in Sources */,
 				451E5ED22454C3920065F4E6 /* CritterPicker.swift in Sources */,
