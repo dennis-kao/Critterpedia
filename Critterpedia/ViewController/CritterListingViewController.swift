@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-final class CritterListingViewController: UIViewController {
+final class CritterListingViewController: UIViewController, CritterPickerDelegate {
     
     let critterPicker = CritterPicker()
     
@@ -26,5 +26,15 @@ final class CritterListingViewController: UIViewController {
             critterPicker.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
             critterPicker.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
+        critterPicker.delegate = self
+    }
+    
+    func critterPicked(picked: CritterType) {
+        switch picked {
+            case .Insects:
+                print("Picked Insects")
+            case .Fish:
+                print("Picked Fish")
+        }
     }
 }

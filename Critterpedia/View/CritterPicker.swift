@@ -13,9 +13,15 @@ enum CritterType: String {
     case Fish
 }
 
+protocol CritterPickerDelegate {
+    func critterPicked(picked: CritterType)
+}
+
 final class CritterPicker: UIControl {
     
-    var selectedCritter: CritterType {
+    var delegate: CritterPickerDelegate? = nil
+    
+    fileprivate var selectedCritter: CritterType {
         didSet {
             switch(selectedCritter) {
                 case .Insects:
@@ -29,6 +35,8 @@ final class CritterPicker: UIControl {
                     insectsLayer.fillColor = unselectedColor.cgColor
                     insectsTextLayer.foregroundColor = unselectedColor.cgColor
             }
+            
+            delegate?.critterPicked(picked: selectedCritter)
         }
     }
     
@@ -272,9 +280,9 @@ final class CritterPicker: UIControl {
             return
         }
         
-        if layer == insectsLayer {
+        if (layer == insectsLayer || layer == insectsTextLayer) && selectedCritter != .Insects {
             selectedCritter = .Insects
-        } else if layer == fishLayer {
+        } else if (layer == fishLayer || layer == fishTextLayer) && selectedCritter != .Fish {
             selectedCritter = .Fish
         }
     }
