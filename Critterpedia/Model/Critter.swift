@@ -39,7 +39,7 @@ final class CritterParser {
                     return nil
                 }
                 
-                return jsonArray.compactMap({CritterParser.parse($0)})
+                return jsonArray.compactMap({CritterParser.parse($0)}).sorted(by: {$0.name < $1.name})
             } catch {
                 print("Error while parsing Critter data: \(error)")
             }

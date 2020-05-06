@@ -14,6 +14,7 @@
 		451E5EDA245A37C80065F4E6 /* Fish.json in Resources */ = {isa = PBXBuildFile; fileRef = 451E5ED8245A37C80065F4E6 /* Fish.json */; };
 		451E5EDB245A37C80065F4E6 /* Insects.json in Resources */ = {isa = PBXBuildFile; fileRef = 451E5ED9245A37C80065F4E6 /* Insects.json */; };
 		451E5EDD245A3D170065F4E6 /* Critter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E5EDC245A3D170065F4E6 /* Critter.swift */; };
+		451E5F212463755B0065F4E6 /* CritterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E5F202463755B0065F4E6 /* CritterTableViewCell.swift */; };
 		4521698924525207007A808B /* HemisphereViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4521698824525207007A808B /* HemisphereViewController.swift */; };
 		4521698C24525340007A808B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4521698E24525340007A808B /* Localizable.strings */; };
 		4521699024525448007A808B /* HemispherePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4521698F24525448007A808B /* HemispherePicker.swift */; };
@@ -53,6 +54,7 @@
 		451E5ED8245A37C80065F4E6 /* Fish.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Fish.json; sourceTree = "<group>"; };
 		451E5ED9245A37C80065F4E6 /* Insects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Insects.json; sourceTree = "<group>"; };
 		451E5EDC245A3D170065F4E6 /* Critter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Critter.swift; sourceTree = "<group>"; };
+		451E5F202463755B0065F4E6 /* CritterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CritterTableViewCell.swift; sourceTree = "<group>"; };
 		4521698824525207007A808B /* HemisphereViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HemisphereViewController.swift; sourceTree = "<group>"; };
 		4521698D24525340007A808B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4521698F24525448007A808B /* HemispherePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HemispherePicker.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				45ED849F2451103F00B1BB2C /* SplashViewController.swift */,
 				4521698824525207007A808B /* HemisphereViewController.swift */,
 				451E5ED32454C6B90065F4E6 /* CritterListingViewController.swift */,
+				451E5F202463755B0065F4E6 /* CritterTableViewCell.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				451E5ED62457A5840065F4E6 /* UINavigationBar+Transparent.swift in Sources */,
 				45ED846F24510F2D00B1BB2C /* SceneDelegate.swift in Sources */,
 				451E5ED42454C6B90065F4E6 /* CritterListingViewController.swift in Sources */,
+				451E5F212463755B0065F4E6 /* CritterTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

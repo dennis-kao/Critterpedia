@@ -21,7 +21,7 @@ final class CritterPicker: UIControl {
     
     var delegate: CritterPickerDelegate? = nil
     
-    fileprivate var selectedCritter: CritterType {
+    var selectedCritter: CritterType = .Insects {
         didSet {
             switch(selectedCritter) {
                 case .Insects:
@@ -183,13 +183,11 @@ final class CritterPicker: UIControl {
     }()
     
     override init(frame: CGRect) {
-        selectedCritter = .Insects
         super.init(frame: frame)
         commonInit()
     }
     
     required init?(coder: NSCoder) {
-        selectedCritter = .Insects
         super.init(coder: coder)
         commonInit()
     }
