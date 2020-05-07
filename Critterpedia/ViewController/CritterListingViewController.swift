@@ -55,7 +55,7 @@ final class CritterListingViewController: UIViewController {
     
     func fetchCritterImage(critter: Critter, indexPath: IndexPath) {
         DispatchQueue.global(qos: .background).async {
-            let image = UIImage(named: "\(critter.imageName).png", in: Bundle(for: type(of: self)), with: nil)
+            let image = UIImage(named: "\(critter.iconName).png", in: Bundle(for: type(of: self)), with: nil)
                                     
             DispatchQueue.main.async {
                 // is the cell visible on the tableView

@@ -15,6 +15,7 @@ struct Critter {
     var times: String
     var northernMonths: [Int]
     var southernMonths: [Int]
+    var iconName: String
     var imageName: String
     
     init(name: String, location: String, price: Int, times: String, northernMonths: [Int], southernMonths: [Int]) {
@@ -25,7 +26,9 @@ struct Critter {
         self.times = times
         self.northernMonths = northernMonths
         self.southernMonths = southernMonths
+        
         self.imageName = name.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "-", with: "").replacingOccurrences(of: "'", with: "").lowercased()
+        self.iconName = "icon-\(self.imageName)"
     }
 }
 
