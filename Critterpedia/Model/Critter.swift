@@ -18,6 +18,11 @@ struct Critter {
     var iconName: String
     var imageName: String
     
+    enum Category: String {
+      case Fish
+      case Insect
+    }
+    
     init(name: String, location: String, price: Int, times: String, northernMonths: [Int], southernMonths: [Int]) {
         
         self.name = name

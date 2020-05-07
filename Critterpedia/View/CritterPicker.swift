@@ -8,23 +8,18 @@
 
 import UIKit
 
-enum CritterType: String {
-    case Insects
-    case Fish
-}
-
 protocol CritterPickerDelegate {
-    func critterPicked(picked: CritterType)
+    func critterPicked(picked: Critter.Category)
 }
 
 final class CritterPicker: UIControl {
     
     var delegate: CritterPickerDelegate? = nil
     
-    var selectedCritter: CritterType = .Insects {
+    var selectedCritter: Critter.Category = .Insect {
         didSet {
             switch(selectedCritter) {
-                case .Insects:
+                case .Insect:
                     insectsLayer.fillColor = selectedColor.cgColor
                     insectsTextLayer.foregroundColor = selectedColor.cgColor
                     fishLayer.fillColor = unselectedColor.cgColor
@@ -278,8 +273,8 @@ final class CritterPicker: UIControl {
             return
         }
         
-        if (layer == insectsLayer || layer == insectsTextLayer) && selectedCritter != .Insects {
-            selectedCritter = .Insects
+        if (layer == insectsLayer || layer == insectsTextLayer) && selectedCritter != .Insect {
+            selectedCritter = .Insect
         } else if (layer == fishLayer || layer == fishTextLayer) && selectedCritter != .Fish {
             selectedCritter = .Fish
         }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CritterTableViewCell: UITableViewCell {
+final class CritterTableViewCell: UITableViewCell {
     
     let nameLabel: UILabel = {
         let label = UILabel()

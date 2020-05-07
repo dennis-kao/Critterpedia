@@ -11,10 +11,11 @@ import UIKit
 
 final class CritterListingViewController: UIViewController {
     
-    fileprivate let critterPicker = CritterPicker()
     fileprivate let insectCritters = CritterParser.loadJson(filename: "Insects")
     fileprivate let fishCritters = CritterParser.loadJson(filename: "Fish")
-
+    fileprivate var filteredCritters: [Critter] = []
+    
+    fileprivate let critterPicker = CritterPicker()
     fileprivate let tableView: UITableView = {
         let table = UITableView()
         table.rowHeight = UITableView.automaticDimension
@@ -24,11 +25,25 @@ final class CritterListingViewController: UIViewController {
         table.backgroundColor = #colorLiteral(red: 0.9794296622, green: 0.9611505866, blue: 0.882307291, alpha: 1)
         return table
     }()
+    fileprivate let searchController = UISearchController(searchResultsController: nil)
+    
+    fileprivate var isSearchBarEmpty: Bool {
+      return searchController.searchBar.text?.isEmpty ?? true
+    }
+    fileprivate var isFiltering: Bool {
+      return searchController.isActive && !isSearchBarEmpty
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         critterPicker.delegate = self
+        
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search Critters"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
         
         view.backgroundColor = #colorLiteral(red: 0.9794296622, green: 0.9611505866, blue: 0.882307291, alpha: 1)
         
@@ -53,7 +68,17 @@ final class CritterListingViewController: UIViewController {
         tableView.register(CritterTableViewCell.self, forCellReuseIdentifier: String(describing: CritterTableViewCell.self))
     }
     
-    func fetchCritterImage(critter: Critter, indexPath: IndexPath) {
+    fileprivate func getSelectedCritter() -> [Critter]? {
+
+        switch (critterPicker.selectedCritter) {
+            case .Fish:
+                return fishCritters
+            case .Insect:
+                return insectCritters
+        }
+    }
+    
+    fileprivate func fetchCritterImage(critter: Critter, indexPath: IndexPath) {
         DispatchQueue.global(qos: .background).async {
             let image = UIImage(named: "\(critter.iconName).png", in: Bundle(for: type(of: self)), with: nil)
                                     
@@ -65,24 +90,40 @@ final class CritterListingViewController: UIViewController {
             }
         }
     }
+    
+    fileprivate func filterContentForSearchText(_ searchText: String, category: Critter.Category? = nil) {
+        
+        guard let selectedCritter = getSelectedCritter() else {
+            return
+        }
+
+        filteredCritters = selectedCritter.filter { (critter: Critter) -> Bool in
+            return critter.imageName.contains(searchText.lowercased())
+        }
+      
+        tableView.reloadData()
+    }
 }
 
 extension CritterListingViewController: CritterPickerDelegate {
     
-    func critterPicked(picked: CritterType) {
+    func critterPicked(picked: Critter.Category) {
         tableView.reloadData()
     }
 }
 
 extension CritterListingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let insectCritters = insectCritters, critterPicker.selectedCritter == .Insects {
-            return insectCritters.count
-        } else if let fishCritters = fishCritters, critterPicker.selectedCritter == .Fish {
-                   return fishCritters.count
-        } else {
-            fatalError("Unknown critter type selected for UITableView")
+        
+        if isFiltering {
+            return filteredCritters.count
         }
+        
+        guard let selectedCritter = getSelectedCritter() else {
+            return 0
+        }
+        
+        return selectedCritter.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -96,15 +137,28 @@ extension CritterListingViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CritterTableViewCell.self), for: indexPath) as! CritterTableViewCell
+        var critter: Critter
         
-        if let insectCritters = insectCritters, critterPicker.selectedCritter == .Insects {
-            cell.nameLabel.text = insectCritters[indexPath.item].name
-            fetchCritterImage(critter: insectCritters[indexPath.item], indexPath: indexPath)
-        } else if let fishCritters = fishCritters, critterPicker.selectedCritter == .Fish {
-            cell.nameLabel.text = fishCritters[indexPath.item].name
-            fetchCritterImage(critter: fishCritters[indexPath.item], indexPath: indexPath)
+        if isFiltering {
+            critter = filteredCritters[indexPath.item]
+        } else {
+            guard let selectedCritters = getSelectedCritter() else {
+                return cell
+            }
+            
+            critter = selectedCritters[indexPath.item]
         }
         
+        cell.nameLabel.text = critter.name
+        fetchCritterImage(critter: critter, indexPath: indexPath)
+
         return cell
+    }
+}
+
+extension CritterListingViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        filterContentForSearchText(searchBar.text!)
     }
 }
