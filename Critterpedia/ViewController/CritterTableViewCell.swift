@@ -36,6 +36,7 @@ class CritterTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         self.backgroundColor = #colorLiteral(red: 0.9794296622, green: 0.9611505866, blue: 0.882307291, alpha: 1)
+        self.selectionStyle = .none
         
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         addSubview(nameLabel)
@@ -52,7 +53,6 @@ class CritterTableViewCell: UITableViewCell {
             critterImage.leftAnchor.constraint(equalTo: leftAnchor),
             critterImage.rightAnchor.constraint(equalTo: nameLabel.leftAnchor),
         ])
-
     }
     
     required init?(coder: NSCoder) {

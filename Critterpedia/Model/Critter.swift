@@ -6,7 +6,7 @@
 //  Copyright © 2020 Dennis Kao. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Critter {
     var name: String
@@ -15,6 +15,18 @@ struct Critter {
     var times: String
     var northernMonths: [Int]
     var southernMonths: [Int]
+    var imageName: String
+    
+    init(name: String, location: String, price: Int, times: String, northernMonths: [Int], southernMonths: [Int]) {
+        
+        self.name = name
+        self.location = location
+        self.price = price
+        self.times = times
+        self.northernMonths = northernMonths
+        self.southernMonths = southernMonths
+        self.imageName = name.replacingOccurrences(of: " ", with: "").replacingOccurrences(of: "-", with: "").replacingOccurrences(of: "'", with: "").lowercased()
+    }
 }
 
 final class CritterParser {

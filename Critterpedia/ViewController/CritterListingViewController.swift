@@ -52,6 +52,19 @@ final class CritterListingViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(CritterTableViewCell.self, forCellReuseIdentifier: String(describing: CritterTableViewCell.self))
     }
+    
+    func fetchCritterImage(critter: Critter, indexPath: IndexPath) {
+        DispatchQueue.global(qos: .background).async {
+            let image = UIImage(named: "\(critter.imageName).png", in: Bundle(for: type(of: self)), with: nil)
+                                    
+            DispatchQueue.main.async {
+                // is the cell visible on the tableView
+                if let cell = self.tableView.cellForRow(at: indexPath) as? CritterTableViewCell {
+                    cell.critterImage.image = image
+                }
+            }
+        }
+    }
 }
 
 extension CritterListingViewController: CritterPickerDelegate {
@@ -86,8 +99,10 @@ extension CritterListingViewController: UITableViewDelegate, UITableViewDataSour
         
         if let insectCritters = insectCritters, critterPicker.selectedCritter == .Insects {
             cell.nameLabel.text = insectCritters[indexPath.item].name
+            fetchCritterImage(critter: insectCritters[indexPath.item], indexPath: indexPath)
         } else if let fishCritters = fishCritters, critterPicker.selectedCritter == .Fish {
             cell.nameLabel.text = fishCritters[indexPath.item].name
+            fetchCritterImage(critter: fishCritters[indexPath.item], indexPath: indexPath)
         }
         
         return cell

@@ -359,7 +359,7 @@
     },
     {
         "id": 8,
-        "name": "Monach Butterfly",
+        "name": "Monarch Butterfly",
         "location": "Flying",
         "price": 140,
         "times": {
@@ -3010,7 +3010,7 @@
     },
     {
         "id": 65,
-        "name": "Horned Herucles",
+        "name": "Horned Hercules",
         "location": "On trees",
         "price": 12000,
         "times": {
