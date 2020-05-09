@@ -16,6 +16,7 @@ final class CritterListingViewController: UIViewController {
     fileprivate var filteredCritters: [Critter] = []
     
     fileprivate let critterPicker = CritterPicker()
+    fileprivate lazy var searchButtonBar = SearchButtonBar(searchBar: searchController.searchBar)
     fileprivate let tableView: UITableView = {
         let table = UITableView()
         table.rowHeight = UITableView.automaticDimension
@@ -62,10 +63,18 @@ final class CritterListingViewController: UIViewController {
         pickerHeightAnchor = critterPicker.heightAnchor.constraint(equalToConstant: critterPickerMaxHeight)
         pickerHeightAnchor.isActive = true
         
+        view.addSubview(searchButtonBar)
+        searchButtonBar.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            searchButtonBar.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
+            searchButtonBar.topAnchor.constraint(equalTo: critterPicker.bottomAnchor),
+            searchButtonBar.heightAnchor.constraint(equalToConstant: 40),
+        ])
+        
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: critterPicker.bottomAnchor),
+            tableView.topAnchor.constraint(equalTo: searchButtonBar.bottomAnchor, constant: 10 ),
             tableView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
         ])
@@ -142,8 +151,7 @@ extension CritterListingViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        return (!isFiltering) ? 84 : 42
+        return 84
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
