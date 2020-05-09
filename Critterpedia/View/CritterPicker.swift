@@ -18,19 +18,7 @@ final class CritterPicker: UIControl {
     
     var selectedCritter: Critter.Category = .Insect {
         didSet {
-            switch(selectedCritter) {
-                case .Insect:
-                    insectsLayer.fillColor = selectedColor.cgColor
-                    insectsTextLayer.foregroundColor = selectedColor.cgColor
-                    fishLayer.fillColor = unselectedColor.cgColor
-                    fishTextLayer.foregroundColor = unselectedColor.cgColor
-                case .Fish:
-                    fishLayer.fillColor = selectedColor.cgColor
-                    fishTextLayer.foregroundColor = selectedColor.cgColor
-                    insectsLayer.fillColor = unselectedColor.cgColor
-                    insectsTextLayer.foregroundColor = unselectedColor.cgColor
-            }
-            
+            setFillColors()
             delegate?.critterPicked(picked: selectedCritter)
         }
     }
@@ -189,6 +177,7 @@ final class CritterPicker: UIControl {
 
     fileprivate func commonInit() {
         self.isOpaque = false
+        setFillColors()
         layer.addSublayer(circleBackgroundLayer)
         layer.addSublayer(insectsLayer)
         layer.addSublayer(insectsTextLayer)
@@ -199,10 +188,10 @@ final class CritterPicker: UIControl {
     override func layoutSubviews() {
         super.layoutSubviews()
         updateBackgroundCircleLayer()
-        updateShapeLayer(shape: insectShape, layer: insectsLayer, circleCenter: circleCenter1, fillColor: selectedColor.cgColor)
-        updateTextLayer(textLayer: insectsTextLayer, point: CGPoint(x: insectsLayer.frame.midX, y: insectsLayer.frame.maxY + textYOffset), text: NSLocalizedString("Insects", comment: "Critter type Insects"), color: selectedColor.cgColor)
-        updateShapeLayer(shape: fishShape, layer: fishLayer, circleCenter: CGPoint(x: circleCenter2.x, y: circleCenter2.y + insectsLayer.bounds.height * 0.125), fillColor: unselectedColor.cgColor)
-        updateTextLayer(textLayer: fishTextLayer, point: CGPoint(x: fishLayer.frame.midX, y: insectsLayer.frame.maxY + textYOffset), text: NSLocalizedString("Fish", comment: "Critter type Fish"), color: unselectedColor.cgColor)
+        updateShapeLayer(shape: insectShape, layer: insectsLayer, circleCenter: circleCenter1)
+        updateTextLayer(textLayer: insectsTextLayer, point: CGPoint(x: insectsLayer.frame.midX, y: insectsLayer.frame.maxY + textYOffset), text: NSLocalizedString("Insects", comment: "Critter type Insects"))
+        updateShapeLayer(shape: fishShape, layer: fishLayer, circleCenter: CGPoint(x: circleCenter2.x, y: circleCenter2.y + insectsLayer.bounds.height * 0.125))
+        updateTextLayer(textLayer: fishTextLayer, point: CGPoint(x: fishLayer.frame.midX, y: insectsLayer.frame.maxY + textYOffset), text: NSLocalizedString("Fish", comment: "Critter type Fish"))
     }
     
     fileprivate func updateBackgroundCircleLayer() {
@@ -236,7 +225,22 @@ final class CritterPicker: UIControl {
         circleBackgroundLayer.fillColor = circleFillColor.cgColor
     }
     
-    fileprivate func updateShapeLayer(shape: UIBezierPath, layer: CAShapeLayer, circleCenter: CGPoint, fillColor: CGColor) {
+    fileprivate func setFillColors() {
+        switch(selectedCritter) {
+            case .Insect:
+                insectsLayer.fillColor = selectedColor.cgColor
+                insectsTextLayer.foregroundColor = selectedColor.cgColor
+                fishLayer.fillColor = unselectedColor.cgColor
+                fishTextLayer.foregroundColor = unselectedColor.cgColor
+            case .Fish:
+                fishLayer.fillColor = selectedColor.cgColor
+                fishTextLayer.foregroundColor = selectedColor.cgColor
+                insectsLayer.fillColor = unselectedColor.cgColor
+                insectsTextLayer.foregroundColor = unselectedColor.cgColor
+        }
+    }
+    
+    fileprivate func updateShapeLayer(shape: UIBezierPath, layer: CAShapeLayer, circleCenter: CGPoint) {
         let aspectRatio = shape.bounds.width / shape.bounds.height
         
         shape.apply(CGAffineTransform(scaleX: radius / shape.bounds.width, y: radius / shape.bounds.height / aspectRatio))
@@ -245,17 +249,15 @@ final class CritterPicker: UIControl {
         layer.contentsGravity = .center
         layer.frame = CGRect(x: 0, y: 0, width: shape.bounds.width, height: shape.bounds.height)
         layer.position = CGPoint(x: circleCenter.x, y: circleCenter.y + imageYOffset)
-        layer.fillColor = fillColor
     }
     
-    fileprivate func updateTextLayer(textLayer: CATextLayer, point: CGPoint, text: String, color: CGColor) {
+    fileprivate func updateTextLayer(textLayer: CATextLayer, point: CGPoint, text: String) {
         
         textLayer.frame = CGRect(x: 0, y: 0, width: 80, height: 20)
         textLayer.position = point
         textLayer.string = text
         textLayer.fontSize = 20
         textLayer.font = UIFont(name: "FinkHeavy", size: 20)
-        textLayer.foregroundColor = color
         textLayer.contentsScale = UIScreen.main.scale
         textLayer.alignmentMode = .center
     }

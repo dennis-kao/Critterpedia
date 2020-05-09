@@ -33,6 +33,10 @@ final class CritterListingViewController: UIViewController {
     fileprivate var isFiltering: Bool {
       return searchController.isActive && !isSearchBarEmpty
     }
+    
+    fileprivate let critterPickerMaxHeight: CGFloat = 200
+    fileprivate let critterPickerMinHeight: CGFloat = 130
+    fileprivate lazy var pickerHeightAnchor: NSLayoutConstraint = critterPicker.heightAnchor.constraint(equalToConstant: critterPickerMaxHeight)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,10 +56,11 @@ final class CritterListingViewController: UIViewController {
         critterPicker.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             critterPicker.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            critterPicker.heightAnchor.constraint(equalToConstant: 200),
             critterPicker.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
             critterPicker.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
+        pickerHeightAnchor = critterPicker.heightAnchor.constraint(equalToConstant: critterPickerMaxHeight)
+        pickerHeightAnchor.isActive = true
         
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -110,7 +115,11 @@ final class CritterListingViewController: UIViewController {
 extension CritterListingViewController: CritterPickerDelegate {
     
     func critterPicked(picked: Critter.Category) {
-        tableView.reloadData()
+        if isFiltering {
+            filterContentForSearchText(searchController.searchBar.text!)
+        } else {
+            tableView.reloadData()
+        }
     }
 }
 
@@ -156,6 +165,20 @@ extension CritterListingViewController: UITableViewDelegate, UITableViewDataSour
         fetchCritterImage(critter: critter, indexPath: indexPath)
 
         return cell
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let y: CGFloat = scrollView.contentOffset.y
+        let newHeaderViewHeight: CGFloat = pickerHeightAnchor.constant - y
+
+        if newHeaderViewHeight > critterPickerMaxHeight {
+            pickerHeightAnchor.constant = critterPickerMaxHeight
+        } else if newHeaderViewHeight < critterPickerMinHeight {
+            pickerHeightAnchor.constant = critterPickerMinHeight
+        } else {
+            pickerHeightAnchor.constant = newHeaderViewHeight
+            scrollView.contentOffset.y = 0 // block scroll view
+        }
     }
 }
 
