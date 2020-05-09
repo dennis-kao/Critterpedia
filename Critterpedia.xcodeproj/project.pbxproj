@@ -335,6 +335,8 @@
 		451E62482464CB500065F4E6 /* greatwhiteshark.png in Resources */ = {isa = PBXBuildFile; fileRef = 451E62472464CB500065F4E6 /* greatwhiteshark.png */; };
 		451E624A2464CBAB0065F4E6 /* popeyedgoldfish.png in Resources */ = {isa = PBXBuildFile; fileRef = 451E62492464CBAB0065F4E6 /* popeyedgoldfish.png */; };
 		451E624C2464CBE30065F4E6 /* mahimahi.png in Resources */ = {isa = PBXBuildFile; fileRef = 451E624B2464CBE30065F4E6 /* mahimahi.png */; };
+		451E62562467211D0065F4E6 /* CritterParsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E62552467211D0065F4E6 /* CritterParsingTests.swift */; };
+		451E6264246729190065F4E6 /* CritterNameToFileNameTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E6263246729190065F4E6 /* CritterNameToFileNameTest.swift */; };
 		4521698924525207007A808B /* HemisphereViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4521698824525207007A808B /* HemisphereViewController.swift */; };
 		4521698C24525340007A808B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4521698E24525340007A808B /* Localizable.strings */; };
 		4521699024525448007A808B /* HemispherePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4521698F24525448007A808B /* HemispherePicker.swift */; };
@@ -350,6 +352,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		451E62582467211D0065F4E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45ED846124510F2C00B1BB2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45ED846824510F2C00B1BB2C;
+			remoteInfo = Critterpedia;
+		};
+		451E6266246729190065F4E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 45ED846124510F2C00B1BB2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45ED846824510F2C00B1BB2C;
+			remoteInfo = Critterpedia;
+		};
 		45ED848024510F2D00B1BB2C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 45ED846124510F2C00B1BB2C /* Project object */;
@@ -695,6 +711,12 @@
 		451E62472464CB500065F4E6 /* greatwhiteshark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greatwhiteshark.png; sourceTree = "<group>"; };
 		451E62492464CBAB0065F4E6 /* popeyedgoldfish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = popeyedgoldfish.png; sourceTree = "<group>"; };
 		451E624B2464CBE30065F4E6 /* mahimahi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mahimahi.png; sourceTree = "<group>"; };
+		451E62532467211D0065F4E6 /* CritterParsingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CritterParsingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		451E62552467211D0065F4E6 /* CritterParsingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CritterParsingTests.swift; sourceTree = "<group>"; };
+		451E62572467211D0065F4E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		451E6261246729190065F4E6 /* CritterNameToFileNameTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CritterNameToFileNameTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		451E6263246729190065F4E6 /* CritterNameToFileNameTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CritterNameToFileNameTest.swift; sourceTree = "<group>"; };
+		451E6265246729190065F4E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4521698824525207007A808B /* HemisphereViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HemisphereViewController.swift; sourceTree = "<group>"; };
 		4521698D24525340007A808B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4521698F24525448007A808B /* HemispherePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HemispherePicker.swift; sourceTree = "<group>"; };
@@ -716,6 +738,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		451E62502467211D0065F4E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		451E625E246729190065F4E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45ED846624510F2C00B1BB2C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1092,12 +1128,32 @@
 			path = Insects;
 			sourceTree = "<group>";
 		};
+		451E62542467211D0065F4E6 /* CritterParsingTests */ = {
+			isa = PBXGroup;
+			children = (
+				451E62552467211D0065F4E6 /* CritterParsingTests.swift */,
+				451E62572467211D0065F4E6 /* Info.plist */,
+			);
+			path = CritterParsingTests;
+			sourceTree = "<group>";
+		};
+		451E6262246729190065F4E6 /* CritterNameToFileNameTest */ = {
+			isa = PBXGroup;
+			children = (
+				451E6263246729190065F4E6 /* CritterNameToFileNameTest.swift */,
+				451E6265246729190065F4E6 /* Info.plist */,
+			);
+			path = CritterNameToFileNameTest;
+			sourceTree = "<group>";
+		};
 		45ED846024510F2C00B1BB2C = {
 			isa = PBXGroup;
 			children = (
 				45ED846B24510F2D00B1BB2C /* Critterpedia */,
 				45ED848224510F2D00B1BB2C /* CritterpediaTests */,
 				45ED848D24510F2D00B1BB2C /* CritterpediaUITests */,
+				451E62542467211D0065F4E6 /* CritterParsingTests */,
+				451E6262246729190065F4E6 /* CritterNameToFileNameTest */,
 				45ED846A24510F2D00B1BB2C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -1108,6 +1164,8 @@
 				45ED846924510F2D00B1BB2C /* Critterpedia.app */,
 				45ED847F24510F2D00B1BB2C /* CritterpediaTests.xctest */,
 				45ED848A24510F2D00B1BB2C /* CritterpediaUITests.xctest */,
+				451E62532467211D0065F4E6 /* CritterParsingTests.xctest */,
+				451E6261246729190065F4E6 /* CritterNameToFileNameTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1199,6 +1257,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		451E62522467211D0065F4E6 /* CritterParsingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 451E625A2467211D0065F4E6 /* Build configuration list for PBXNativeTarget "CritterParsingTests" */;
+			buildPhases = (
+				451E624F2467211D0065F4E6 /* Sources */,
+				451E62502467211D0065F4E6 /* Frameworks */,
+				451E62512467211D0065F4E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				451E62592467211D0065F4E6 /* PBXTargetDependency */,
+			);
+			name = CritterParsingTests;
+			productName = CritterParsingTests;
+			productReference = 451E62532467211D0065F4E6 /* CritterParsingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		451E6260246729190065F4E6 /* CritterNameToFileNameTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 451E6268246729190065F4E6 /* Build configuration list for PBXNativeTarget "CritterNameToFileNameTest" */;
+			buildPhases = (
+				451E625D246729190065F4E6 /* Sources */,
+				451E625E246729190065F4E6 /* Frameworks */,
+				451E625F246729190065F4E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				451E6267246729190065F4E6 /* PBXTargetDependency */,
+			);
+			name = CritterNameToFileNameTest;
+			productName = CritterNameToFileNameTest;
+			productReference = 451E6261246729190065F4E6 /* CritterNameToFileNameTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		45ED846824510F2C00B1BB2C /* Critterpedia */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45ED849324510F2D00B1BB2C /* Build configuration list for PBXNativeTarget "Critterpedia" */;
@@ -1262,6 +1356,14 @@
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Dennis Kao";
 				TargetAttributes = {
+					451E62522467211D0065F4E6 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 45ED846824510F2C00B1BB2C;
+					};
+					451E6260246729190065F4E6 = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 45ED846824510F2C00B1BB2C;
+					};
 					45ED846824510F2C00B1BB2C = {
 						CreatedOnToolsVersion = 11.4.1;
 					};
@@ -1291,11 +1393,27 @@
 				45ED846824510F2C00B1BB2C /* Critterpedia */,
 				45ED847E24510F2D00B1BB2C /* CritterpediaTests */,
 				45ED848924510F2D00B1BB2C /* CritterpediaUITests */,
+				451E62522467211D0065F4E6 /* CritterParsingTests */,
+				451E6260246729190065F4E6 /* CritterNameToFileNameTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		451E62512467211D0065F4E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		451E625F246729190065F4E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45ED846724510F2C00B1BB2C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1647,6 +1765,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		451E624F2467211D0065F4E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				451E62562467211D0065F4E6 /* CritterParsingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		451E625D246729190065F4E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				451E6264246729190065F4E6 /* CritterNameToFileNameTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45ED846524510F2C00B1BB2C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1684,6 +1818,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		451E62592467211D0065F4E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45ED846824510F2C00B1BB2C /* Critterpedia */;
+			targetProxy = 451E62582467211D0065F4E6 /* PBXContainerItemProxy */;
+		};
+		451E6267246729190065F4E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 45ED846824510F2C00B1BB2C /* Critterpedia */;
+			targetProxy = 451E6266246729190065F4E6 /* PBXContainerItemProxy */;
+		};
 		45ED848124510F2D00B1BB2C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 45ED846824510F2C00B1BB2C /* Critterpedia */;
@@ -1716,6 +1860,86 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		451E625B2467211D0065F4E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D6NP2AUF46;
+				INFOPLIST_FILE = CritterParsingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.denny.CritterParsingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Critterpedia.app/Critterpedia";
+			};
+			name = Debug;
+		};
+		451E625C2467211D0065F4E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D6NP2AUF46;
+				INFOPLIST_FILE = CritterParsingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.denny.CritterParsingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Critterpedia.app/Critterpedia";
+			};
+			name = Release;
+		};
+		451E6269246729190065F4E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D6NP2AUF46;
+				INFOPLIST_FILE = CritterNameToFileNameTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.denny.CritterNameToFileNameTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Critterpedia.app/Critterpedia";
+			};
+			name = Debug;
+		};
+		451E626A246729190065F4E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = D6NP2AUF46;
+				INFOPLIST_FILE = CritterNameToFileNameTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.denny.CritterNameToFileNameTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Critterpedia.app/Critterpedia";
+			};
+			name = Release;
+		};
 		45ED849124510F2D00B1BB2C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1953,6 +2177,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		451E625A2467211D0065F4E6 /* Build configuration list for PBXNativeTarget "CritterParsingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				451E625B2467211D0065F4E6 /* Debug */,
+				451E625C2467211D0065F4E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		451E6268246729190065F4E6 /* Build configuration list for PBXNativeTarget "CritterNameToFileNameTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				451E6269246729190065F4E6 /* Debug */,
+				451E626A246729190065F4E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		45ED846424510F2C00B1BB2C /* Build configuration list for PBXProject "Critterpedia" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
