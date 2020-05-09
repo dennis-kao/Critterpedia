@@ -37,16 +37,17 @@ final class CritterListingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        critterPicker.delegate = self
-        
-        searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search Critters"
-        navigationItem.searchController = searchController
-        definesPresentationContext = true
-        
         view.backgroundColor = #colorLiteral(red: 0.9794296622, green: 0.9611505866, blue: 0.882307291, alpha: 1)
         
+        critterPicker.delegate = self
+
+        definesPresentationContext = true
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.searchBar.placeholder = "Search Critters"
+        navigationItem.titleView = searchController.searchBar
+                        
         view.addSubview(critterPicker)
         critterPicker.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -98,11 +99,12 @@ final class CritterListingViewController: UIViewController {
         }
 
         filteredCritters = selectedCritter.filter { (critter: Critter) -> Bool in
-            return critter.imageName.contains(searchText.lowercased())
+            return critter.name.lowercased().contains(searchText.lowercased())
         }
       
         tableView.reloadData()
     }
+    
 }
 
 extension CritterListingViewController: CritterPickerDelegate {
@@ -131,7 +133,8 @@ extension CritterListingViewController: UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 84
+        
+        return (!isFiltering) ? 84 : 42
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

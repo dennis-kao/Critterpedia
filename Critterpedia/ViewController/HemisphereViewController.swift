@@ -30,6 +30,8 @@ final class HemisphereViewController: UIViewController {
         
         self.view.backgroundColor = #colorLiteral(red: 0.9794296622, green: 0.9611505866, blue: 0.882307291, alpha: 1)
         
+        self.title = ""
+        self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.transparent()
         
         view.addSubview(whichHemisphereLabel)
