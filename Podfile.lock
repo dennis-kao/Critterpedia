@@ -1,0 +1,16 @@
+PODS:
+  - SHSearchBar (1.7.0)
+
+DEPENDENCIES:
+  - SHSearchBar
+
+SPEC REPOS:
+  trunk:
+    - SHSearchBar
+
+SPEC CHECKSUMS:
+  SHSearchBar: 9fcc9daff8a3264386b975961de6c485f33439d4
+
+PODFILE CHECKSUM: 2afbd30f5a57a59f93f9e88a994224fe548e6d3b
+
+COCOAPODS: 1.8.3

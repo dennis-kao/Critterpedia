@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SHSearchBar
 
 final class CritterListingViewController: UIViewController {
     
@@ -16,7 +17,7 @@ final class CritterListingViewController: UIViewController {
     fileprivate var filteredCritters: [Critter] = []
     
     fileprivate let critterPicker = CritterPicker()
-    fileprivate lazy var searchButtonBar = SearchButtonBar(searchBar: searchController.searchBar)
+    fileprivate lazy var searchButtonBar = SearchButtonBar()
     fileprivate let tableView: UITableView = {
         let table = UITableView()
         table.rowHeight = UITableView.automaticDimension
@@ -26,13 +27,12 @@ final class CritterListingViewController: UIViewController {
         table.backgroundColor = #colorLiteral(red: 0.9794296622, green: 0.9611505866, blue: 0.882307291, alpha: 1)
         return table
     }()
-    fileprivate let searchController = UISearchController(searchResultsController: nil)
     
     fileprivate var isSearchBarEmpty: Bool {
-      return searchController.searchBar.text?.isEmpty ?? true
+      return searchButtonBar.searchBar.text?.isEmpty ?? true
     }
     fileprivate var isFiltering: Bool {
-      return searchController.isActive && !isSearchBarEmpty
+        return searchButtonBar.searchBar.isActive && !isSearchBarEmpty
     }
     
     fileprivate let critterPickerMaxHeight: CGFloat = 200
@@ -45,13 +45,10 @@ final class CritterListingViewController: UIViewController {
         view.backgroundColor = #colorLiteral(red: 0.9794296622, green: 0.9611505866, blue: 0.882307291, alpha: 1)
         
         critterPicker.delegate = self
-
-        definesPresentationContext = true
-        searchController.searchResultsUpdater = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.hidesNavigationBarDuringPresentation = false
-        searchController.searchBar.placeholder = "Search Critters"
-        navigationItem.titleView = searchController.searchBar
+        searchButtonBar.searchButtonDelegate = self
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(CritterTableViewCell.self, forCellReuseIdentifier: String(describing: CritterTableViewCell.self))
                         
         view.addSubview(critterPicker)
         critterPicker.translatesAutoresizingMaskIntoConstraints = false
@@ -78,9 +75,6 @@ final class CritterListingViewController: UIViewController {
             tableView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
         ])
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(CritterTableViewCell.self, forCellReuseIdentifier: String(describing: CritterTableViewCell.self))
     }
     
     fileprivate func getSelectedCritter() -> [Critter]? {
@@ -125,7 +119,7 @@ extension CritterListingViewController: CritterPickerDelegate {
     
     func critterPicked(picked: Critter.Category) {
         if isFiltering {
-            filterContentForSearchText(searchController.searchBar.text!)
+            filterContentForSearchText(searchButtonBar.searchBar.text!)
         } else {
             tableView.reloadData()
         }
@@ -190,9 +184,15 @@ extension CritterListingViewController: UITableViewDelegate, UITableViewDataSour
     }
 }
 
-extension CritterListingViewController: UISearchResultsUpdating {
-    func updateSearchResults(for searchController: UISearchController) {
-        let searchBar = searchController.searchBar
-        filterContentForSearchText(searchBar.text!)
+extension CritterListingViewController: ButtonBarDelegate {
+    
+    func searchBar(_ searchBar: SHSearchBar, textDidChange text: String) {
+        filterContentForSearchText(text)
+    }
+
+    func searchButtonTapped(isBarActive: Bool) {
+        if !isBarActive {
+            tableView.reloadData()
+        }
     }
 }
