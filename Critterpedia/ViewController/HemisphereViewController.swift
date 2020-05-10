@@ -16,9 +16,9 @@ final class HemisphereViewController: UIViewController {
         label.font = UIFont(name: "FinkHeavy", size: 24)
         label.textColor = .black
         label.textAlignment = .center
-        label.numberOfLines = 1;
-        label.minimumScaleFactor = 0.7;
-        label.adjustsFontSizeToFitWidth = true;
+        label.numberOfLines = 1
+        label.minimumScaleFactor = 0.7
+        label.adjustsFontSizeToFitWidth = true
         return label
     }()
     
