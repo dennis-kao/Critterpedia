@@ -90,7 +90,8 @@ class CritterParsingTests: XCTestCase {
         XCTAssert(passingCritter!.name == "Crucian Carp")
         XCTAssert(passingCritter!.location == "River")
         XCTAssert(passingCritter!.price == 160)
-        XCTAssert(passingCritter!.times == "All day")
+        XCTAssert(passingCritter!.timesText == "All day")
+        XCTAssert(passingCritter!.times == [0, 1, 2, 3, 4,])
         XCTAssert(passingCritter!.northernMonths == [ 1, 2, 3, 12 ])
         XCTAssert(passingCritter!.southernMonths == [ 9, 10, 11, 12 ])
         

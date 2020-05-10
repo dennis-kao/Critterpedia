@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -728,6 +728,7 @@
 		4521698824525207007A808B /* HemisphereViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HemisphereViewController.swift; sourceTree = "<group>"; };
 		4521698D24525340007A808B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4521698F24525448007A808B /* HemispherePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HemispherePicker.swift; sourceTree = "<group>"; };
+		454BFB55246840E80005BA91 /* libSHSearchBar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSHSearchBar.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		45ED846924510F2D00B1BB2C /* Critterpedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Critterpedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45ED846C24510F2D00B1BB2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45ED846E24510F2D00B1BB2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -790,6 +791,7 @@
 		3F9AB64D2ACCA557B95AFEF6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				454BFB55246840E80005BA91 /* libSHSearchBar.a */,
 				30B0C3B4B1211F7F457F3CE1 /* libPods-Critterpedia.a */,
 			);
 			name = Frameworks;
@@ -1292,7 +1294,6 @@
 				EAA86FC2BD6C73B20BE61F53 /* Pods-Critterpedia.debug.xcconfig */,
 				8F670814F2B6BEC9CE2CA676 /* Pods-Critterpedia.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
