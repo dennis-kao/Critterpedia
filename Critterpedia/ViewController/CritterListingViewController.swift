@@ -38,6 +38,7 @@ final class CritterListingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = ""
         view.backgroundColor = #colorLiteral(red: 0.9794296622, green: 0.9611505866, blue: 0.882307291, alpha: 1)
         
         critterPicker.delegate = self
@@ -97,7 +98,7 @@ final class CritterListingViewController: UIViewController {
         tableView.reloadData()
     }
     
-    fileprivate func fetchCritterImage(critter: Critter, indexPath: IndexPath) {
+    fileprivate func fetchCritterIcon(critter: Critter, indexPath: IndexPath) {
         DispatchQueue.global(qos: .background).async {
             let image = UIImage(named: "\(critter.iconName).png", in: Bundle(for: type(of: self)), with: nil)
                                     
@@ -195,23 +196,42 @@ extension CritterListingViewController: UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CritterTableViewCell.self), for: indexPath) as! CritterTableViewCell
-        var critter: Critter
-        
-        if filterOption != nil {
-            critter = filteredCritters[indexPath.item]
-        } else {
-            switch (critterPicker.selectedCritter) {
-                case .Fish:
-                    critter = fishCritters![indexPath.item]
-                case .Insect:
-                    critter = insectCritters![indexPath.item]
+        let critter: Critter = {
+            if filterOption != nil {
+                return filteredCritters[indexPath.item]
+            } else {
+                switch (critterPicker.selectedCritter) {
+                   case .Fish:
+                       return fishCritters![indexPath.item]
+                   case .Insect:
+                       return insectCritters![indexPath.item]
+                }
             }
-        }
+        }()
         
         cell.nameLabel.text = critter.name
-        fetchCritterImage(critter: critter, indexPath: indexPath)
+        fetchCritterIcon(critter: critter, indexPath: indexPath)
 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let critter: Critter = {
+            if filterOption != nil {
+                return filteredCritters[indexPath.item]
+            } else {
+                switch (critterPicker.selectedCritter) {
+                   case .Fish:
+                       return fishCritters![indexPath.item]
+                   case .Insect:
+                       return insectCritters![indexPath.item]
+                }
+            }
+        }()
+
+        let viewController = CritterDetailViewController(critter: critter)
+        viewController.modalPresentationStyle = .fullScreen
+        self.navigationController?.show(viewController, sender: self)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
