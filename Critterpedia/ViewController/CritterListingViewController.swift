@@ -12,8 +12,8 @@ import SHSearchBar
 
 final class CritterListingViewController: UIViewController {
     
-    fileprivate let insectCritters = CritterParser.loadJson(filename: "Insects")
-    fileprivate let fishCritters = CritterParser.loadJson(filename: "Fish")
+    fileprivate var insectCritters = CritterParser.loadJson(filename: "Insects")
+    fileprivate var fishCritters = CritterParser.loadJson(filename: "Fish")
     fileprivate var filteredCritters: [Critter] = []
     
     var hemisphere: Hemisphere? = nil
@@ -30,16 +30,11 @@ final class CritterListingViewController: UIViewController {
         return table
     }()
     
-    fileprivate var isSearchBarEmpty: Bool {
-      return searchButtonBar.searchBar.text?.isEmpty ?? true
-    }
-    fileprivate var isFiltering: Bool {
-        return searchButtonBar.searchBar.isActive && !isSearchBarEmpty
-    }
-    
     fileprivate let critterPickerMaxHeight: CGFloat = 200
     fileprivate let critterPickerMinHeight: CGFloat = 130
     fileprivate lazy var pickerHeightAnchor: NSLayoutConstraint = critterPicker.heightAnchor.constraint(equalToConstant: critterPickerMaxHeight)
+    
+    fileprivate var filterOption: Critter.FilterOptions? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +42,7 @@ final class CritterListingViewController: UIViewController {
         view.backgroundColor = #colorLiteral(red: 0.9794296622, green: 0.9611505866, blue: 0.882307291, alpha: 1)
         
         critterPicker.delegate = self
-        searchButtonBar.searchButtonDelegate = self
+        searchButtonBar.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(CritterTableViewCell.self, forCellReuseIdentifier: String(describing: CritterTableViewCell.self))
@@ -89,6 +84,20 @@ final class CritterListingViewController: UIViewController {
         }
     }
     
+    fileprivate func sortCritters(sort: (Critter, Critter) -> Bool) {
+        filterOption = nil
+        searchButtonBar.searchBar.cancelSearch()
+        
+        switch (critterPicker.selectedCritter) {
+            case .Fish:
+                fishCritters?.sort(by: sort)
+            case .Insect:
+                insectCritters?.sort(by: sort)
+        }
+        
+        tableView.reloadData()
+    }
+    
     fileprivate func fetchCritterImage(critter: Critter, indexPath: IndexPath) {
         DispatchQueue.global(qos: .background).async {
             let image = UIImage(named: "\(critter.iconName).png", in: Bundle(for: type(of: self)), with: nil)
@@ -102,36 +111,70 @@ final class CritterListingViewController: UIViewController {
         }
     }
     
-    fileprivate func filterContentForSearchText(_ searchText: String, category: Critter.Category? = nil) {
+    fileprivate func filterCrittersOn(_ filterOption: Critter.FilterOptions) {
+        func filterCritters(_ filter: (Critter) -> Bool) {
+            
+            guard let selectedCritter = getSelectedCritter() else {
+                return
+            }
+
+            filteredCritters = selectedCritter.filter(filter)
+          
+            tableView.reloadData()
+        }
         
-        guard let selectedCritter = getSelectedCritter() else {
-            return
+        self.filterOption = filterOption
+        
+        if filterOption != .Name && searchButtonBar.isFiltering {
+            searchButtonBar.searchBar.cancelSearch()
         }
 
-        filteredCritters = selectedCritter.filter { (critter: Critter) -> Bool in
-            return critter.name.lowercased().contains(searchText.lowercased())
+        switch filterOption {
+            case .Name:
+                // empty string should show all critters instead of setting filter criteria to none and showing none
+                if searchButtonBar.searchBar.text == nil || searchButtonBar.searchBar.text == "" {
+                    self.filterOption = nil
+                    tableView.reloadData()
+                }
+                filterCritters({$0.name.lowercased().contains(searchButtonBar.searchBar.text!.lowercased())})
+            case .Month:
+                let monthNum = Calendar.current.component(.month, from: Date())
+                switch hemisphere! {
+                    case .Northern:
+                        filterCritters({$0.northernMonths.contains(monthNum)})
+                    case .Southern:
+                        filterCritters({$0.southernMonths.contains(monthNum)})
+                }
+            case .MonthHour:
+                let monthNum = Calendar.current.component(.month, from: Date())
+                let hourNum = Calendar.current.component(.hour, from: Date())
+                switch hemisphere! {
+                    case .Northern:
+                        filterCritters({$0.northernMonths.contains(monthNum) && $0.times.contains(hourNum)})
+                    case .Southern:
+                        filterCritters({$0.southernMonths.contains(monthNum) && $0.times.contains(hourNum)})
+                }
         }
-      
-        tableView.reloadData()
     }
-    
 }
 
 extension CritterListingViewController: CritterPickerDelegate {
     
     func critterPicked(picked: Critter.Category) {
-        if isFiltering {
-            filterContentForSearchText(searchButtonBar.searchBar.text!)
-        } else {
+        
+        guard let filterOption = self.filterOption else {
             tableView.reloadData()
+            return
         }
+        
+        filterCrittersOn(filterOption)
     }
 }
 
 extension CritterListingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if isFiltering {
+        if filterOption != nil {
             return filteredCritters.count
         }
         
@@ -155,14 +198,15 @@ extension CritterListingViewController: UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: CritterTableViewCell.self), for: indexPath) as! CritterTableViewCell
         var critter: Critter
         
-        if isFiltering {
+        if filterOption != nil {
             critter = filteredCritters[indexPath.item]
         } else {
-            guard let selectedCritters = getSelectedCritter() else {
-                return cell
+            switch (critterPicker.selectedCritter) {
+                case .Fish:
+                    critter = fishCritters![indexPath.item]
+                case .Insect:
+                    critter = insectCritters![indexPath.item]
             }
-            
-            critter = selectedCritters[indexPath.item]
         }
         
         cell.nameLabel.text = critter.name
@@ -187,13 +231,58 @@ extension CritterListingViewController: UITableViewDelegate, UITableViewDataSour
 }
 
 extension CritterListingViewController: ButtonBarDelegate {
+        
+    func sortButtonTapped(sender: UIButton) {
+        
+        func getTimeString() -> String {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "h:mm a"
+            return dateFormatter.string(from: Date())
+        }
+
+        let alertController = UIAlertController(title: nil, message: "View Critters", preferredStyle: .actionSheet)
+
+        let sortAlphabetical = UIAlertAction(title: "Show all (A - Z)", style: .default, handler: { (alert: UIAlertAction!) -> Void in
+            self.sortCritters(sort: {$0.name < $1.name})
+        })
+
+        let sortReverseAlphabetical = UIAlertAction(title: "Show all (Z - A)", style: .default, handler: { (alert: UIAlertAction!) -> Void in
+            self.sortCritters(sort: {$0.name > $1.name})
+        })
+
+        let availableThisMonth = UIAlertAction(title: "Show available this month", style: .default, handler: { (alert: UIAlertAction!) -> Void in
+            self.filterCrittersOn(.Month)
+        })
+        
+        let availableNow = UIAlertAction(title: "Show available now (\(getTimeString()))", style: .default, handler: { (alert: UIAlertAction!) -> Void in
+          self.filterCrittersOn(.MonthHour)
+        })
+
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+
+        alertController.addAction(sortAlphabetical)
+        alertController.addAction(sortReverseAlphabetical)
+        alertController.addAction(availableThisMonth)
+        alertController.addAction(availableNow)
+        alertController.addAction(cancel)
+
+        if let popoverController = alertController.popoverPresentationController {
+            popoverController.sourceView = sender
+            popoverController.sourceRect = CGRect(x: sender.bounds.midX, y: sender.bounds.midY, width: 0, height: 0)
+            popoverController.permittedArrowDirections = [.up]
+        }
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     
     func searchBar(_ searchBar: SHSearchBar, textDidChange text: String) {
-        filterContentForSearchText(text)
+        filterCrittersOn(.Name)
     }
 
     func searchButtonTapped(isBarActive: Bool) {
         if !isBarActive {
+            filterOption = nil
             tableView.reloadData()
         }
     }

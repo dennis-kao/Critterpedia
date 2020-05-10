@@ -24,6 +24,12 @@ struct Critter {
       case Insect
     }
     
+    enum FilterOptions {
+        case Name
+        case Month
+        case MonthHour
+    }
+    
     init(name: String, location: String, price: Int, timesText: String, times: [Int], northernMonths: [Int], southernMonths: [Int]) {
         
         self.name = name

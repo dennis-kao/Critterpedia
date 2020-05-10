@@ -12,9 +12,18 @@ import SHSearchBar
 
 protocol ButtonBarDelegate: SHSearchBarDelegate {
     func searchButtonTapped(isBarActive: Bool)
+    func sortButtonTapped(sender: UIButton)
 }
 
 final class SearchButtonBar: UIView {
+    
+    fileprivate var isSearchBarEmpty: Bool {
+      return searchBar.text?.isEmpty ?? true
+    }
+    
+    var isFiltering: Bool {
+        return searchBar.isActive && !isSearchBarEmpty
+    }
     
     fileprivate let searchButton: UIButton = {
         let button = UIButton()
@@ -52,9 +61,9 @@ final class SearchButtonBar: UIView {
     fileprivate lazy var searchBarLeftAnchor: NSLayoutConstraint = searchBar.leftAnchor.constraint(equalTo: leftAnchor, constant: 15)
     fileprivate lazy var searchBarWidthZero: NSLayoutConstraint = searchBar.widthAnchor.constraint(equalToConstant: 0)
     
-    var searchButtonDelegate: ButtonBarDelegate? = nil {
+    var delegate: ButtonBarDelegate? = nil {
         didSet {
-            searchBar.delegate = searchButtonDelegate
+            searchBar.delegate = delegate
         }
     }
     
@@ -74,6 +83,10 @@ final class SearchButtonBar: UIView {
     }
     
     fileprivate func setupView() {
+        
+        searchButton.addTarget(self, action: #selector(searchButtonTapped), for: .touchUpInside)
+        sortButton.addTarget(self, action: #selector(sortButtonTapped(sender:)), for: .touchUpInside)
+
         backgroundColor = #colorLiteral(red: 0.9794296622, green: 0.9611505866, blue: 0.882307291, alpha: 1)
         
         sortButton.translatesAutoresizingMaskIntoConstraints = false
@@ -93,7 +106,6 @@ final class SearchButtonBar: UIView {
             searchButton.centerYAnchor.constraint(equalTo: centerYAnchor),
             searchButton.rightAnchor.constraint(equalTo: sortButton.leftAnchor, constant: -13),
         ])
-        searchButton.addTarget(self, action: #selector(searchButtonTapped), for: .touchUpInside)
 
         searchBar.translatesAutoresizingMaskIntoConstraints = false
         addSubview(searchBar)
@@ -131,8 +143,12 @@ final class SearchButtonBar: UIView {
                     // setting left constraint does not make the search bar disappear completely, there are some non-zero fixed margin widths
                     self.searchBarWidthZero.isActive = !self.searchBarWidthZero.isActive
                 }
-                self.searchButtonDelegate?.searchButtonTapped(isBarActive: self.searchBarLeftAnchor.isActive)
+                self.delegate?.searchButtonTapped(isBarActive: self.searchBarLeftAnchor.isActive)
             }
         )
+    }
+    
+    @objc func sortButtonTapped(sender: UIButton) {
+        delegate?.sortButtonTapped(sender: sender)
     }
 }
