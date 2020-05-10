@@ -28,7 +28,7 @@ final class SearchButtonBar: UIView {
     fileprivate let searchButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = #colorLiteral(red: 0.8745098039, green: 0.8823529412, blue: 0.6352941176, alpha: 1)
-        button.setImage(#imageLiteral(resourceName: "SearchIcon.png"), for: .normal)
+        button.setImage(#imageLiteral(resourceName: "Search Icon"), for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
         button.tintColor = .black
         button.startAnimatingPressActions()
@@ -38,7 +38,7 @@ final class SearchButtonBar: UIView {
     fileprivate let sortButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = #colorLiteral(red: 0.8745098039, green: 0.8823529412, blue: 0.6352941176, alpha: 1)
-        button.setImage(#imageLiteral(resourceName: "SortButton.png"), for: .normal)
+        button.setImage(#imageLiteral(resourceName: "Group"), for: .normal)
         button.imageView?.contentMode = .scaleAspectFit
         button.tintColor = .black
         button.startAnimatingPressActions()

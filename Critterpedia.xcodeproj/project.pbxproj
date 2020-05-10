@@ -338,8 +338,6 @@
 		451E62562467211D0065F4E6 /* CritterParsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E62552467211D0065F4E6 /* CritterParsingTests.swift */; };
 		451E6264246729190065F4E6 /* CritterNameToFileNameTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E6263246729190065F4E6 /* CritterNameToFileNameTest.swift */; };
 		451E626C24672CBF0065F4E6 /* SearchButtonBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E626B24672CBF0065F4E6 /* SearchButtonBar.swift */; };
-		451E627024672ED70065F4E6 /* SortButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 451E626E24672ED70065F4E6 /* SortButton.png */; };
-		451E627124672ED70065F4E6 /* SearchIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 451E626F24672ED70065F4E6 /* SearchIcon.png */; };
 		4521698924525207007A808B /* HemisphereViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4521698824525207007A808B /* HemisphereViewController.swift */; };
 		4521698C24525340007A808B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4521698E24525340007A808B /* Localizable.strings */; };
 		4521699024525448007A808B /* HemispherePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4521698F24525448007A808B /* HemispherePicker.swift */; };
@@ -350,7 +348,6 @@
 		45ED848424510F2D00B1BB2C /* CritterpediaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED848324510F2D00B1BB2C /* CritterpediaTests.swift */; };
 		45ED848F24510F2D00B1BB2C /* CritterpediaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED848E24510F2D00B1BB2C /* CritterpediaUITests.swift */; };
 		45ED84A02451103F00B1BB2C /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED849F2451103F00B1BB2C /* SplashViewController.swift */; };
-		45ED84A52451112000B1BB2C /* SplashScreenBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 45ED84A42451112000B1BB2C /* SplashScreenBackground.png */; };
 		45ED84A8245119E800B1BB2C /* FinkHeavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45ED84A72451116E00B1BB2C /* FinkHeavy.ttf */; };
 		E6657C7A201DDF62EFFAC479 /* libPods-Critterpedia.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30B0C3B4B1211F7F457F3CE1 /* libPods-Critterpedia.a */; };
 /* End PBXBuildFile section */
@@ -723,8 +720,6 @@
 		451E6263246729190065F4E6 /* CritterNameToFileNameTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CritterNameToFileNameTest.swift; sourceTree = "<group>"; };
 		451E6265246729190065F4E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		451E626B24672CBF0065F4E6 /* SearchButtonBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchButtonBar.swift; sourceTree = "<group>"; };
-		451E626E24672ED70065F4E6 /* SortButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SortButton.png; sourceTree = "<group>"; };
-		451E626F24672ED70065F4E6 /* SearchIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SearchIcon.png; sourceTree = "<group>"; };
 		4521698824525207007A808B /* HemisphereViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HemisphereViewController.swift; sourceTree = "<group>"; };
 		4521698D24525340007A808B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4521698F24525448007A808B /* HemispherePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HemispherePicker.swift; sourceTree = "<group>"; };
@@ -742,7 +737,6 @@
 		45ED848E24510F2D00B1BB2C /* CritterpediaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CritterpediaUITests.swift; sourceTree = "<group>"; };
 		45ED849024510F2D00B1BB2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45ED849F2451103F00B1BB2C /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		45ED84A42451112000B1BB2C /* SplashScreenBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SplashScreenBackground.png; sourceTree = "<group>"; };
 		45ED84A72451116E00B1BB2C /* FinkHeavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FinkHeavy.ttf; sourceTree = "<group>"; };
 		8F670814F2B6BEC9CE2CA676 /* Pods-Critterpedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Critterpedia.release.xcconfig"; path = "Target Support Files/Pods-Critterpedia/Pods-Critterpedia.release.xcconfig"; sourceTree = "<group>"; };
 		EAA86FC2BD6C73B20BE61F53 /* Pods-Critterpedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Critterpedia.debug.xcconfig"; path = "Target Support Files/Pods-Critterpedia/Pods-Critterpedia.debug.xcconfig"; sourceTree = "<group>"; };
@@ -1167,16 +1161,6 @@
 			path = CritterNameToFileNameTest;
 			sourceTree = "<group>";
 		};
-		451E626D24672EBC0065F4E6 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				45ED84A42451112000B1BB2C /* SplashScreenBackground.png */,
-				451E626F24672ED70065F4E6 /* SearchIcon.png */,
-				451E626E24672ED70065F4E6 /* SortButton.png */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
 		45ED846024510F2C00B1BB2C = {
 			isa = PBXGroup;
 			children = (
@@ -1273,7 +1257,6 @@
 		45ED84A32451110900B1BB2C /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				451E626D24672EBC0065F4E6 /* UI */,
 				451E5F2424637F070065F4E6 /* Insects */,
 				451E5F2324637F000065F4E6 /* Fish */,
 			);
@@ -1524,7 +1507,6 @@
 				451E62432464CAAC0065F4E6 /* molecricket.png in Resources */,
 				451E60522464C8930065F4E6 /* icon-mosquito.png in Resources */,
 				451E61462464CA5F0065F4E6 /* barreleye.png in Resources */,
-				451E627124672ED70065F4E6 /* SearchIcon.png in Resources */,
 				451E604D2464C8930065F4E6 /* icon-walkingstick.png in Resources */,
 				451E618F2464CA6E0065F4E6 /* saddledbichir.png in Resources */,
 				451E62322464CAAC0065F4E6 /* rainbowstag.png in Resources */,
@@ -1618,7 +1600,6 @@
 				451E61342464CA5F0065F4E6 /* horsemackerel.png in Resources */,
 				451E61D92464CA930065F4E6 /* firefly.png in Resources */,
 				451E60BC2464C8C90065F4E6 /* icon-arapaima.png in Resources */,
-				45ED84A52451112000B1BB2C /* SplashScreenBackground.png in Resources */,
 				451E60D22464C8CA0065F4E6 /* icon-whaleshark.png in Resources */,
 				451E61932464CA6E0065F4E6 /* tuna.png in Resources */,
 				451E60FD2464C8CA0065F4E6 /* icon-butterflyfish.png in Resources */,
@@ -1701,7 +1682,6 @@
 				451E60322464C8930065F4E6 /* icon-walkercicada.png in Resources */,
 				451E60EE2464C8CA0065F4E6 /* icon-barredknifejaw.png in Resources */,
 				451E62222464CAAC0065F4E6 /* scarabbeetle.png in Resources */,
-				451E627024672ED70065F4E6 /* SortButton.png in Resources */,
 				451E61D82464CA930065F4E6 /* grasshopper.png in Resources */,
 				451E60B82464C8C90065F4E6 /* icon-napoleonfish.png in Resources */,
 				451E603D2464C8930065F4E6 /* icon-scarabbeetle.png in Resources */,
