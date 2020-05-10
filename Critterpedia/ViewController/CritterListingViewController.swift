@@ -16,6 +16,8 @@ final class CritterListingViewController: UIViewController {
     fileprivate let fishCritters = CritterParser.loadJson(filename: "Fish")
     fileprivate var filteredCritters: [Critter] = []
     
+    var hemisphere: Hemisphere? = nil
+    
     fileprivate let critterPicker = CritterPicker()
     fileprivate lazy var searchButtonBar = SearchButtonBar()
     fileprivate let tableView: UITableView = {

@@ -28,6 +28,8 @@ final class HemisphereViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        hemispherePicker.delegate = self
+        
         self.view.backgroundColor = #colorLiteral(red: 0.9794296622, green: 0.9611505866, blue: 0.882307291, alpha: 1)
         
         self.title = ""
@@ -50,13 +52,14 @@ final class HemisphereViewController: UIViewController {
             hemispherePicker.heightAnchor.constraint(equalToConstant: 130),
             hemispherePicker.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
-        
-        hemispherePicker.addTargets(sender: self, northAction: #selector(goToCritterListing), southAction:  #selector(goToCritterListing), event: .touchUpInside)
     }
-    
-    @objc func goToCritterListing() {
+}
+
+extension HemisphereViewController: HemispherePickerDelegate {
+    func hemispherePicked(hemisphere: Hemisphere) {
         let viewController = CritterListingViewController()
         viewController.modalPresentationStyle = .fullScreen
+        viewController.hemisphere = hemisphere
         self.navigationController?.show(viewController, sender: self)
     }
 }

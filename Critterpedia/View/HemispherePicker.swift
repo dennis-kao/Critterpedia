@@ -8,6 +8,15 @@
 
 import UIKit
 
+enum Hemisphere {
+    case Northern
+    case Southern
+}
+
+protocol HemispherePickerDelegate {
+    func hemispherePicked(hemisphere: Hemisphere)
+}
+
 final class HemispherePicker: UIStackView {
     
     fileprivate let northernHemisphereButton: UIButton = {
@@ -38,6 +47,8 @@ final class HemispherePicker: UIStackView {
         return button
     }()
     
+    var delegate: HemispherePickerDelegate? = nil
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.addArrangedSubview(northernHemisphereButton)
@@ -45,14 +56,22 @@ final class HemispherePicker: UIStackView {
         self.spacing = 20
         self.axis = .horizontal
         self.distribution = .fillEqually
+        
+        northernHemisphereButton.addTarget(self, action: #selector(hemispherePicked(sender:)), for: .touchUpInside)
+        southernHemisphereButton.addTarget(self, action: #selector(hemispherePicked(sender:)), for: .touchUpInside)
     }
     
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    func addTargets(sender: Any?, northAction: Selector, southAction: Selector, event: UIControl.Event) {
-        northernHemisphereButton.addTarget(sender, action: northAction, for: event)
-        southernHemisphereButton.addTarget(sender, action: southAction, for: event)
+        
+    @objc fileprivate func hemispherePicked(sender: UIButton) {
+        if sender == northernHemisphereButton {
+            self.delegate?.hemispherePicked(hemisphere: .Northern)
+        } else if sender == southernHemisphereButton {
+            self.delegate?.hemispherePicked(hemisphere: .Southern)
+        } else {
+            fatalError("Unknown button called hemispherePicked")
+        }
     }
 }
