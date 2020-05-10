@@ -341,6 +341,8 @@
 		4521698924525207007A808B /* HemisphereViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4521698824525207007A808B /* HemisphereViewController.swift */; };
 		4521698C24525340007A808B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4521698E24525340007A808B /* Localizable.strings */; };
 		4521699024525448007A808B /* HemispherePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4521698F24525448007A808B /* HemispherePicker.swift */; };
+		454BFB58246887390005BA91 /* CritterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454BFB57246887390005BA91 /* CritterDetailViewController.swift */; };
+		454BFB5A246888070005BA91 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454BFB59246888070005BA91 /* TitleView.swift */; };
 		45ED846D24510F2D00B1BB2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED846C24510F2D00B1BB2C /* AppDelegate.swift */; };
 		45ED846F24510F2D00B1BB2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED846E24510F2D00B1BB2C /* SceneDelegate.swift */; };
 		45ED847624510F2D00B1BB2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45ED847524510F2D00B1BB2C /* Assets.xcassets */; };
@@ -724,6 +726,8 @@
 		4521698D24525340007A808B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		4521698F24525448007A808B /* HemispherePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HemispherePicker.swift; sourceTree = "<group>"; };
 		454BFB55246840E80005BA91 /* libSHSearchBar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSHSearchBar.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		454BFB57246887390005BA91 /* CritterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CritterDetailViewController.swift; sourceTree = "<group>"; };
+		454BFB59246888070005BA91 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		45ED846924510F2D00B1BB2C /* Critterpedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Critterpedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45ED846C24510F2D00B1BB2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45ED846E24510F2D00B1BB2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -1229,7 +1233,7 @@
 				45ED849F2451103F00B1BB2C /* SplashViewController.swift */,
 				4521698824525207007A808B /* HemisphereViewController.swift */,
 				451E5ED32454C6B90065F4E6 /* CritterListingViewController.swift */,
-				451E5F202463755B0065F4E6 /* CritterTableViewCell.swift */,
+				454BFB57246887390005BA91 /* CritterDetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1242,6 +1246,8 @@
 				4521698F24525448007A808B /* HemispherePicker.swift */,
 				451E5ED12454C3920065F4E6 /* CritterPicker.swift */,
 				451E626B24672CBF0065F4E6 /* SearchButtonBar.swift */,
+				451E5F202463755B0065F4E6 /* CritterTableViewCell.swift */,
+				454BFB59246888070005BA91 /* TitleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1857,8 +1863,10 @@
 				4521699024525448007A808B /* HemispherePicker.swift in Sources */,
 				451E5EDD245A3D170065F4E6 /* Critter.swift in Sources */,
 				45ED84A02451103F00B1BB2C /* SplashViewController.swift in Sources */,
+				454BFB5A246888070005BA91 /* TitleView.swift in Sources */,
 				451E5ED02454C0F40065F4E6 /* UIButton+Animations.swift in Sources */,
 				451E5ED22454C3920065F4E6 /* CritterPicker.swift in Sources */,
+				454BFB58246887390005BA91 /* CritterDetailViewController.swift in Sources */,
 				45ED846D24510F2D00B1BB2C /* AppDelegate.swift in Sources */,
 				4521698924525207007A808B /* HemisphereViewController.swift in Sources */,
 				451E5ED62457A5840065F4E6 /* UINavigationBar+Transparent.swift in Sources */,
