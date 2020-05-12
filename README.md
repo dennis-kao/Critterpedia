@@ -17,7 +17,7 @@ You can quickly lookup Critters using their names, view available Critters for t
 3. Xcode 11
 
 ## Installation instructions
-1. Git clone the repo. Navigate to Critterpedia/Critterpedia. Run ```pod install```
+1. Git clone the repo. Navigate to Critterpedia. Run ```pod install```
 2. Open the newly generated .xcworkspace file
 3. Replace the build identifier to an unused identifier
 4. Deploy the app on the top left corner to a simulator or device of your choice
