@@ -734,6 +734,10 @@
 		454BFB5B24689A010005BA91 /* CritterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CritterDetailView.swift; sourceTree = "<group>"; };
 		454BFB5D24689B6E0005BA91 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		456FDE3F2468C32B007955F8 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
+		456FDE42246A313B007955F8 /* Start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Start.png; sourceTree = "<group>"; };
+		456FDE44246A3153007955F8 /* Main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Main.png; sourceTree = "<group>"; };
+		456FDE45246A3163007955F8 /* ViewOptions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ViewOptions.png; sourceTree = "<group>"; };
+		456FDE46246A316D007955F8 /* ButterflyDetailView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButterflyDetailView.png; sourceTree = "<group>"; };
 		45ED846924510F2D00B1BB2C /* Critterpedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Critterpedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45ED846C24510F2D00B1BB2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45ED846E24510F2D00B1BB2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -1171,9 +1175,21 @@
 			path = CritterNameToFileNameTest;
 			sourceTree = "<group>";
 		};
+		456FDE41246A3106007955F8 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				456FDE42246A313B007955F8 /* Start.png */,
+				456FDE44246A3153007955F8 /* Main.png */,
+				456FDE45246A3163007955F8 /* ViewOptions.png */,
+				456FDE46246A316D007955F8 /* ButterflyDetailView.png */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 		45ED846024510F2C00B1BB2C = {
 			isa = PBXGroup;
 			children = (
+				456FDE41246A3106007955F8 /* Screenshots */,
 				45ED846B24510F2D00B1BB2C /* Critterpedia */,
 				45ED848224510F2D00B1BB2C /* CritterpediaTests */,
 				45ED848D24510F2D00B1BB2C /* CritterpediaUITests */,
