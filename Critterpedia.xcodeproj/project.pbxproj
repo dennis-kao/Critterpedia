@@ -345,6 +345,7 @@
 		454BFB5A246888070005BA91 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454BFB59246888070005BA91 /* TitleView.swift */; };
 		454BFB5C24689A010005BA91 /* CritterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454BFB5B24689A010005BA91 /* CritterDetailView.swift */; };
 		454BFB5E24689B6E0005BA91 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454BFB5D24689B6E0005BA91 /* DetailsView.swift */; };
+		456FDE402468C32B007955F8 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456FDE3F2468C32B007955F8 /* CalendarCollectionViewCell.swift */; };
 		45ED846D24510F2D00B1BB2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED846C24510F2D00B1BB2C /* AppDelegate.swift */; };
 		45ED846F24510F2D00B1BB2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED846E24510F2D00B1BB2C /* SceneDelegate.swift */; };
 		45ED847624510F2D00B1BB2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45ED847524510F2D00B1BB2C /* Assets.xcassets */; };
@@ -732,6 +733,7 @@
 		454BFB59246888070005BA91 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		454BFB5B24689A010005BA91 /* CritterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CritterDetailView.swift; sourceTree = "<group>"; };
 		454BFB5D24689B6E0005BA91 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		456FDE3F2468C32B007955F8 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		45ED846924510F2D00B1BB2C /* Critterpedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Critterpedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45ED846C24510F2D00B1BB2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45ED846E24510F2D00B1BB2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -1254,6 +1256,7 @@
 				454BFB59246888070005BA91 /* TitleView.swift */,
 				454BFB5D24689B6E0005BA91 /* DetailsView.swift */,
 				454BFB5B24689A010005BA91 /* CritterDetailView.swift */,
+				456FDE3F2468C32B007955F8 /* CalendarCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1871,6 +1874,7 @@
 				45ED84A02451103F00B1BB2C /* SplashViewController.swift in Sources */,
 				454BFB5A246888070005BA91 /* TitleView.swift in Sources */,
 				451E5ED02454C0F40065F4E6 /* UIButton+Animations.swift in Sources */,
+				456FDE402468C32B007955F8 /* CalendarCollectionViewCell.swift in Sources */,
 				451E5ED22454C3920065F4E6 /* CritterPicker.swift in Sources */,
 				454BFB58246887390005BA91 /* CritterDetailViewController.swift in Sources */,
 				45ED846D24510F2D00B1BB2C /* AppDelegate.swift in Sources */,

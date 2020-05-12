@@ -1129,7 +1129,7 @@
     {
         "id": 25,
         "name": "Wasp",
-        "location": "Falls from shaking trees",
+        "location": "Shake trees",
         "price": 2500,
         "times": {
             "array": [
@@ -3053,7 +3053,7 @@
     {
         "id": 66,
         "name": "Walking Stick",
-        "location": "Falls from shaking trees",
+        "location": "Shake trees",
         "price":600,
         "times": {
             "array": [
@@ -3092,7 +3092,7 @@
     {
         "id": 67,
         "name": "Walking Leaf",
-        "location": "Near trees, disguised as furniture leaf",
+        "location": "Near trees",
         "price": 600,
         "times": {
             "array": [
@@ -3144,7 +3144,7 @@
     {
         "id": 68,
         "name": "Bagworm",
-        "location": "Falls from shaking trees",
+        "location": "Shake trees",
         "price": 600,
         "times": {
             "array": [
@@ -3774,7 +3774,7 @@
     {
         "id": 78,
         "name": "Spider",
-        "location": "Falls from shaking trees",
+        "location": "Shake trees",
         "price": 480,
         "times": {
             "array": [

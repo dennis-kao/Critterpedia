@@ -47,7 +47,7 @@ final class CritterDetailView: UIView {
         NSLayoutConstraint.activate([
             imageView.topAnchor.constraint(equalTo: titleView.bottomAnchor, constant: 40),
             imageView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.8),
-            imageView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.4),
+            imageView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.30),
             imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
         ])
 

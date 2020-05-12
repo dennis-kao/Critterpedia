@@ -229,7 +229,7 @@ extension CritterListingViewController: UITableViewDelegate, UITableViewDataSour
             }
         }()
 
-        let viewController = CritterDetailViewController(critter: critter)
+        let viewController = CritterDetailViewController(critter: critter, hemisphere: hemisphere!)
         viewController.modalPresentationStyle = .fullScreen
         self.navigationController?.show(viewController, sender: self)
     }
