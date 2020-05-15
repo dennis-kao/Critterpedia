@@ -39,7 +39,7 @@ class CalendarCollectionViewCell: UICollectionViewCell {
         monthLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             monthLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.85),
-            monthLabel.widthAnchor.constraint(equalTo: widthAnchor, constant: -10),
+            monthLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.85),
             monthLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             monthLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
         ])
@@ -53,7 +53,7 @@ class CalendarCollectionViewCell: UICollectionViewCell {
     }
     
     func setCurrentMonth() {
-        self.layer.borderColor = #colorLiteral(red: 0.6156862745, green: 0.5843137255, blue: 0.4156862745, alpha: 1)
-        self.layer.borderWidth = 6
+        self.layer.borderColor = #colorLiteral(red: 0.8352941176, green: 0.3882352941, blue: 0.2901960784, alpha: 1)
+        self.layer.borderWidth = 2
     }
 }

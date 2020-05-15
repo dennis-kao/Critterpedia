@@ -22,6 +22,8 @@ final class CritterDetailViewController: UIViewController {
     fileprivate let minimumSpacing: CGFloat = 2
     fileprivate let numberOfSections = 3
     fileprivate let numberOfItemsInSection = 4
+    
+    fileprivate let currentMonth = Calendar.current.component(.month, from: Date())
 
     init(critter: Critter, hemisphere: Hemisphere) {
         self.critter = critter
@@ -83,6 +85,10 @@ extension CritterDetailViewController: UICollectionViewDataSource, UICollectionV
         }
         
         let cellMonthNumber = 4 * indexPath.section + indexPath.item + 1
+        
+        if cellMonthNumber == currentMonth {
+            cell.setCurrentMonth()
+        }
 
         switch hemisphere {
             case .Northern:
