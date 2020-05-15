@@ -19,7 +19,7 @@ final class CritterDetailViewController: UIViewController {
     fileprivate let critterDetail = CritterDetailView()
     
     fileprivate var edgeInsetPadding: CGFloat = 1
-    fileprivate let minimumSpacing: CGFloat = 1
+    fileprivate let minimumSpacing: CGFloat = 2
     fileprivate let numberOfSections = 3
     fileprivate let numberOfItemsInSection = 4
 

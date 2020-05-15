@@ -38,7 +38,7 @@ class CalendarCollectionViewCell: UICollectionViewCell {
         addSubview(monthLabel)
         monthLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            monthLabel.heightAnchor.constraint(equalTo: heightAnchor, constant: -8),
+            monthLabel.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.85),
             monthLabel.widthAnchor.constraint(equalTo: widthAnchor, constant: -10),
             monthLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             monthLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
@@ -50,5 +50,10 @@ class CalendarCollectionViewCell: UICollectionViewCell {
         monthLabel.layer.masksToBounds = true
         monthLabel.layer.cornerRadius = 6
         monthLabel.backgroundColor = #colorLiteral(red: 0.8588235294, green: 0.8352941176, blue: 0.3294117647, alpha: 1)
+    }
+    
+    func setCurrentMonth() {
+        self.layer.borderColor = #colorLiteral(red: 0.6156862745, green: 0.5843137255, blue: 0.4156862745, alpha: 1)
+        self.layer.borderWidth = 6
     }
 }

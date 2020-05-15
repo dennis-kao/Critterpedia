@@ -49,8 +49,9 @@ class DetailsView: UIView {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.register(CalendarCollectionViewCell.self, forCellWithReuseIdentifier: String(describing: CalendarCollectionViewCell.self))
         collectionView.isScrollEnabled = false
-        collectionView.layer.borderWidth = 1
-        collectionView.layer.borderColor = UIColor.black.cgColor
+        collectionView.layer.borderWidth = 2
+        collectionView.layer.borderColor = #colorLiteral(red: 0.6156862745, green: 0.5843137255, blue: 0.4156862745, alpha: 1)
+        collectionView.backgroundColor = #colorLiteral(red: 0.6156862745, green: 0.5843137255, blue: 0.4156862745, alpha: 1)
         return collectionView
     }()
     
