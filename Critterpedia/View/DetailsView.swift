@@ -36,10 +36,14 @@ class DetailsView: UIView {
     }()
     
     lazy var activeHours: UILabel = setupValueLabel()
-    lazy var location: UILabel = setupValueLabel()
+    lazy var location: UILabel = {
+        let label = setupValueLabel()
+        label.numberOfLines = 2
+        return label
+    }()
     lazy var value: UILabel = setupValueLabel()
     
-    fileprivate let labelHeight: CGFloat = 30
+    fileprivate let labelHeight: CGFloat = 36
 
     let calendarView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
@@ -68,7 +72,7 @@ class DetailsView: UIView {
         seasonalityLabel.text = NSLocalizedString("Seasonality", comment: "Months in which a Critter appears")
         activeHoursLabel.text = NSLocalizedString("ActiveHours", comment: "Hours in which a critter appears")
         locationLabel.text = NSLocalizedString("Location", comment: "Where a critter appears")
-        valueLabel.text = NSLocalizedString("Value", comment: "How much a critter can be sold for")
+        valueLabel.text = NSLocalizedString("Bells", comment: "The in game currency")
         
         addSubview(seasonalityLabel)
         seasonalityLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -134,7 +138,7 @@ class DetailsView: UIView {
         NSLayoutConstraint.activate([
             location.centerYAnchor.constraint(equalTo: locationLabel.centerYAnchor),
             location.leftAnchor.constraint(equalTo: locationLabel.rightAnchor, constant: 10),
-            location.rightAnchor.constraint(equalTo: locationView.rightAnchor, constant: 10),
+            location.rightAnchor.constraint(equalTo: locationView.rightAnchor, constant: -10),
         ])
         
         valueView.translatesAutoresizingMaskIntoConstraints = false
@@ -153,7 +157,7 @@ class DetailsView: UIView {
         NSLayoutConstraint.activate([
             value.centerYAnchor.constraint(equalTo: valueLabel.centerYAnchor),
             value.leftAnchor.constraint(equalTo: valueLabel.rightAnchor, constant: 10),
-            value.rightAnchor.constraint(equalTo: valueView.rightAnchor, constant: 10),
+            value.rightAnchor.constraint(equalTo: valueView.rightAnchor, constant: -10),
         ])
     }
     
@@ -161,7 +165,7 @@ class DetailsView: UIView {
         let label = UILabel()
         label.backgroundColor = #colorLiteral(red: 0.8745098039, green: 0.8823529412, blue: 0.6352941176, alpha: 1)
         label.layer.masksToBounds = true
-        label.font = UIFont(name: "FinkHeavy", size: 40)
+        label.font = UIFont(name: "FinkHeavy", size: 35)
         label.textColor = .black
         label.textAlignment = .center
         label.numberOfLines = 1
@@ -175,8 +179,8 @@ class DetailsView: UIView {
         label.font = UIFont(name: "FinkHeavy", size: 28)
         label.textColor = #colorLiteral(red: 0.2666666667, green: 0.262745098, blue: 0.2392156863, alpha: 1)
         label.textAlignment = .left
-        label.numberOfLines = 2
         label.minimumScaleFactor = 0.1
+        label.numberOfLines = 1
         label.adjustsFontSizeToFitWidth = true
         return label
     }

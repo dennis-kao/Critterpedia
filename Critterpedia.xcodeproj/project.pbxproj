@@ -738,6 +738,7 @@
 		456FDE44246A3153007955F8 /* Main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Main.png; sourceTree = "<group>"; };
 		456FDE45246A3163007955F8 /* ViewOptions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ViewOptions.png; sourceTree = "<group>"; };
 		456FDE46246A316D007955F8 /* ButterflyDetailView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButterflyDetailView.png; sourceTree = "<group>"; };
+		45BA4A33246B80D300F770C9 /* Critterpedia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Critterpedia.entitlements; sourceTree = "<group>"; };
 		45ED846924510F2D00B1BB2C /* Critterpedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Critterpedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45ED846C24510F2D00B1BB2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45ED846E24510F2D00B1BB2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -1216,6 +1217,7 @@
 		45ED846B24510F2D00B1BB2C /* Critterpedia */ = {
 			isa = PBXGroup;
 			children = (
+				45BA4A33246B80D300F770C9 /* Critterpedia.entitlements */,
 				451E5F2224637ECF0065F4E6 /* Assets */,
 				451E5ED7245A37B70065F4E6 /* JSONData */,
 				45ED849E2451100900B1BB2C /* Model */,
@@ -2165,6 +2167,7 @@
 			baseConfigurationReference = EAA86FC2BD6C73B20BE61F53 /* Pods-Critterpedia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Critterpedia/Critterpedia.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D6NP2AUF46;
 				INFOPLIST_FILE = Critterpedia/Info.plist;
@@ -2175,6 +2178,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.denny.Critterpedia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2185,6 +2189,7 @@
 			baseConfigurationReference = 8F670814F2B6BEC9CE2CA676 /* Pods-Critterpedia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Critterpedia/Critterpedia.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D6NP2AUF46;
 				INFOPLIST_FILE = Critterpedia/Info.plist;
@@ -2195,6 +2200,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.denny.Critterpedia;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
