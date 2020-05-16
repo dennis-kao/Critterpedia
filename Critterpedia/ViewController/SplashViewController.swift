@@ -19,14 +19,14 @@ final class SplashViewController: UIViewController {
         let button = UIButton()
         button.backgroundColor = #colorLiteral(red: 0.8431372549, green: 0.8666666667, blue: 0.5333333333, alpha: 1)
         button.setTitleColor(.black, for: .normal)
-        button.setTitle(NSLocalizedString("Go", comment: "Proceed to the next screen"), for: .normal)
         button.titleLabel?.font = UIFont(name: "FinkHeavy", size: 24)
+        button.setAttributedTitle(NSAttributedString(string: NSLocalizedString("Go", comment: "Proceed to the next screen"), attributes: [NSAttributedString.Key.kern: -0.26]), for: .normal)
         button.startAnimatingPressActions()
         return button
     }()
     fileprivate let critterpediaLabel: UILabel = {
         let label = UILabel()
-        label.text = NSLocalizedString("App", comment: "The name of the app")
+        label.attributedText = NSAttributedString(string: NSLocalizedString("App", comment: "The name of the app"), attributes: [NSAttributedString.Key.kern: 2.77])
         label.font = UIFont(name: "FinkHeavy", size: 50)
         label.textColor = .black
         label.textAlignment = .center

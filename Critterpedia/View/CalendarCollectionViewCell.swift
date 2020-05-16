@@ -12,10 +12,11 @@ class CalendarCollectionViewCell: UICollectionViewCell {
     
     let monthLabel: UILabel = {
         let label = UILabel()
+        label.attributedText = NSAttributedString(string: "", attributes: [NSAttributedString.Key.kern: 0.4])
         label.font = UIFont(name: "FinkHeavy", size: 30)
         label.textColor = #colorLiteral(red: 0.7921568627, green: 0.7764705882, blue: 0.6980392157, alpha: 1)
         label.textAlignment = .center
-        label.numberOfLines = 0
+        label.numberOfLines = 1
         label.minimumScaleFactor = 0.7
         label.adjustsFontSizeToFitWidth = true
         return label

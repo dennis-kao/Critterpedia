@@ -164,6 +164,7 @@ class DetailsView: UIView {
     
     fileprivate func setupLabel() -> UILabel {
         let label = UILabel()
+        label.attributedText = NSAttributedString(string: "", attributes: [NSAttributedString.Key.kern: 0.4])
         label.backgroundColor = #colorLiteral(red: 0.8745098039, green: 0.8823529412, blue: 0.6352941176, alpha: 1)
         label.layer.masksToBounds = true
         label.font = UIFont(name: "FinkHeavy", size: 35)
@@ -177,6 +178,7 @@ class DetailsView: UIView {
     
     fileprivate func setupValueLabel() -> UILabel {
         let label = UILabel()
+        label.attributedText = NSAttributedString(string: "", attributes: [NSAttributedString.Key.kern: 0.34])
         label.font = UIFont(name: "FinkHeavy", size: 28)
         label.textColor = #colorLiteral(red: 0.2666666667, green: 0.262745098, blue: 0.2392156863, alpha: 1)
         label.textAlignment = .left

@@ -12,7 +12,7 @@ final class HemisphereViewController: UIViewController {
     
     fileprivate let whichHemisphereLabel: UILabel = {
         let label = UILabel()
-        label.text = NSLocalizedString("Hemisphere", comment: "Which hemisphere?")
+        label.attributedText = NSAttributedString(string: NSLocalizedString("Hemisphere", comment: "Which hemisphere?"), attributes: [NSAttributedString.Key.kern: 1.66])
         label.font = UIFont(name: "FinkHeavy", size: 24)
         label.textColor = .black
         label.textAlignment = .center

@@ -12,6 +12,7 @@ final class TitleView: UIView {
     
     let critterLabel: UILabel = {
         let label = UILabel()
+        label.attributedText = NSAttributedString(string: "", attributes: [NSAttributedString.Key.kern: -0.26])
         label.layer.borderColor =  #colorLiteral(red: 0.8431372549, green: 0.8431372549, blue: 0.8431372549, alpha: 1)
         label.layer.borderWidth = 4
         label.layer.cornerRadius = 4
