@@ -824,7 +824,7 @@
         "id": 18,
         "name": "Rice Grasshopper",
         "location": "On ground",
-        "price": 160,
+        "price": 400,
         "times": {
             "array": [
                 8,
@@ -1273,7 +1273,7 @@
         "id": 28,
         "name": "Giant Cicada",
         "location": "On trees",
-        "price": 600,
+        "price": 500,
         "times": {
             "array": [
                 8,
@@ -3800,7 +3800,7 @@
         "id": 78,
         "name": "Spider",
         "location": "Shake trees",
-        "price": 480,
+        "price": 600,
         "times": {
             "array": [
                 0,
