@@ -346,6 +346,7 @@
 		454BFB5C24689A010005BA91 /* CritterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454BFB5B24689A010005BA91 /* CritterDetailView.swift */; };
 		454BFB5E24689B6E0005BA91 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454BFB5D24689B6E0005BA91 /* DetailsView.swift */; };
 		456FDE402468C32B007955F8 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456FDE3F2468C32B007955F8 /* CalendarCollectionViewCell.swift */; };
+		4591BB122470385400293CDC /* UIView+ExternalBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591BB112470385400293CDC /* UIView+ExternalBorder.swift */; };
 		45ED846D24510F2D00B1BB2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED846C24510F2D00B1BB2C /* AppDelegate.swift */; };
 		45ED846F24510F2D00B1BB2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED846E24510F2D00B1BB2C /* SceneDelegate.swift */; };
 		45ED847624510F2D00B1BB2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45ED847524510F2D00B1BB2C /* Assets.xcassets */; };
@@ -738,6 +739,7 @@
 		456FDE44246A3153007955F8 /* Main.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Main.png; sourceTree = "<group>"; };
 		456FDE45246A3163007955F8 /* ViewOptions.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ViewOptions.png; sourceTree = "<group>"; };
 		456FDE46246A316D007955F8 /* ButterflyDetailView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButterflyDetailView.png; sourceTree = "<group>"; };
+		4591BB112470385400293CDC /* UIView+ExternalBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ExternalBorder.swift"; sourceTree = "<group>"; };
 		45BA4A33246B80D300F770C9 /* Critterpedia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Critterpedia.entitlements; sourceTree = "<group>"; };
 		45ED846924510F2D00B1BB2C /* Critterpedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Critterpedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45ED846C24510F2D00B1BB2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -1267,6 +1269,7 @@
 			children = (
 				451E5ECF2454C0F40065F4E6 /* UIButton+Animations.swift */,
 				451E5ED52457A5840065F4E6 /* UINavigationBar+Transparent.swift */,
+				4591BB112470385400293CDC /* UIView+ExternalBorder.swift */,
 				4521698F24525448007A808B /* HemispherePicker.swift */,
 				451E5ED12454C3920065F4E6 /* CritterPicker.swift */,
 				451E626B24672CBF0065F4E6 /* SearchButtonBar.swift */,
@@ -1898,6 +1901,7 @@
 				45ED846D24510F2D00B1BB2C /* AppDelegate.swift in Sources */,
 				4521698924525207007A808B /* HemisphereViewController.swift in Sources */,
 				454BFB5C24689A010005BA91 /* CritterDetailView.swift in Sources */,
+				4591BB122470385400293CDC /* UIView+ExternalBorder.swift in Sources */,
 				451E5ED62457A5840065F4E6 /* UINavigationBar+Transparent.swift in Sources */,
 				45ED846F24510F2D00B1BB2C /* SceneDelegate.swift in Sources */,
 				451E5ED42454C6B90065F4E6 /* CritterListingViewController.swift in Sources */,

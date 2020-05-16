@@ -53,7 +53,11 @@ class CalendarCollectionViewCell: UICollectionViewCell {
     }
     
     func setCurrentMonth() {
-        self.layer.borderColor = #colorLiteral(red: 0.8352941176, green: 0.3882352941, blue: 0.2901960784, alpha: 1)
-        self.layer.borderWidth = 2
+        let borderColor = #colorLiteral(red: 0.8352941176, green: 0.3882352941, blue: 0.2901960784, alpha: 1)
+        
+        self.layer.borderColor = borderColor.cgColor
+        self.layer.borderWidth = 4
+        
+        let _ = addExternalBorder(borderWidth: 2, borderColor: borderColor)
     }
 }

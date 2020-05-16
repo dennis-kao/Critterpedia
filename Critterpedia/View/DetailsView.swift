@@ -131,7 +131,7 @@ class DetailsView: UIView {
             locationLabel.heightAnchor.constraint(equalToConstant: labelHeight),
             locationLabel.centerYAnchor.constraint(equalTo: locationView.centerYAnchor),
             locationLabel.leftAnchor.constraint(equalTo: locationView.leftAnchor, constant: 10),
-            locationLabel.widthAnchor.constraint(equalTo: locationView.widthAnchor, multiplier: 0.3),
+            locationLabel.widthAnchor.constraint(equalTo: locationView.widthAnchor, multiplier: 0.4),
         ])
         
         locationView.addSubview(location)
@@ -150,7 +150,7 @@ class DetailsView: UIView {
             valueLabel.heightAnchor.constraint(equalToConstant: labelHeight),
             valueLabel.centerYAnchor.constraint(equalTo: valueView.centerYAnchor),
             valueLabel.leftAnchor.constraint(equalTo: valueView.leftAnchor, constant: 10),
-            valueLabel.widthAnchor.constraint(equalTo: valueView.widthAnchor, multiplier: 0.3),
+            valueLabel.widthAnchor.constraint(equalTo: valueView.widthAnchor, multiplier: 0.4),
         ])
         
         valueView.addSubview(value)
