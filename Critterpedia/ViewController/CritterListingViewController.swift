@@ -8,6 +8,7 @@
 
 import UIKit
 import SHSearchBar
+import GoogleMobileAds
 
 final class CritterListingViewController: UIViewController {
     
@@ -28,6 +29,14 @@ final class CritterListingViewController: UIViewController {
         table.backgroundColor = #colorLiteral(red: 0.9794296622, green: 0.9611505866, blue: 0.882307291, alpha: 1)
         return table
     }()
+    fileprivate var bannerAd: GADBannerView = {
+        let banner = GADBannerView(frame: .zero)
+        // prod id: ca-app-pub-4364291013766259/7607752155
+        // test id: ca-app-pub-3940256099942544/2934735716
+        banner.adUnitID = "ca-app-pub-4364291013766259/7607752155"
+        banner.isAutoloadEnabled = true
+        return banner
+    }()
     
     fileprivate let critterPickerMaxHeight: CGFloat = 200
     fileprivate let critterPickerMinHeight: CGFloat = 130
@@ -46,7 +55,10 @@ final class CritterListingViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(CritterTableViewCell.self, forCellReuseIdentifier: String(describing: CritterTableViewCell.self))
-                        
+        
+        bannerAd.rootViewController = self
+        bannerAd.delegate = self
+        
         view.addSubview(critterPicker)
         critterPicker.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -72,6 +84,40 @@ final class CritterListingViewController: UIViewController {
             tableView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
         ])
+        
+        setupBannerAd()
+    }
+    
+    fileprivate func setupBannerAd() {
+        
+        // remove this line of code for production!
+        // iphone 11 pro: 2aef27f5c3f4ea47515161fc958dd562
+        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ "2aef27f5c3f4ea47515161fc958dd562" ]
+        
+        view.addSubview(bannerAd)
+        bannerAd.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            bannerAd.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            bannerAd.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+        ])
+        
+        // Step 2 - Determine the view width to use for the ad width.
+        let frame = { () -> CGRect in
+          // Here safe area is taken into account, hence the view frame is used
+          // after the view has been laid out.
+          if #available(iOS 11.0, *) {
+            return view.frame.inset(by: view.safeAreaInsets)
+          } else {
+            return view.frame
+          }
+        }()
+        let viewWidth = frame.size.width
+
+        // Step 3 - Get Adaptive GADAdSize and set the ad view.
+        // Here the current interface orientation is used. If the ad is being preloaded
+        // for a future orientation change or different orientation, the function for the
+        // relevant orientation should be used.
+        bannerAd.adSize = GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(viewWidth)
     }
     
     fileprivate func getSelectedCritter() -> [Critter]? {
@@ -304,5 +350,45 @@ extension CritterListingViewController: ButtonBarDelegate {
             filterOption = nil
             tableView.reloadData()
         }
+    }
+}
+
+extension CritterListingViewController: GADBannerViewDelegate {
+    /// Tells the delegate an ad request loaded an ad.
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print("adViewDidReceiveAd")
+                
+        bannerView.alpha = 0
+        UIView.animate(withDuration: 1, animations: {
+          bannerView.alpha = 1
+        })
+    }
+
+    /// Tells the delegate an ad request failed.
+    func adView(_ bannerView: GADBannerView,
+        didFailToReceiveAdWithError error: GADRequestError) {
+      print("adView:didFailToReceiveAdWithError: \(error.localizedDescription)")
+    }
+
+    /// Tells the delegate that a full-screen view will be presented in response
+    /// to the user clicking on an ad.
+    func adViewWillPresentScreen(_ bannerView: GADBannerView) {
+      print("adViewWillPresentScreen")
+    }
+
+    /// Tells the delegate that the full-screen view will be dismissed.
+    func adViewWillDismissScreen(_ bannerView: GADBannerView) {
+      print("adViewWillDismissScreen")
+    }
+
+    /// Tells the delegate that the full-screen view has been dismissed.
+    func adViewDidDismissScreen(_ bannerView: GADBannerView) {
+      print("adViewDidDismissScreen")
+    }
+
+    /// Tells the delegate that a user click will open another app (such as
+    /// the App Store), backgrounding the current app.
+    func adViewWillLeaveApplication(_ bannerView: GADBannerView) {
+      print("adViewWillLeaveApplication")
     }
 }
