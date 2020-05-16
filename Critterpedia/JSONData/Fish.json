@@ -25,7 +25,7 @@
         "name": "Pale Chub",
         "location": "River",
         "shadow_size": "Smallest",
-        "price": 160,
+        "price": 200,
         "times": {
             "array": [
                 9,
@@ -634,7 +634,7 @@
                     8,
                     9
                 ],
-                "text": "April - September"
+                "text": "April - September 15th"
             },
             "southern": {
                 "array": [
@@ -1361,7 +1361,7 @@
         "name": "Pond Smelt",
         "location": "River",
         "shadow_size": "Small",
-        "price": 500,
+        "price": 400,
         "times": {
             "array": [
                 0,
