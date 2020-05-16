@@ -162,7 +162,7 @@
     {
         "id": 4,
         "name": "Peacock Butterfly",
-        "location": "Flying",
+        "location": "Flying by Hybrid Flowers",
         "price": 2500,
         "times": {
             "array": [
@@ -1707,7 +1707,7 @@
     {
         "id": 38,
         "name": "Pondskater",
-        "location": "Ponds",
+        "location": "On Ponds and Rivers",
         "price": 130,
         "times": {
             "array": [
@@ -1751,7 +1751,7 @@
     {
         "id": 39,
         "name": "Diving Beetle",
-        "location": "Ponds and rivers",
+        "location": "On Ponds and Rivers",
         "price": 800,
         "times": {
             "array": [
@@ -2069,7 +2069,7 @@
     {
         "id": 45,
         "name": "Jewel Beetle",
-        "location": "On trees",
+        "location": "On tree stumps",
         "price": 2400,
         "times": {
             "array": [
@@ -2556,7 +2556,7 @@
     {
         "id": 54,
         "name": "Goliath Beetle",
-        "location": "On trees",
+        "location": "On palm trees",
         "price": 8000,
         "times": {
             "array": [
@@ -2784,7 +2784,7 @@
     {
         "id": 59,
         "name": "Cyclommatus Stag",
-        "location": "On trees",
+        "location": "On palm trees",
         "price": 8000,
         "times": {
             "array": [
@@ -2826,7 +2826,7 @@
     {
         "id": 60,
         "name": "Golden Stag",
-        "location": "On trees",
+        "location": "On palm trees",
         "price": 12000,
         "times": {
             "array": [
@@ -2868,7 +2868,7 @@
     {
         "id": 61,
         "name": "Giraffe Stag",
-        "location": "On trees",
+        "location": "On palm trees",
         "price": 12000,
         "times": {
             "array": [
@@ -2952,7 +2952,7 @@
     {
         "id": 63,
         "name": "Horned Atlas",
-        "location": "On trees",
+        "location": "On palm trees",
         "price": 8000,
         "times": {
             "array": [
@@ -2994,7 +2994,7 @@
     {
         "id": 64,
         "name": "Horned Elephant",
-        "location": "On trees",
+        "location": "On palm trees",
         "price": 8000,
         "times": {
             "array": [
@@ -3036,7 +3036,7 @@
     {
         "id": 65,
         "name": "Horned Hercules",
-        "location": "On trees",
+        "location": "On palm trees",
         "price": 12000,
         "times": {
             "array": [
@@ -3078,7 +3078,7 @@
     {
         "id": 66,
         "name": "Walking Stick",
-        "location": "Shake trees",
+        "location": "On trees",
         "price":600,
         "times": {
             "array": [
@@ -3117,7 +3117,7 @@
     {
         "id": 67,
         "name": "Walking Leaf",
-        "location": "Near trees",
+        "location": "Disguised under trees",
         "price": 600,
         "times": {
             "array": [
@@ -3311,7 +3311,7 @@
     {
         "id": 70,
         "name": "Hermit Crab",
-        "location": "Beach",
+        "location": "Disguised on Beach",
         "price": 1000,
         "times": {
             "array": [
@@ -3555,7 +3555,7 @@
     {
         "id": 74,
         "name": "Flea",
-        "location": "On villagers",
+        "location": "On villager's heads",
         "price": 70,
         "times": {
             "array": [
