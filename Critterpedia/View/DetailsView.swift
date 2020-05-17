@@ -107,7 +107,7 @@ class DetailsView: UIView {
         NSLayoutConstraint.activate([
             activeHours.centerYAnchor.constraint(equalTo: activeHoursLabel.centerYAnchor),
             activeHours.leftAnchor.constraint(equalTo: activeHoursLabel.rightAnchor, constant: 10),
-            activeHours.rightAnchor.constraint(equalTo: rightAnchor, constant: 10),
+            activeHours.rightAnchor.constraint(equalTo: rightAnchor, constant: -10),
             activeHours.heightAnchor.constraint(equalTo: activeHoursLabel.heightAnchor),
         ])
 
