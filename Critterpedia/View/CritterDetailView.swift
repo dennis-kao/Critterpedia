@@ -51,10 +51,16 @@ final class CritterDetailView: UIView {
             imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
         ])
 
+        let minDetailsViewHeightAnchor = detailsView.heightAnchor.constraint(greaterThanOrEqualToConstant: 300)
+        minDetailsViewHeightAnchor.priority = UILayoutPriority(rawValue: 1000)
+        let detailsViewHeightAnchor = detailsView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 40)
+        detailsViewHeightAnchor.priority = UILayoutPriority(rawValue: 750)
+
         detailsView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(detailsView)
         NSLayoutConstraint.activate([
-            detailsView.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 40),
+            minDetailsViewHeightAnchor,
+            detailsViewHeightAnchor,
             detailsView.widthAnchor.constraint(equalTo: widthAnchor),
             detailsView.bottomAnchor.constraint(equalTo: bottomAnchor),
         ])
