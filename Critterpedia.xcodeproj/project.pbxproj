@@ -741,7 +741,7 @@
 		456FDE46246A316D007955F8 /* ButterflyDetailView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButterflyDetailView.png; sourceTree = "<group>"; };
 		4591BB112470385400293CDC /* UIView+ExternalBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ExternalBorder.swift"; sourceTree = "<group>"; };
 		45BA4A33246B80D300F770C9 /* Critterpedia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Critterpedia.entitlements; sourceTree = "<group>"; };
-		45ED846924510F2D00B1BB2C /* Critterpedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Critterpedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		45ED846924510F2D00B1BB2C /* CritterDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CritterDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45ED846C24510F2D00B1BB2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45ED846E24510F2D00B1BB2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		45ED847524510F2D00B1BB2C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -1207,7 +1207,7 @@
 		45ED846A24510F2D00B1BB2C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				45ED846924510F2D00B1BB2C /* Critterpedia.app */,
+				45ED846924510F2D00B1BB2C /* CritterDex.app */,
 				45ED847F24510F2D00B1BB2C /* CritterpediaTests.xctest */,
 				45ED848A24510F2D00B1BB2C /* CritterpediaUITests.xctest */,
 				451E62532467211D0065F4E6 /* CritterParsingTests.xctest */,
@@ -1371,7 +1371,7 @@
 			);
 			name = Critterpedia;
 			productName = Critterpedia;
-			productReference = 45ED846924510F2D00B1BB2C /* Critterpedia.app */;
+			productReference = 45ED846924510F2D00B1BB2C /* CritterDex.app */;
 			productType = "com.apple.product-type.application";
 		};
 		45ED847E24510F2D00B1BB2C /* CritterpediaTests */ = {
@@ -2181,7 +2181,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.denny.Critterpedia;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CritterDex;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2203,7 +2203,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.denny.Critterpedia;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CritterDex;
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
