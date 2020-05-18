@@ -77,15 +77,15 @@ final class CritterListingViewController: UIViewController {
             searchButtonBar.heightAnchor.constraint(equalToConstant: 40),
         ])
         
+        setupBannerAd()
+        
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             tableView.topAnchor.constraint(equalTo: searchButtonBar.bottomAnchor, constant: 10 ),
             tableView.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            tableView.bottomAnchor.constraint(equalTo: bannerAd.topAnchor),
         ])
-        
-        setupBannerAd()
     }
     
     fileprivate func setupBannerAd() {
