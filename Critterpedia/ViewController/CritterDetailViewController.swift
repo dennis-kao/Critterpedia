@@ -54,7 +54,7 @@ final class CritterDetailViewController: UIViewController {
         critterDetail.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             critterDetail.widthAnchor.constraint(equalTo: view.safeAreaLayoutGuide.widthAnchor, constant: -10),
-            critterDetail.topAnchor.constraint(equalTo: view.topAnchor, constant: UIApplication.shared.statusBarFrame.size.height),
+            critterDetail.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: -1 * (navigationController?.navigationBar.frame.height ?? 0)),
             critterDetail.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -10),
             critterDetail.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
