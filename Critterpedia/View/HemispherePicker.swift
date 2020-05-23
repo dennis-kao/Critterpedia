@@ -21,7 +21,7 @@ final class HemispherePicker: UIStackView {
     
     fileprivate let northernHemisphereButton: UIButton = {
         let button = UIButton()
-        button.setAttributedTitle(NSAttributedString(string: NSLocalizedString("North", comment: "North hemisphere"), attributes: [NSAttributedString.Key.kern: 1.66]), for: .normal)
+        button.setAttributedTitle(NSAttributedString(string: NSLocalizedString("North", comment: "North hemisphere"), attributes: [NSAttributedString.Key.kern: 1.66, NSAttributedString.Key.foregroundColor: UIColor.black.cgColor]), for: .normal)
         button.titleLabel?.font = UIFont(name: "FinkHeavy", size: 24)
         button.setTitleColor(.black, for: .normal)
         button.backgroundColor = #colorLiteral(red: 0.8745098039, green: 0.8823529412, blue: 0.6352941176, alpha: 1)
@@ -35,7 +35,7 @@ final class HemispherePicker: UIStackView {
     
     fileprivate let southernHemisphereButton: UIButton = {
         let button = UIButton()
-        button.setAttributedTitle(NSAttributedString(string: NSLocalizedString("South", comment: "South hemisphere"), attributes: [NSAttributedString.Key.kern: 1.66]), for: .normal)
+        button.setAttributedTitle(NSAttributedString(string: NSLocalizedString("South", comment: "South hemisphere"), attributes: [NSAttributedString.Key.kern: 1.66, NSAttributedString.Key.foregroundColor: UIColor.black.cgColor]), for: .normal)
         button.titleLabel?.font = UIFont(name: "FinkHeavy", size: 24)
         button.setTitleColor(.black, for: .normal)
         button.backgroundColor = #colorLiteral(red: 0.8745098039, green: 0.8823529412, blue: 0.6352941176, alpha: 1)

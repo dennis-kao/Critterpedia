@@ -20,7 +20,7 @@ final class SplashViewController: UIViewController {
         button.backgroundColor = #colorLiteral(red: 0.8431372549, green: 0.8666666667, blue: 0.5333333333, alpha: 1)
         button.setTitleColor(.black, for: .normal)
         button.titleLabel?.font = UIFont(name: "FinkHeavy", size: 24)
-        button.setAttributedTitle(NSAttributedString(string: NSLocalizedString("Go", comment: "Proceed to the next screen"), attributes: [NSAttributedString.Key.kern: -0.26]), for: .normal)
+        button.setAttributedTitle(NSAttributedString(string: NSLocalizedString("Go", comment: "Proceed to the next screen"), attributes: [NSAttributedString.Key.kern: -0.26, NSAttributedString.Key.foregroundColor: UIColor.black.cgColor]), for: .normal)
         button.startAnimatingPressActions()
         return button
     }()
