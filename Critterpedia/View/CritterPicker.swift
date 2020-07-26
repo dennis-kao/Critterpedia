@@ -29,6 +29,7 @@ final class CritterPicker: UIControl {
     
     fileprivate var circleCenter1 = CGPoint()
     fileprivate var circleCenter2 = CGPoint()
+    fileprivate var circleCenter3 = CGPoint()
     fileprivate var radius = CGFloat()
     fileprivate var imageYOffset: CGFloat = -10
     fileprivate let textYOffset: CGFloat = 20
@@ -41,10 +42,12 @@ final class CritterPicker: UIControl {
         layer.transform = CATransform3DMakeRotation(.pi, 1, 0, 0)
         return layer
     }()
+    fileprivate let octopusLayer = CAShapeLayer()
     
     fileprivate let insectsTextLayer = CATextLayer()
     fileprivate let fishTextLayer = CATextLayer()
-    
+    fileprivate let octopusTextLayer = CATextLayer()
+
     fileprivate var insectShape: UIBezierPath = {
         let shape = UIBezierPath()
         shape.move(to: CGPoint(x: 72.89, y: 5.9))
@@ -165,6 +168,49 @@ final class CritterPicker: UIControl {
         return shape
     }()
     
+    fileprivate var octopusShape: UIBezierPath = {
+        let path = UIBezierPath()
+        path.move(to: CGPoint(x: 21.1, y: 21.6))
+        path.addCurve(to: CGPoint(x: 22.9, y: 23.4), controlPoint1: CGPoint(x: 22.1, y: 21.6), controlPoint2: CGPoint(x: 22.9, y: 22.4))
+        path.addCurve(to: CGPoint(x: 21.1, y: 25.1), controlPoint1: CGPoint(x: 22.9, y: 24.3), controlPoint2: CGPoint(x: 22.1, y: 25.1))
+        path.addCurve(to: CGPoint(x: 19.3, y: 23.4), controlPoint1: CGPoint(x: 20.1, y: 25.1), controlPoint2: CGPoint(x: 19.3, y: 24.3))
+        path.addCurve(to: CGPoint(x: 21.1, y: 21.6), controlPoint1: CGPoint(x: 19.3, y: 22.4), controlPoint2: CGPoint(x: 20.1, y: 21.6))
+        path.move(to: CGPoint(x: 28.9, y: 21.6))
+        path.addCurve(to: CGPoint(x: 30.7, y: 23.4), controlPoint1: CGPoint(x: 29.9, y: 21.6), controlPoint2: CGPoint(x: 30.7, y: 22.4))
+        path.addCurve(to: CGPoint(x: 28.9, y: 25.1), controlPoint1: CGPoint(x: 30.7, y: 24.3), controlPoint2: CGPoint(x: 29.9, y: 25.1))
+        path.addCurve(to: CGPoint(x: 27.1, y: 23.4), controlPoint1: CGPoint(x: 27.9, y: 25.1), controlPoint2: CGPoint(x: 27.1, y: 24.3))
+        path.addCurve(to: CGPoint(x: 28.9, y: 21.6), controlPoint1: CGPoint(x: 27.1, y: 22.4), controlPoint2: CGPoint(x: 27.9, y: 21.6))
+        path.close()
+        path.move(to: CGPoint(x: 35.6, y: 3.6))
+        path.addCurve(to: CGPoint(x: 14.4, y: 3.6), controlPoint1: CGPoint(x: 29.8, y: -1.2), controlPoint2: CGPoint(x: 20.2, y: -1.2))
+        path.addCurve(to: CGPoint(x: 9.5, y: 20), controlPoint1: CGPoint(x: 9.7, y: 7.6), controlPoint2: CGPoint(x: 8, y: 14.1))
+        path.addCurve(to: CGPoint(x: 13.8, y: 27.5), controlPoint1: CGPoint(x: 10.2, y: 22.8), controlPoint2: CGPoint(x: 11.6, y: 25.4))
+        path.addCurve(to: CGPoint(x: 9.9, y: 35.8), controlPoint1: CGPoint(x: 10.8, y: 29.5), controlPoint2: CGPoint(x: 10.4, y: 32.7))
+        path.addCurve(to: CGPoint(x: 3.6, y: 42.5), controlPoint1: CGPoint(x: 9.5, y: 39.1), controlPoint2: CGPoint(x: 9, y: 42.5))
+        path.addCurve(to: CGPoint(x: 3.4, y: 45.6), controlPoint1: CGPoint(x: 1.7, y: 42.6), controlPoint2: CGPoint(x: 1.5, y: 45.3))
+        path.addCurve(to: CGPoint(x: 13.9, y: 38.7), controlPoint1: CGPoint(x: 11, y: 46.6), controlPoint2: CGPoint(x: 12.4, y: 42.6))
+        path.addCurve(to: CGPoint(x: 17, y: 34.1), controlPoint1: CGPoint(x: 14.6, y: 37), controlPoint2: CGPoint(x: 15.3, y: 35.1))
+        path.addCurve(to: CGPoint(x: 17.4, y: 38.9), controlPoint1: CGPoint(x: 16.8, y: 35.6), controlPoint2: CGPoint(x: 17.1, y: 37.2))
+        path.addCurve(to: CGPoint(x: 15.6, y: 47.2), controlPoint1: CGPoint(x: 17.9, y: 41.9), controlPoint2: CGPoint(x: 18.4, y: 45.4))
+        path.addCurve(to: CGPoint(x: 17, y: 49.9), controlPoint1: CGPoint(x: 14, y: 48.2), controlPoint2: CGPoint(x: 15.3, y: 50.6))
+        path.addCurve(to: CGPoint(x: 24, y: 38.5), controlPoint1: CGPoint(x: 21.9, y: 47.7), controlPoint2: CGPoint(x: 23, y: 42.8))
+        path.addCurve(to: CGPoint(x: 25, y: 34.9), controlPoint1: CGPoint(x: 24.3, y: 37.2), controlPoint2: CGPoint(x: 24.6, y: 35.9))
+        path.addCurve(to: CGPoint(x: 26, y: 38.5), controlPoint1: CGPoint(x: 25.4, y: 35.9), controlPoint2: CGPoint(x: 25.7, y: 37.2))
+        path.addCurve(to: CGPoint(x: 33, y: 49.9), controlPoint1: CGPoint(x: 27, y: 42.8), controlPoint2: CGPoint(x: 28.1, y: 47.7))
+        path.addCurve(to: CGPoint(x: 34.4, y: 47.2), controlPoint1: CGPoint(x: 34.7, y: 50.6), controlPoint2: CGPoint(x: 36, y: 48.2))
+        path.addCurve(to: CGPoint(x: 32.6, y: 38.9), controlPoint1: CGPoint(x: 31.6, y: 45.4), controlPoint2: CGPoint(x: 32.1, y: 41.9))
+        path.addCurve(to: CGPoint(x: 33, y: 34.1), controlPoint1: CGPoint(x: 32.9, y: 37.2), controlPoint2: CGPoint(x: 33.2, y: 35.6))
+        path.addCurve(to: CGPoint(x: 36.1, y: 38.7), controlPoint1: CGPoint(x: 34.7, y: 35.1), controlPoint2: CGPoint(x: 35.4, y: 37))
+        path.addCurve(to: CGPoint(x: 46.6, y: 45.6), controlPoint1: CGPoint(x: 37.6, y: 42.6), controlPoint2: CGPoint(x: 39, y: 46.6))
+        path.addCurve(to: CGPoint(x: 46.4, y: 42.5), controlPoint1: CGPoint(x: 48.5, y: 45.3), controlPoint2: CGPoint(x: 48.3, y: 42.6))
+        path.addCurve(to: CGPoint(x: 40.1, y: 35.8), controlPoint1: CGPoint(x: 41, y: 42.4), controlPoint2: CGPoint(x: 40.5, y: 39.1))
+        path.addCurve(to: CGPoint(x: 36.2, y: 27.5), controlPoint1: CGPoint(x: 39.6, y: 32.7), controlPoint2: CGPoint(x: 39.2, y: 29.5))
+        path.addCurve(to: CGPoint(x: 40.5, y: 20), controlPoint1: CGPoint(x: 38.4, y: 25.4), controlPoint2: CGPoint(x: 39.8, y: 22.8))
+        path.addCurve(to: CGPoint(x: 35.6, y: 3.6), controlPoint1: CGPoint(x: 42, y: 14.1), controlPoint2: CGPoint(x: 40.3, y: 7.6))
+        path.close()
+        return path
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -183,6 +229,8 @@ final class CritterPicker: UIControl {
         layer.addSublayer(insectsTextLayer)
         layer.addSublayer(fishLayer)
         layer.addSublayer(fishTextLayer)
+        layer.addSublayer(octopusLayer)
+        layer.addSublayer(octopusTextLayer)
     }
     
     override func layoutSubviews() {
@@ -192,16 +240,19 @@ final class CritterPicker: UIControl {
         updateTextLayer(textLayer: insectsTextLayer, point: CGPoint(x: insectsLayer.frame.midX, y: insectsLayer.frame.maxY + textYOffset), text: NSLocalizedString("Insects", comment: "Critter type Insects"))
         updateShapeLayer(shape: fishShape, layer: fishLayer, circleCenter: CGPoint(x: circleCenter2.x, y: circleCenter2.y + insectsLayer.bounds.height * 0.125))
         updateTextLayer(textLayer: fishTextLayer, point: CGPoint(x: fishLayer.frame.midX, y: insectsLayer.frame.maxY + textYOffset), text: NSLocalizedString("Fish", comment: "Critter type Fish"))
+        updateShapeLayer(shape: octopusShape, layer: octopusLayer, circleCenter: CGPoint(x: circleCenter3.x, y: circleCenter3.y))
+        updateTextLayer(textLayer: octopusTextLayer, point: CGPoint(x: octopusLayer.frame.midX, y: insectsLayer.frame.maxY + textYOffset), text: NSLocalizedString("Sea", comment: "Critter type Sea"))
     }
     
     fileprivate func updateBackgroundCircleLayer() {
                 
-        self.radius = min(bounds.width, bounds.height) / 2.5
+        self.radius = min(bounds.width, bounds.height) / 3.5
         let circleGap: CGFloat = self.radius * 0.80
 
-        self.circleCenter1 = CGPoint(x: bounds.midX - circleGap, y: bounds.midY)
-        self.circleCenter2 = CGPoint(x: bounds.midX + circleGap, y: bounds.midY)
-                
+        self.circleCenter1 = CGPoint(x: bounds.midX - circleGap - radius, y: bounds.midY)
+        self.circleCenter2 = CGPoint(x: bounds.midX, y: bounds.midY)
+        self.circleCenter3 = CGPoint(x: bounds.midX + circleGap + radius, y: bounds.midY)
+
         let circlePath1 = UIBezierPath(arcCenter: circleCenter1,
             radius: self.radius,
         startAngle: 0,
@@ -213,10 +264,17 @@ final class CritterPicker: UIControl {
         startAngle: 0,
           endAngle: 360,
          clockwise: true)
-        
+
+        let circlePath3 = UIBezierPath(arcCenter: circleCenter3,
+            radius: self.radius,
+        startAngle: 0,
+          endAngle: 360,
+         clockwise: true)
+
         let combined = UIBezierPath()
         combined.append(circlePath1)
         combined.append(circlePath2)
+        combined.append(circlePath3)
         combined.usesEvenOddFillRule = false
                 
         circleBackgroundLayer.path = combined.cgPath
@@ -232,9 +290,20 @@ final class CritterPicker: UIControl {
                 insectsTextLayer.foregroundColor = selectedColor.cgColor
                 fishLayer.fillColor = unselectedColor.cgColor
                 fishTextLayer.foregroundColor = unselectedColor.cgColor
+                octopusLayer.fillColor = unselectedColor.cgColor
+                octopusTextLayer.foregroundColor = unselectedColor.cgColor
             case .Fish:
                 fishLayer.fillColor = selectedColor.cgColor
                 fishTextLayer.foregroundColor = selectedColor.cgColor
+                insectsLayer.fillColor = unselectedColor.cgColor
+                insectsTextLayer.foregroundColor = unselectedColor.cgColor
+                octopusLayer.fillColor = unselectedColor.cgColor
+                octopusTextLayer.foregroundColor = unselectedColor.cgColor
+            case .Sea:
+                octopusLayer.fillColor = selectedColor.cgColor
+                octopusTextLayer.foregroundColor = selectedColor.cgColor
+                fishLayer.fillColor = unselectedColor.cgColor
+                fishTextLayer.foregroundColor = unselectedColor.cgColor
                 insectsLayer.fillColor = unselectedColor.cgColor
                 insectsTextLayer.foregroundColor = unselectedColor.cgColor
         }
@@ -279,6 +348,8 @@ final class CritterPicker: UIControl {
             selectedCritter = .Insect
         } else if (layer == fishLayer || layer == fishTextLayer) && selectedCritter != .Fish {
             selectedCritter = .Fish
+        } else if (layer == octopusLayer || layer == octopusTextLayer) && selectedCritter != .Sea {
+            selectedCritter = .Sea
         }
     }
 }

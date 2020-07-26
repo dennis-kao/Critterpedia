@@ -12,8 +12,9 @@ import GoogleMobileAds
 
 final class CritterListingViewController: UIViewController {
     
-    fileprivate var insectCritters = CritterParser.loadJson(filename: "Insects")
-    fileprivate var fishCritters = CritterParser.loadJson(filename: "Fish")
+    fileprivate var bugCritters = CritterParser.loadJson(filename: "bugs")
+    fileprivate var fishCritters = CritterParser.loadJson(filename: "fish")
+    fileprivate var seaCritters = CritterParser.loadJson(filename: "sea")
     fileprivate var filteredCritters: [Critter] = []
     
     var hemisphere: Hemisphere? = nil
@@ -38,8 +39,8 @@ final class CritterListingViewController: UIViewController {
         return banner
     }()
     
-    fileprivate let critterPickerMaxHeight: CGFloat = 200
-    fileprivate let critterPickerMinHeight: CGFloat = 130
+    fileprivate let critterPickerMaxHeight: CGFloat = 210
+    fileprivate let critterPickerMinHeight: CGFloat = 170
     fileprivate lazy var pickerHeightAnchor: NSLayoutConstraint = critterPicker.heightAnchor.constraint(equalToConstant: critterPickerMaxHeight)
     
     fileprivate var filterOption: Critter.FilterOptions? = nil
@@ -92,7 +93,7 @@ final class CritterListingViewController: UIViewController {
         
         // remove this line of code for production!
         // iphone 11 pro: 2aef27f5c3f4ea47515161fc958dd562
-        GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ "2aef27f5c3f4ea47515161fc958dd562" ]
+        // GADMobileAds.sharedInstance().requestConfiguration.testDeviceIdentifiers = [ "2aef27f5c3f4ea47515161fc958dd562" ]
         
         view.addSubview(bannerAd)
         bannerAd.translatesAutoresizingMaskIntoConstraints = false
@@ -126,7 +127,9 @@ final class CritterListingViewController: UIViewController {
             case .Fish:
                 return fishCritters
             case .Insect:
-                return insectCritters
+                return bugCritters
+            case .Sea:
+                return seaCritters
         }
     }
     
@@ -138,7 +141,9 @@ final class CritterListingViewController: UIViewController {
             case .Fish:
                 fishCritters?.sort(by: sort)
             case .Insect:
-                insectCritters?.sort(by: sort)
+                bugCritters?.sort(by: sort)
+            case .Sea:
+                seaCritters?.sort(by: sort)
         }
         
         tableView.reloadData()
@@ -250,7 +255,9 @@ extension CritterListingViewController: UITableViewDelegate, UITableViewDataSour
                    case .Fish:
                        return fishCritters![indexPath.item]
                    case .Insect:
-                       return insectCritters![indexPath.item]
+                       return bugCritters![indexPath.item]
+                   case .Sea:
+                        return seaCritters![indexPath.item]
                 }
             }
         }()
@@ -270,7 +277,9 @@ extension CritterListingViewController: UITableViewDelegate, UITableViewDataSour
                    case .Fish:
                        return fishCritters![indexPath.item]
                    case .Insect:
-                       return insectCritters![indexPath.item]
+                       return bugCritters![indexPath.item]
+                    case .Sea:
+                        return seaCritters![indexPath.item]
                 }
             }
         }()

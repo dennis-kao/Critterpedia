@@ -11,8 +11,6 @@
 		451E5ED22454C3920065F4E6 /* CritterPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E5ED12454C3920065F4E6 /* CritterPicker.swift */; };
 		451E5ED42454C6B90065F4E6 /* CritterListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E5ED32454C6B90065F4E6 /* CritterListingViewController.swift */; };
 		451E5ED62457A5840065F4E6 /* UINavigationBar+Transparent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E5ED52457A5840065F4E6 /* UINavigationBar+Transparent.swift */; };
-		451E5EDA245A37C80065F4E6 /* Fish.json in Resources */ = {isa = PBXBuildFile; fileRef = 451E5ED8245A37C80065F4E6 /* Fish.json */; };
-		451E5EDB245A37C80065F4E6 /* Insects.json in Resources */ = {isa = PBXBuildFile; fileRef = 451E5ED9245A37C80065F4E6 /* Insects.json */; };
 		451E5EDD245A3D170065F4E6 /* Critter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E5EDC245A3D170065F4E6 /* Critter.swift */; };
 		451E5F212463755B0065F4E6 /* CritterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 451E5F202463755B0065F4E6 /* CritterTableViewCell.swift */; };
 		451E60172464C8930065F4E6 /* icon-hornedhercules.png in Resources */ = {isa = PBXBuildFile; fileRef = 451E5FC72464C88E0065F4E6 /* icon-hornedhercules.png */; };
@@ -347,6 +345,89 @@
 		454BFB5E24689B6E0005BA91 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454BFB5D24689B6E0005BA91 /* DetailsView.swift */; };
 		456FDE402468C32B007955F8 /* CalendarCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456FDE3F2468C32B007955F8 /* CalendarCollectionViewCell.swift */; };
 		4591BB122470385400293CDC /* UIView+ExternalBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4591BB112470385400293CDC /* UIView+ExternalBorder.swift */; };
+		459393A724CDECC80080DE79 /* sea.json in Resources */ = {isa = PBXBuildFile; fileRef = 459393A424CDECC70080DE79 /* sea.json */; };
+		459393A824CDECC80080DE79 /* bugs.json in Resources */ = {isa = PBXBuildFile; fileRef = 459393A524CDECC70080DE79 /* bugs.json */; };
+		459393A924CDECC80080DE79 /* fish.json in Resources */ = {isa = PBXBuildFile; fileRef = 459393A624CDECC80080DE79 /* fish.json */; };
+		45DA0F3024CDFBB0006A1291 /* icon-umbrellaoctopus.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F0824CDFBAB006A1291 /* icon-umbrellaoctopus.png */; };
+		45DA0F3124CDFBB0006A1291 /* icon-acornbarnacle.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F0924CDFBAB006A1291 /* icon-acornbarnacle.png */; };
+		45DA0F3224CDFBB0006A1291 /* icon-seacucumber.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F0A24CDFBAB006A1291 /* icon-seacucumber.png */; };
+		45DA0F3324CDFBB0006A1291 /* icon-redkingcrab.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F0B24CDFBAC006A1291 /* icon-redkingcrab.png */; };
+		45DA0F3424CDFBB0006A1291 /* icon-scallop.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F0C24CDFBAC006A1291 /* icon-scallop.png */; };
+		45DA0F3524CDFBB0006A1291 /* icon-seaslug.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F0D24CDFBAC006A1291 /* icon-seaslug.png */; };
+		45DA0F3624CDFBB0006A1291 /* icon-abalone.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F0E24CDFBAC006A1291 /* icon-abalone.png */; };
+		45DA0F3724CDFBB0006A1291 /* icon-moonjellyfish.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F0F24CDFBAC006A1291 /* icon-moonjellyfish.png */; };
+		45DA0F3824CDFBB0006A1291 /* icon-gazamicrab.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F1024CDFBAC006A1291 /* icon-gazamicrab.png */; };
+		45DA0F3924CDFBB0006A1291 /* icon-turbanshell.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F1124CDFBAC006A1291 /* icon-turbanshell.png */; };
+		45DA0F3A24CDFBB0006A1291 /* icon-pearloyster.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F1224CDFBAC006A1291 /* icon-pearloyster.png */; };
+		45DA0F3B24CDFBB0006A1291 /* icon-seaanemone.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F1324CDFBAD006A1291 /* icon-seaanemone.png */; };
+		45DA0F3C24CDFBB0006A1291 /* icon-giantisopod.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F1424CDFBAD006A1291 /* icon-giantisopod.png */; };
+		45DA0F3D24CDFBB0006A1291 /* icon-spinylobster.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F1524CDFBAD006A1291 /* icon-spinylobster.png */; };
+		45DA0F3E24CDFBB0006A1291 /* icon-mussel.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F1624CDFBAD006A1291 /* icon-mussel.png */; };
+		45DA0F3F24CDFBB0006A1291 /* icon-oyster.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F1724CDFBAD006A1291 /* icon-oyster.png */; };
+		45DA0F4024CDFBB0006A1291 /* icon-fireflysquid.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F1824CDFBAD006A1291 /* icon-fireflysquid.png */; };
+		45DA0F4124CDFBB0006A1291 /* icon-seapineapple.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F1924CDFBAD006A1291 /* icon-seapineapple.png */; };
+		45DA0F4224CDFBB0006A1291 /* icon-snowcrab.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F1A24CDFBAD006A1291 /* icon-snowcrab.png */; };
+		45DA0F4324CDFBB0006A1291 /* icon-chamberednautilus.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F1B24CDFBAD006A1291 /* icon-chamberednautilus.png */; };
+		45DA0F4424CDFBB0006A1291 /* icon-dungenesscrab.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F1C24CDFBAE006A1291 /* icon-dungenesscrab.png */; };
+		45DA0F4524CDFBB0006A1291 /* icon-seagrapes.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F1D24CDFBAE006A1291 /* icon-seagrapes.png */; };
+		45DA0F4624CDFBB0006A1291 /* icon-mantisshrimp.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F1E24CDFBAE006A1291 /* icon-mantisshrimp.png */; };
+		45DA0F4724CDFBB0006A1291 /* icon-octopus.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F1F24CDFBAE006A1291 /* icon-octopus.png */; };
+		45DA0F4824CDFBB0006A1291 /* icon-venusflowerbasket.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F2024CDFBAE006A1291 /* icon-venusflowerbasket.png */; };
+		45DA0F4924CDFBB0006A1291 /* icon-seapig.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F2124CDFBAE006A1291 /* icon-seapig.png */; };
+		45DA0F4A24CDFBB0006A1291 /* icon-flatworm.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F2224CDFBAE006A1291 /* icon-flatworm.png */; };
+		45DA0F4B24CDFBB0006A1291 /* icon-seastar.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F2324CDFBAE006A1291 /* icon-seastar.png */; };
+		45DA0F4C24CDFBB0006A1291 /* icon-spottedgardeneel.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F2424CDFBAF006A1291 /* icon-spottedgardeneel.png */; };
+		45DA0F4D24CDFBB0006A1291 /* icon-gigasgiantclam.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F2524CDFBAF006A1291 /* icon-gigasgiantclam.png */; };
+		45DA0F4E24CDFBB0006A1291 /* icon-vampiresquid.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F2624CDFBAF006A1291 /* icon-vampiresquid.png */; };
+		45DA0F4F24CDFBB0006A1291 /* icon-horseshoecrab.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F2724CDFBAF006A1291 /* icon-horseshoecrab.png */; };
+		45DA0F5024CDFBB0006A1291 /* icon-spidercrab.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F2824CDFBAF006A1291 /* icon-spidercrab.png */; };
+		45DA0F5124CDFBB0006A1291 /* icon-lobster.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F2924CDFBAF006A1291 /* icon-lobster.png */; };
+		45DA0F5224CDFBB0006A1291 /* icon-whelk.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F2A24CDFBAF006A1291 /* icon-whelk.png */; };
+		45DA0F5324CDFBB0006A1291 /* icon-seaurchin.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F2B24CDFBAF006A1291 /* icon-seaurchin.png */; };
+		45DA0F5424CDFBB0006A1291 /* icon-slatepencilurchin.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F2C24CDFBAF006A1291 /* icon-slatepencilurchin.png */; };
+		45DA0F5524CDFBB0006A1291 /* icon-seaweed.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F2D24CDFBB0006A1291 /* icon-seaweed.png */; };
+		45DA0F5624CDFBB0006A1291 /* icon-sweetshrimp.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F2E24CDFBB0006A1291 /* icon-sweetshrimp.png */; };
+		45DA0F5724CDFBB0006A1291 /* icon-tigerprawn.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F2F24CDFBB0006A1291 /* icon-tigerprawn.png */; };
+		45DA0F8024CDFBC2006A1291 /* gigasgiantclam.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F5824CDFBBE006A1291 /* gigasgiantclam.png */; };
+		45DA0F8124CDFBC2006A1291 /* venusflowerbasket.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F5924CDFBBE006A1291 /* venusflowerbasket.png */; };
+		45DA0F8224CDFBC2006A1291 /* spidercrab.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F5A24CDFBBE006A1291 /* spidercrab.png */; };
+		45DA0F8324CDFBC2006A1291 /* whelk.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F5B24CDFBBE006A1291 /* whelk.png */; };
+		45DA0F8424CDFBC2006A1291 /* umbrellaoctopus.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F5C24CDFBBE006A1291 /* umbrellaoctopus.png */; };
+		45DA0F8524CDFBC2006A1291 /* sweetshrimp.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F5D24CDFBBE006A1291 /* sweetshrimp.png */; };
+		45DA0F8624CDFBC2006A1291 /* giantisopod.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F5E24CDFBBE006A1291 /* giantisopod.png */; };
+		45DA0F8724CDFBC2006A1291 /* seaanemone.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F5F24CDFBBF006A1291 /* seaanemone.png */; };
+		45DA0F8824CDFBC2006A1291 /* spinylobster.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F6024CDFBBF006A1291 /* spinylobster.png */; };
+		45DA0F8924CDFBC2006A1291 /* tigerprawn.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F6124CDFBBF006A1291 /* tigerprawn.png */; };
+		45DA0F8A24CDFBC2006A1291 /* oyster.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F6224CDFBBF006A1291 /* oyster.png */; };
+		45DA0F8B24CDFBC2006A1291 /* mantisshrimp.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F6324CDFBBF006A1291 /* mantisshrimp.png */; };
+		45DA0F8C24CDFBC2006A1291 /* vampiresquid.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F6424CDFBBF006A1291 /* vampiresquid.png */; };
+		45DA0F8D24CDFBC2006A1291 /* redkingcrab.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F6524CDFBBF006A1291 /* redkingcrab.png */; };
+		45DA0F8E24CDFBC2006A1291 /* gazamicrab.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F6624CDFBBF006A1291 /* gazamicrab.png */; };
+		45DA0F8F24CDFBC2006A1291 /* seastar.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F6724CDFBBF006A1291 /* seastar.png */; };
+		45DA0F9024CDFBC2006A1291 /* snowcrab.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F6824CDFBC0006A1291 /* snowcrab.png */; };
+		45DA0F9124CDFBC2006A1291 /* seapineapple.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F6924CDFBC0006A1291 /* seapineapple.png */; };
+		45DA0F9224CDFBC2006A1291 /* turbanshell.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F6A24CDFBC0006A1291 /* turbanshell.png */; };
+		45DA0F9324CDFBC2006A1291 /* scallop.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F6B24CDFBC0006A1291 /* scallop.png */; };
+		45DA0F9424CDFBC2006A1291 /* octopus.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F6C24CDFBC0006A1291 /* octopus.png */; };
+		45DA0F9524CDFBC2006A1291 /* lobster.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F6D24CDFBC0006A1291 /* lobster.png */; };
+		45DA0F9624CDFBC2006A1291 /* seaslug.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F6E24CDFBC0006A1291 /* seaslug.png */; };
+		45DA0F9724CDFBC2006A1291 /* seaweed.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F6F24CDFBC0006A1291 /* seaweed.png */; };
+		45DA0F9824CDFBC2006A1291 /* dungenesscrab.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F7024CDFBC1006A1291 /* dungenesscrab.png */; };
+		45DA0F9924CDFBC2006A1291 /* chamberednautilus.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F7124CDFBC1006A1291 /* chamberednautilus.png */; };
+		45DA0F9A24CDFBC2006A1291 /* flatworm.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F7224CDFBC1006A1291 /* flatworm.png */; };
+		45DA0F9B24CDFBC2006A1291 /* pearloyster.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F7324CDFBC1006A1291 /* pearloyster.png */; };
+		45DA0F9C24CDFBC2006A1291 /* fireflysquid.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F7424CDFBC1006A1291 /* fireflysquid.png */; };
+		45DA0F9D24CDFBC2006A1291 /* mussel.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F7524CDFBC1006A1291 /* mussel.png */; };
+		45DA0F9E24CDFBC2006A1291 /* acornbarnacle.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F7624CDFBC1006A1291 /* acornbarnacle.png */; };
+		45DA0F9F24CDFBC2006A1291 /* abalone.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F7724CDFBC1006A1291 /* abalone.png */; };
+		45DA0FA024CDFBC2006A1291 /* slatepencilurchin.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F7824CDFBC2006A1291 /* slatepencilurchin.png */; };
+		45DA0FA124CDFBC2006A1291 /* seapig.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F7924CDFBC2006A1291 /* seapig.png */; };
+		45DA0FA224CDFBC2006A1291 /* seagrapes.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F7A24CDFBC2006A1291 /* seagrapes.png */; };
+		45DA0FA324CDFBC2006A1291 /* seaurchin.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F7B24CDFBC2006A1291 /* seaurchin.png */; };
+		45DA0FA424CDFBC2006A1291 /* horseshoecrab.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F7C24CDFBC2006A1291 /* horseshoecrab.png */; };
+		45DA0FA524CDFBC2006A1291 /* seacucumber.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F7D24CDFBC2006A1291 /* seacucumber.png */; };
+		45DA0FA624CDFBC2006A1291 /* spottedgardeneel.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F7E24CDFBC2006A1291 /* spottedgardeneel.png */; };
+		45DA0FA724CDFBC2006A1291 /* moonjellyfish.png in Resources */ = {isa = PBXBuildFile; fileRef = 45DA0F7F24CDFBC2006A1291 /* moonjellyfish.png */; };
 		45ED846D24510F2D00B1BB2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED846C24510F2D00B1BB2C /* AppDelegate.swift */; };
 		45ED846F24510F2D00B1BB2C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45ED846E24510F2D00B1BB2C /* SceneDelegate.swift */; };
 		45ED847624510F2D00B1BB2C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45ED847524510F2D00B1BB2C /* Assets.xcassets */; };
@@ -395,8 +476,6 @@
 		451E5ED12454C3920065F4E6 /* CritterPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CritterPicker.swift; sourceTree = "<group>"; };
 		451E5ED32454C6B90065F4E6 /* CritterListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CritterListingViewController.swift; sourceTree = "<group>"; };
 		451E5ED52457A5840065F4E6 /* UINavigationBar+Transparent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Transparent.swift"; sourceTree = "<group>"; };
-		451E5ED8245A37C80065F4E6 /* Fish.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Fish.json; sourceTree = "<group>"; };
-		451E5ED9245A37C80065F4E6 /* Insects.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Insects.json; sourceTree = "<group>"; };
 		451E5EDC245A3D170065F4E6 /* Critter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Critter.swift; sourceTree = "<group>"; };
 		451E5F202463755B0065F4E6 /* CritterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CritterTableViewCell.swift; sourceTree = "<group>"; };
 		451E5FC72464C88E0065F4E6 /* icon-hornedhercules.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-hornedhercules.png"; sourceTree = "<group>"; };
@@ -736,7 +815,90 @@
 		454BFB5D24689B6E0005BA91 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
 		456FDE3F2468C32B007955F8 /* CalendarCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCollectionViewCell.swift; sourceTree = "<group>"; };
 		4591BB112470385400293CDC /* UIView+ExternalBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ExternalBorder.swift"; sourceTree = "<group>"; };
+		459393A424CDECC70080DE79 /* sea.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sea.json; sourceTree = "<group>"; };
+		459393A524CDECC70080DE79 /* bugs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bugs.json; sourceTree = "<group>"; };
+		459393A624CDECC80080DE79 /* fish.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fish.json; sourceTree = "<group>"; };
 		45BA4A33246B80D300F770C9 /* Critterpedia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Critterpedia.entitlements; sourceTree = "<group>"; };
+		45DA0F0824CDFBAB006A1291 /* icon-umbrellaoctopus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-umbrellaoctopus.png"; sourceTree = "<group>"; };
+		45DA0F0924CDFBAB006A1291 /* icon-acornbarnacle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-acornbarnacle.png"; sourceTree = "<group>"; };
+		45DA0F0A24CDFBAB006A1291 /* icon-seacucumber.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-seacucumber.png"; sourceTree = "<group>"; };
+		45DA0F0B24CDFBAC006A1291 /* icon-redkingcrab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-redkingcrab.png"; sourceTree = "<group>"; };
+		45DA0F0C24CDFBAC006A1291 /* icon-scallop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-scallop.png"; sourceTree = "<group>"; };
+		45DA0F0D24CDFBAC006A1291 /* icon-seaslug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-seaslug.png"; sourceTree = "<group>"; };
+		45DA0F0E24CDFBAC006A1291 /* icon-abalone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-abalone.png"; sourceTree = "<group>"; };
+		45DA0F0F24CDFBAC006A1291 /* icon-moonjellyfish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-moonjellyfish.png"; sourceTree = "<group>"; };
+		45DA0F1024CDFBAC006A1291 /* icon-gazamicrab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-gazamicrab.png"; sourceTree = "<group>"; };
+		45DA0F1124CDFBAC006A1291 /* icon-turbanshell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-turbanshell.png"; sourceTree = "<group>"; };
+		45DA0F1224CDFBAC006A1291 /* icon-pearloyster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-pearloyster.png"; sourceTree = "<group>"; };
+		45DA0F1324CDFBAD006A1291 /* icon-seaanemone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-seaanemone.png"; sourceTree = "<group>"; };
+		45DA0F1424CDFBAD006A1291 /* icon-giantisopod.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-giantisopod.png"; sourceTree = "<group>"; };
+		45DA0F1524CDFBAD006A1291 /* icon-spinylobster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-spinylobster.png"; sourceTree = "<group>"; };
+		45DA0F1624CDFBAD006A1291 /* icon-mussel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-mussel.png"; sourceTree = "<group>"; };
+		45DA0F1724CDFBAD006A1291 /* icon-oyster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-oyster.png"; sourceTree = "<group>"; };
+		45DA0F1824CDFBAD006A1291 /* icon-fireflysquid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-fireflysquid.png"; sourceTree = "<group>"; };
+		45DA0F1924CDFBAD006A1291 /* icon-seapineapple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-seapineapple.png"; sourceTree = "<group>"; };
+		45DA0F1A24CDFBAD006A1291 /* icon-snowcrab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-snowcrab.png"; sourceTree = "<group>"; };
+		45DA0F1B24CDFBAD006A1291 /* icon-chamberednautilus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-chamberednautilus.png"; sourceTree = "<group>"; };
+		45DA0F1C24CDFBAE006A1291 /* icon-dungenesscrab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-dungenesscrab.png"; sourceTree = "<group>"; };
+		45DA0F1D24CDFBAE006A1291 /* icon-seagrapes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-seagrapes.png"; sourceTree = "<group>"; };
+		45DA0F1E24CDFBAE006A1291 /* icon-mantisshrimp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-mantisshrimp.png"; sourceTree = "<group>"; };
+		45DA0F1F24CDFBAE006A1291 /* icon-octopus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-octopus.png"; sourceTree = "<group>"; };
+		45DA0F2024CDFBAE006A1291 /* icon-venusflowerbasket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-venusflowerbasket.png"; sourceTree = "<group>"; };
+		45DA0F2124CDFBAE006A1291 /* icon-seapig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-seapig.png"; sourceTree = "<group>"; };
+		45DA0F2224CDFBAE006A1291 /* icon-flatworm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-flatworm.png"; sourceTree = "<group>"; };
+		45DA0F2324CDFBAE006A1291 /* icon-seastar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-seastar.png"; sourceTree = "<group>"; };
+		45DA0F2424CDFBAF006A1291 /* icon-spottedgardeneel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-spottedgardeneel.png"; sourceTree = "<group>"; };
+		45DA0F2524CDFBAF006A1291 /* icon-gigasgiantclam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-gigasgiantclam.png"; sourceTree = "<group>"; };
+		45DA0F2624CDFBAF006A1291 /* icon-vampiresquid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-vampiresquid.png"; sourceTree = "<group>"; };
+		45DA0F2724CDFBAF006A1291 /* icon-horseshoecrab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-horseshoecrab.png"; sourceTree = "<group>"; };
+		45DA0F2824CDFBAF006A1291 /* icon-spidercrab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-spidercrab.png"; sourceTree = "<group>"; };
+		45DA0F2924CDFBAF006A1291 /* icon-lobster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-lobster.png"; sourceTree = "<group>"; };
+		45DA0F2A24CDFBAF006A1291 /* icon-whelk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-whelk.png"; sourceTree = "<group>"; };
+		45DA0F2B24CDFBAF006A1291 /* icon-seaurchin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-seaurchin.png"; sourceTree = "<group>"; };
+		45DA0F2C24CDFBAF006A1291 /* icon-slatepencilurchin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-slatepencilurchin.png"; sourceTree = "<group>"; };
+		45DA0F2D24CDFBB0006A1291 /* icon-seaweed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-seaweed.png"; sourceTree = "<group>"; };
+		45DA0F2E24CDFBB0006A1291 /* icon-sweetshrimp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-sweetshrimp.png"; sourceTree = "<group>"; };
+		45DA0F2F24CDFBB0006A1291 /* icon-tigerprawn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-tigerprawn.png"; sourceTree = "<group>"; };
+		45DA0F5824CDFBBE006A1291 /* gigasgiantclam.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gigasgiantclam.png; sourceTree = "<group>"; };
+		45DA0F5924CDFBBE006A1291 /* venusflowerbasket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = venusflowerbasket.png; sourceTree = "<group>"; };
+		45DA0F5A24CDFBBE006A1291 /* spidercrab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spidercrab.png; sourceTree = "<group>"; };
+		45DA0F5B24CDFBBE006A1291 /* whelk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whelk.png; sourceTree = "<group>"; };
+		45DA0F5C24CDFBBE006A1291 /* umbrellaoctopus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = umbrellaoctopus.png; sourceTree = "<group>"; };
+		45DA0F5D24CDFBBE006A1291 /* sweetshrimp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sweetshrimp.png; sourceTree = "<group>"; };
+		45DA0F5E24CDFBBE006A1291 /* giantisopod.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = giantisopod.png; sourceTree = "<group>"; };
+		45DA0F5F24CDFBBF006A1291 /* seaanemone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seaanemone.png; sourceTree = "<group>"; };
+		45DA0F6024CDFBBF006A1291 /* spinylobster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spinylobster.png; sourceTree = "<group>"; };
+		45DA0F6124CDFBBF006A1291 /* tigerprawn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tigerprawn.png; sourceTree = "<group>"; };
+		45DA0F6224CDFBBF006A1291 /* oyster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oyster.png; sourceTree = "<group>"; };
+		45DA0F6324CDFBBF006A1291 /* mantisshrimp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mantisshrimp.png; sourceTree = "<group>"; };
+		45DA0F6424CDFBBF006A1291 /* vampiresquid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vampiresquid.png; sourceTree = "<group>"; };
+		45DA0F6524CDFBBF006A1291 /* redkingcrab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redkingcrab.png; sourceTree = "<group>"; };
+		45DA0F6624CDFBBF006A1291 /* gazamicrab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gazamicrab.png; sourceTree = "<group>"; };
+		45DA0F6724CDFBBF006A1291 /* seastar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seastar.png; sourceTree = "<group>"; };
+		45DA0F6824CDFBC0006A1291 /* snowcrab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = snowcrab.png; sourceTree = "<group>"; };
+		45DA0F6924CDFBC0006A1291 /* seapineapple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seapineapple.png; sourceTree = "<group>"; };
+		45DA0F6A24CDFBC0006A1291 /* turbanshell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turbanshell.png; sourceTree = "<group>"; };
+		45DA0F6B24CDFBC0006A1291 /* scallop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = scallop.png; sourceTree = "<group>"; };
+		45DA0F6C24CDFBC0006A1291 /* octopus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = octopus.png; sourceTree = "<group>"; };
+		45DA0F6D24CDFBC0006A1291 /* lobster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lobster.png; sourceTree = "<group>"; };
+		45DA0F6E24CDFBC0006A1291 /* seaslug.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seaslug.png; sourceTree = "<group>"; };
+		45DA0F6F24CDFBC0006A1291 /* seaweed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seaweed.png; sourceTree = "<group>"; };
+		45DA0F7024CDFBC1006A1291 /* dungenesscrab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dungenesscrab.png; sourceTree = "<group>"; };
+		45DA0F7124CDFBC1006A1291 /* chamberednautilus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chamberednautilus.png; sourceTree = "<group>"; };
+		45DA0F7224CDFBC1006A1291 /* flatworm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flatworm.png; sourceTree = "<group>"; };
+		45DA0F7324CDFBC1006A1291 /* pearloyster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pearloyster.png; sourceTree = "<group>"; };
+		45DA0F7424CDFBC1006A1291 /* fireflysquid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fireflysquid.png; sourceTree = "<group>"; };
+		45DA0F7524CDFBC1006A1291 /* mussel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mussel.png; sourceTree = "<group>"; };
+		45DA0F7624CDFBC1006A1291 /* acornbarnacle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = acornbarnacle.png; sourceTree = "<group>"; };
+		45DA0F7724CDFBC1006A1291 /* abalone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = abalone.png; sourceTree = "<group>"; };
+		45DA0F7824CDFBC2006A1291 /* slatepencilurchin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = slatepencilurchin.png; sourceTree = "<group>"; };
+		45DA0F7924CDFBC2006A1291 /* seapig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seapig.png; sourceTree = "<group>"; };
+		45DA0F7A24CDFBC2006A1291 /* seagrapes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seagrapes.png; sourceTree = "<group>"; };
+		45DA0F7B24CDFBC2006A1291 /* seaurchin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seaurchin.png; sourceTree = "<group>"; };
+		45DA0F7C24CDFBC2006A1291 /* horseshoecrab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = horseshoecrab.png; sourceTree = "<group>"; };
+		45DA0F7D24CDFBC2006A1291 /* seacucumber.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seacucumber.png; sourceTree = "<group>"; };
+		45DA0F7E24CDFBC2006A1291 /* spottedgardeneel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spottedgardeneel.png; sourceTree = "<group>"; };
+		45DA0F7F24CDFBC2006A1291 /* moonjellyfish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moonjellyfish.png; sourceTree = "<group>"; };
 		45ED846924510F2D00B1BB2C /* CritterDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CritterDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45ED846C24510F2D00B1BB2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45ED846E24510F2D00B1BB2C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -807,8 +969,9 @@
 		451E5ED7245A37B70065F4E6 /* JSONData */ = {
 			isa = PBXGroup;
 			children = (
-				451E5ED8245A37C80065F4E6 /* Fish.json */,
-				451E5ED9245A37C80065F4E6 /* Insects.json */,
+				459393A524CDECC70080DE79 /* bugs.json */,
+				459393A624CDECC80080DE79 /* fish.json */,
+				459393A424CDECC70080DE79 /* sea.json */,
 			);
 			path = JSONData;
 			sourceTree = "<group>";
@@ -1174,6 +1337,93 @@
 			path = CritterNameToFileNameTest;
 			sourceTree = "<group>";
 		};
+		45DA0F0724CDFBA4006A1291 /* Sea */ = {
+			isa = PBXGroup;
+			children = (
+				45DA0F7724CDFBC1006A1291 /* abalone.png */,
+				45DA0F7624CDFBC1006A1291 /* acornbarnacle.png */,
+				45DA0F7124CDFBC1006A1291 /* chamberednautilus.png */,
+				45DA0F7024CDFBC1006A1291 /* dungenesscrab.png */,
+				45DA0F7424CDFBC1006A1291 /* fireflysquid.png */,
+				45DA0F7224CDFBC1006A1291 /* flatworm.png */,
+				45DA0F6624CDFBBF006A1291 /* gazamicrab.png */,
+				45DA0F5E24CDFBBE006A1291 /* giantisopod.png */,
+				45DA0F5824CDFBBE006A1291 /* gigasgiantclam.png */,
+				45DA0F7C24CDFBC2006A1291 /* horseshoecrab.png */,
+				45DA0F6D24CDFBC0006A1291 /* lobster.png */,
+				45DA0F6324CDFBBF006A1291 /* mantisshrimp.png */,
+				45DA0F7F24CDFBC2006A1291 /* moonjellyfish.png */,
+				45DA0F7524CDFBC1006A1291 /* mussel.png */,
+				45DA0F6C24CDFBC0006A1291 /* octopus.png */,
+				45DA0F6224CDFBBF006A1291 /* oyster.png */,
+				45DA0F7324CDFBC1006A1291 /* pearloyster.png */,
+				45DA0F6524CDFBBF006A1291 /* redkingcrab.png */,
+				45DA0F6B24CDFBC0006A1291 /* scallop.png */,
+				45DA0F5F24CDFBBF006A1291 /* seaanemone.png */,
+				45DA0F7D24CDFBC2006A1291 /* seacucumber.png */,
+				45DA0F7A24CDFBC2006A1291 /* seagrapes.png */,
+				45DA0F7924CDFBC2006A1291 /* seapig.png */,
+				45DA0F6924CDFBC0006A1291 /* seapineapple.png */,
+				45DA0F6E24CDFBC0006A1291 /* seaslug.png */,
+				45DA0F6724CDFBBF006A1291 /* seastar.png */,
+				45DA0F7B24CDFBC2006A1291 /* seaurchin.png */,
+				45DA0F6F24CDFBC0006A1291 /* seaweed.png */,
+				45DA0F7824CDFBC2006A1291 /* slatepencilurchin.png */,
+				45DA0F6824CDFBC0006A1291 /* snowcrab.png */,
+				45DA0F5A24CDFBBE006A1291 /* spidercrab.png */,
+				45DA0F6024CDFBBF006A1291 /* spinylobster.png */,
+				45DA0F7E24CDFBC2006A1291 /* spottedgardeneel.png */,
+				45DA0F5D24CDFBBE006A1291 /* sweetshrimp.png */,
+				45DA0F6124CDFBBF006A1291 /* tigerprawn.png */,
+				45DA0F6A24CDFBC0006A1291 /* turbanshell.png */,
+				45DA0F5C24CDFBBE006A1291 /* umbrellaoctopus.png */,
+				45DA0F6424CDFBBF006A1291 /* vampiresquid.png */,
+				45DA0F5924CDFBBE006A1291 /* venusflowerbasket.png */,
+				45DA0F5B24CDFBBE006A1291 /* whelk.png */,
+				45DA0F0E24CDFBAC006A1291 /* icon-abalone.png */,
+				45DA0F0924CDFBAB006A1291 /* icon-acornbarnacle.png */,
+				45DA0F1B24CDFBAD006A1291 /* icon-chamberednautilus.png */,
+				45DA0F1C24CDFBAE006A1291 /* icon-dungenesscrab.png */,
+				45DA0F1824CDFBAD006A1291 /* icon-fireflysquid.png */,
+				45DA0F2224CDFBAE006A1291 /* icon-flatworm.png */,
+				45DA0F1024CDFBAC006A1291 /* icon-gazamicrab.png */,
+				45DA0F1424CDFBAD006A1291 /* icon-giantisopod.png */,
+				45DA0F2524CDFBAF006A1291 /* icon-gigasgiantclam.png */,
+				45DA0F2724CDFBAF006A1291 /* icon-horseshoecrab.png */,
+				45DA0F2924CDFBAF006A1291 /* icon-lobster.png */,
+				45DA0F1E24CDFBAE006A1291 /* icon-mantisshrimp.png */,
+				45DA0F0F24CDFBAC006A1291 /* icon-moonjellyfish.png */,
+				45DA0F1624CDFBAD006A1291 /* icon-mussel.png */,
+				45DA0F1F24CDFBAE006A1291 /* icon-octopus.png */,
+				45DA0F1724CDFBAD006A1291 /* icon-oyster.png */,
+				45DA0F1224CDFBAC006A1291 /* icon-pearloyster.png */,
+				45DA0F0B24CDFBAC006A1291 /* icon-redkingcrab.png */,
+				45DA0F0C24CDFBAC006A1291 /* icon-scallop.png */,
+				45DA0F1324CDFBAD006A1291 /* icon-seaanemone.png */,
+				45DA0F0A24CDFBAB006A1291 /* icon-seacucumber.png */,
+				45DA0F1D24CDFBAE006A1291 /* icon-seagrapes.png */,
+				45DA0F2124CDFBAE006A1291 /* icon-seapig.png */,
+				45DA0F1924CDFBAD006A1291 /* icon-seapineapple.png */,
+				45DA0F0D24CDFBAC006A1291 /* icon-seaslug.png */,
+				45DA0F2324CDFBAE006A1291 /* icon-seastar.png */,
+				45DA0F2B24CDFBAF006A1291 /* icon-seaurchin.png */,
+				45DA0F2D24CDFBB0006A1291 /* icon-seaweed.png */,
+				45DA0F2C24CDFBAF006A1291 /* icon-slatepencilurchin.png */,
+				45DA0F1A24CDFBAD006A1291 /* icon-snowcrab.png */,
+				45DA0F2824CDFBAF006A1291 /* icon-spidercrab.png */,
+				45DA0F1524CDFBAD006A1291 /* icon-spinylobster.png */,
+				45DA0F2424CDFBAF006A1291 /* icon-spottedgardeneel.png */,
+				45DA0F2E24CDFBB0006A1291 /* icon-sweetshrimp.png */,
+				45DA0F2F24CDFBB0006A1291 /* icon-tigerprawn.png */,
+				45DA0F1124CDFBAC006A1291 /* icon-turbanshell.png */,
+				45DA0F0824CDFBAB006A1291 /* icon-umbrellaoctopus.png */,
+				45DA0F2624CDFBAF006A1291 /* icon-vampiresquid.png */,
+				45DA0F2024CDFBAE006A1291 /* icon-venusflowerbasket.png */,
+				45DA0F2A24CDFBAF006A1291 /* icon-whelk.png */,
+			);
+			path = Sea;
+			sourceTree = "<group>";
+		};
 		45ED846024510F2C00B1BB2C = {
 			isa = PBXGroup;
 			children = (
@@ -1277,6 +1527,7 @@
 		45ED84A32451110900B1BB2C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				45DA0F0724CDFBA4006A1291 /* Sea */,
 				451E5F2424637F070065F4E6 /* Insects */,
 				451E5F2324637F000065F4E6 /* Fish */,
 			);
@@ -1466,6 +1717,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45DA0F5224CDFBB0006A1291 /* icon-whelk.png in Resources */,
 				451E614D2464CA5F0065F4E6 /* barredknifejaw.png in Resources */,
 				451E62442464CAAC0065F4E6 /* pondskater.png in Resources */,
 				451E60BB2464C8C90065F4E6 /* icon-cruciancarp.png in Resources */,
@@ -1475,6 +1727,7 @@
 				451E61D32464CA930065F4E6 /* hornedhercules.png in Resources */,
 				451E60412464C8930065F4E6 /* icon-yellowbutterfly.png in Resources */,
 				451E61D22464CA930065F4E6 /* citruslonghornedbeetle.png in Resources */,
+				45DA0F8924CDFBC2006A1291 /* tigerprawn.png in Resources */,
 				451E61CF2464CA930065F4E6 /* ant.png in Resources */,
 				451E62362464CAAC0065F4E6 /* scorpion.png in Resources */,
 				451E612F2464CA5F0065F4E6 /* catfish.png in Resources */,
@@ -1497,9 +1750,11 @@
 				451E612B2464CA5E0065F4E6 /* betta.png in Resources */,
 				451E61D12464CA930065F4E6 /* goliathbeetle.png in Resources */,
 				451E60E12464C8CA0065F4E6 /* icon-bitterling.png in Resources */,
+				45DA0F3424CDFBB0006A1291 /* icon-scallop.png in Resources */,
 				451E61F32464CA930065F4E6 /* hermitcrab.png in Resources */,
 				451E62242464CAAC0065F4E6 /* orchidmantis.png in Resources */,
 				451E60FC2464C8CA0065F4E6 /* icon-pondsmelt.png in Resources */,
+				45DA0F5024CDFBB0006A1291 /* icon-spidercrab.png in Resources */,
 				451E62482464CB500065F4E6 /* greatwhiteshark.png in Resources */,
 				451E61F02464CA930065F4E6 /* cicadashell.png in Resources */,
 				451E61402464CA5F0065F4E6 /* dorado.png in Resources */,
@@ -1509,65 +1764,83 @@
 				451E617D2464CA6E0065F4E6 /* palechub.png in Resources */,
 				451E61ED2464CA930065F4E6 /* bellcricket.png in Resources */,
 				451E62252464CAAC0065F4E6 /* pillbug.png in Resources */,
+				459393A724CDECC80080DE79 /* sea.json in Resources */,
+				45DA0F4624CDFBB0006A1291 /* icon-mantisshrimp.png in Resources */,
 				451E61032464C8CA0065F4E6 /* icon-pufferfish.png in Resources */,
+				45DA0F8824CDFBC2006A1291 /* spinylobster.png in Resources */,
 				4521698C24525340007A808B /* Localizable.strings in Resources */,
 				451E61972464CA6E0065F4E6 /* kingsalmon.png in Resources */,
 				451E60532464C8930065F4E6 /* icon-stinkbug.png in Resources */,
 				451E61842464CA6E0065F4E6 /* oliveflounder.png in Resources */,
 				451E61442464CA5F0065F4E6 /* angelfish.png in Resources */,
+				45DA0F9524CDFBC2006A1291 /* lobster.png in Resources */,
 				451E62202464CAAC0065F4E6 /* walkingstick.png in Resources */,
 				451E60302464C8930065F4E6 /* icon-mantis.png in Resources */,
+				45DA0F4A24CDFBB0006A1291 /* icon-flatworm.png in Resources */,
 				451E60332464C8930065F4E6 /* icon-sawstag.png in Resources */,
 				451E62302464CAAC0065F4E6 /* stinkbug.png in Resources */,
 				451E60652464C8930065F4E6 /* icon-violinbeetle.png in Resources */,
+				45DA0F9224CDFBC2006A1291 /* turbanshell.png in Resources */,
 				451E60482464C8930065F4E6 /* icon-snail.png in Resources */,
 				451E612C2464CA5F0065F4E6 /* goldfish.png in Resources */,
 				451E62382464CAAC0065F4E6 /* walkingleaf.png in Resources */,
 				451E60432464C8930065F4E6 /* icon-ricegrasshopper.png in Resources */,
 				451E62432464CAAC0065F4E6 /* molecricket.png in Resources */,
 				451E60522464C8930065F4E6 /* icon-mosquito.png in Resources */,
+				45DA0F5624CDFBB0006A1291 /* icon-sweetshrimp.png in Resources */,
 				451E61462464CA5F0065F4E6 /* barreleye.png in Resources */,
 				451E604D2464C8930065F4E6 /* icon-walkingstick.png in Resources */,
+				45DA0FA624CDFBC2006A1291 /* spottedgardeneel.png in Resources */,
 				451E618F2464CA6E0065F4E6 /* saddledbichir.png in Resources */,
 				451E62322464CAAC0065F4E6 /* rainbowstag.png in Resources */,
 				451E60582464C8930065F4E6 /* icon-centipede.png in Resources */,
 				451E622B2464CAAC0065F4E6 /* tarantula.png in Resources */,
 				451E61452464CA5F0065F4E6 /* frog.png in Resources */,
+				45DA0F4024CDFBB0006A1291 /* icon-fireflysquid.png in Resources */,
 				451E61D72464CA930065F4E6 /* centipede.png in Resources */,
 				451E60C12464C8CA0065F4E6 /* icon-popeyedgoldfish.png in Resources */,
+				45DA0F4F24CDFBB0006A1291 /* icon-horseshoecrab.png in Resources */,
 				451E62332464CAAC0065F4E6 /* paperkitebutterfly.png in Resources */,
 				451E60E72464C8CA0065F4E6 /* icon-hammerheadshark.png in Resources */,
 				451E61E42464CA930065F4E6 /* cricket.png in Resources */,
+				45DA0FA124CDFBC2006A1291 /* seapig.png in Resources */,
 				451E605B2464C8930065F4E6 /* icon-commonbluebottle.png in Resources */,
+				45DA0F3124CDFBB0006A1291 /* icon-acornbarnacle.png in Resources */,
 				451E60F52464C8CA0065F4E6 /* icon-seahorse.png in Resources */,
 				451E61042464C8CA0065F4E6 /* icon-ray.png in Resources */,
 				451E619B2464CA6E0065F4E6 /* morayeel.png in Resources */,
 				451E618E2464CA6E0065F4E6 /* salmon.png in Resources */,
-				451E5EDB245A37C80065F4E6 /* Insects.json in Resources */,
 				451E61D62464CA930065F4E6 /* goldenstag.png in Resources */,
 				451E60E62464C8CA0065F4E6 /* icon-blowfish.png in Resources */,
 				451E60B92464C8C90065F4E6 /* icon-surgeonfish.png in Resources */,
+				45DA0F4E24CDFBB0006A1291 /* icon-vampiresquid.png in Resources */,
 				451E614A2464CA5F0065F4E6 /* bluegill.png in Resources */,
 				451E61862464CA6E0065F4E6 /* sturgeon.png in Resources */,
 				451E601C2464C8930065F4E6 /* icon-honeybee.png in Resources */,
+				45DA0F5124CDFBB0006A1291 /* icon-lobster.png in Resources */,
+				45DA0F4424CDFBB0006A1291 /* icon-dungenesscrab.png in Resources */,
 				451E613B2464CA5F0065F4E6 /* dace.png in Resources */,
 				451E60D82464C8CA0065F4E6 /* icon-carp.png in Resources */,
+				45DA0F8E24CDFBC2006A1291 /* gazamicrab.png in Resources */,
 				451E61982464CA6E0065F4E6 /* killifish.png in Resources */,
 				451E62212464CAAC0065F4E6 /* wharfroach.png in Resources */,
 				451E61A12464CA6E0065F4E6 /* zebraturkeyfish.png in Resources */,
 				451E61A02464CA6E0065F4E6 /* yellowperch.png in Resources */,
 				451E60192464C8930065F4E6 /* icon-damselfly.png in Resources */,
 				451E61E62464CA930065F4E6 /* bagworm.png in Resources */,
+				45DA0F4924CDFBB0006A1291 /* icon-seapig.png in Resources */,
 				451E62402464CAAC0065F4E6 /* violinbeetle.png in Resources */,
 				451E60FB2464C8CA0065F4E6 /* icon-goldentrout.png in Resources */,
 				451E604C2464C8930065F4E6 /* icon-citruslonghornedbeetle.png in Resources */,
+				45DA0F8D24CDFBC2006A1291 /* redkingcrab.png in Resources */,
+				45DA0F3924CDFBB0006A1291 /* icon-turbanshell.png in Resources */,
 				451E60EC2464C8CA0065F4E6 /* icon-freshwatergoby.png in Resources */,
-				451E5EDA245A37C80065F4E6 /* Fish.json in Resources */,
 				451E605E2464C8930065F4E6 /* icon-tigerbutterfly.png in Resources */,
 				451E619E2464CA6E0065F4E6 /* seabass.png in Resources */,
 				451E62292464CAAC0065F4E6 /* ladybug.png in Resources */,
 				451E60F62464C8CA0065F4E6 /* icon-ribboneel.png in Resources */,
 				451E61F52464CA930065F4E6 /* darnerdragonfly.png in Resources */,
+				45DA0F3324CDFBB0006A1291 /* icon-redkingcrab.png in Resources */,
 				451E61412464CA5F0065F4E6 /* arowana.png in Resources */,
 				451E60262464C8930065F4E6 /* icon-flea.png in Resources */,
 				451E619F2464CA6E0065F4E6 /* suckerfish.png in Resources */,
@@ -1582,17 +1855,23 @@
 				451E60DE2464C8CA0065F4E6 /* icon-guppy.png in Resources */,
 				451E61382464CA5F0065F4E6 /* cruciancarp.png in Resources */,
 				451E613D2464CA5F0065F4E6 /* char.png in Resources */,
+				45DA0F8524CDFBC2006A1291 /* sweetshrimp.png in Resources */,
 				451E60232464C8930065F4E6 /* icon-blueweevilbeetle.png in Resources */,
+				45DA0F4B24CDFBB0006A1291 /* icon-seastar.png in Resources */,
 				451E60E22464C8CA0065F4E6 /* icon-gianttrevally.png in Resources */,
 				451E618D2464CA6E0065F4E6 /* redsnapper.png in Resources */,
+				45DA0F9724CDFBC2006A1291 /* seaweed.png in Resources */,
+				45DA0F4524CDFBB0006A1291 /* icon-seagrapes.png in Resources */,
 				451E60C02464C8CA0065F4E6 /* icon-redsnapper.png in Resources */,
 				451E60292464C8930065F4E6 /* icon-wasp.png in Resources */,
+				45DA0F4124CDFBB0006A1291 /* icon-seapineapple.png in Resources */,
 				45ED847924510F2D00B1BB2C /* LaunchScreen.storyboard in Resources */,
 				451E60C52464C8CA0065F4E6 /* icon-gar.png in Resources */,
 				451E60602464C8930065F4E6 /* icon-tarantula.png in Resources */,
 				451E60CA2464C8CA0065F4E6 /* icon-sturgeon.png in Resources */,
 				451E61A42464CA6E0065F4E6 /* stringfish.png in Resources */,
 				451E60F82464C8CA0065F4E6 /* icon-tuna.png in Resources */,
+				45DA0F5324CDFBB0006A1291 /* icon-seaurchin.png in Resources */,
 				451E61DE2464CA930065F4E6 /* giraffestag.png in Resources */,
 				451E60D12464C8CA0065F4E6 /* icon-footballfish.png in Resources */,
 				451E605A2464C8930065F4E6 /* icon-hermitcrab.png in Resources */,
@@ -1603,11 +1882,14 @@
 				451E60392464C8930065F4E6 /* icon-goldenstag.png in Resources */,
 				451E601A2464C8930065F4E6 /* icon-cicadashell.png in Resources */,
 				451E60272464C8930065F4E6 /* icon-darnerdragonfly.png in Resources */,
+				45DA0F9A24CDFBC2006A1291 /* flatworm.png in Resources */,
 				451E62452464CAAC0065F4E6 /* spider.png in Resources */,
 				451E61A52464CA6E0065F4E6 /* neontetra.png in Resources */,
 				451E60242464C8930065F4E6 /* icon-atlasmoth.png in Resources */,
 				451E61EE2464CA930065F4E6 /* giantstag.png in Resources */,
 				451E60D32464C8CA0065F4E6 /* icon-loach.png in Resources */,
+				45DA0F9824CDFBC2006A1291 /* dungenesscrab.png in Resources */,
+				45DA0F9C24CDFBC2006A1291 /* fireflysquid.png in Resources */,
 				451E61912464CA6E0065F4E6 /* pondsmelt.png in Resources */,
 				451E60D92464C8CA0065F4E6 /* icon-mahimahi.png in Resources */,
 				451E61DC2464CA930065F4E6 /* fly.png in Resources */,
@@ -1615,25 +1897,32 @@
 				451E61EF2464CA930065F4E6 /* divingbeetle.png in Resources */,
 				451E60F42464C8CA0065F4E6 /* icon-saddledbichir.png in Resources */,
 				451E62272464CAAC0065F4E6 /* robustcicada.png in Resources */,
+				45DA0FA724CDFBC2006A1291 /* moonjellyfish.png in Resources */,
 				451E604B2464C8930065F4E6 /* icon-giantcicada.png in Resources */,
+				45DA0F3F24CDFBB0006A1291 /* icon-oyster.png in Resources */,
+				45DA0F9324CDFBC2006A1291 /* scallop.png in Resources */,
 				451E61472464CA5F0065F4E6 /* hammerheadshark.png in Resources */,
 				451E61342464CA5F0065F4E6 /* horsemackerel.png in Resources */,
 				451E61D92464CA930065F4E6 /* firefly.png in Resources */,
 				451E60BC2464C8C90065F4E6 /* icon-arapaima.png in Resources */,
 				451E60D22464C8CA0065F4E6 /* icon-whaleshark.png in Resources */,
+				45DA0F3024CDFBB0006A1291 /* icon-umbrellaoctopus.png in Resources */,
 				451E61932464CA6E0065F4E6 /* tuna.png in Resources */,
 				451E60FD2464C8CA0065F4E6 /* icon-butterflyfish.png in Resources */,
 				45ED84A8245119E800B1BB2C /* FinkHeavy.ttf in Resources */,
 				451E601D2464C8930065F4E6 /* icon-commonbutterfly.png in Resources */,
+				45DA0F9F24CDFBC2006A1291 /* abalone.png in Resources */,
 				451E61EA2464CA930065F4E6 /* bandeddragonfly.png in Resources */,
 				451E60352464C8930065F4E6 /* icon-peacockbutterfly.png in Resources */,
 				451E618C2464CA6E0065F4E6 /* surgeonfish.png in Resources */,
 				451E60BA2464C8C90065F4E6 /* icon-dace.png in Resources */,
+				45DA0F9E24CDFBC2006A1291 /* acornbarnacle.png in Resources */,
 				451E60182464C8930065F4E6 /* icon-agriasbutterfly.png in Resources */,
 				45ED847624510F2D00B1BB2C /* Assets.xcassets in Resources */,
 				451E60FE2464C8CA0065F4E6 /* icon-horsemackerel.png in Resources */,
 				451E60382464C8930065F4E6 /* icon-wharfroach.png in Resources */,
 				451E622F2464CAAC0065F4E6 /* walkercicada.png in Resources */,
+				45DA0FA324CDFBC2006A1291 /* seaurchin.png in Resources */,
 				451E60202464C8930065F4E6 /* icon-hornedelephant.png in Resources */,
 				451E60CC2464C8CA0065F4E6 /* icon-tadpole.png in Resources */,
 				451E614C2464CA5F0065F4E6 /* crawfish.png in Resources */,
@@ -1643,9 +1932,12 @@
 				451E60512464C8930065F4E6 /* icon-giantstag.png in Resources */,
 				451E623D2464CAAC0065F4E6 /* sawstag.png in Resources */,
 				451E623A2464CAAC0065F4E6 /* yellowbutterfly.png in Resources */,
+				45DA0F9B24CDFBC2006A1291 /* pearloyster.png in Resources */,
 				451E61852464CA6E0065F4E6 /* tilapia.png in Resources */,
 				451E61432464CA5F0065F4E6 /* blackbass.png in Resources */,
+				45DA0F4824CDFBB0006A1291 /* icon-venusflowerbasket.png in Resources */,
 				451E61A62464CA6E0065F4E6 /* seabutterfly.png in Resources */,
+				45DA0F4D24CDFBB0006A1291 /* icon-gigasgiantclam.png in Resources */,
 				451E605C2464C8930065F4E6 /* icon-browncicada.png in Resources */,
 				451E60642464C8930065F4E6 /* icon-robustcicada.png in Resources */,
 				451E60402464C8930065F4E6 /* icon-goliathbeetle.png in Resources */,
@@ -1656,22 +1948,31 @@
 				451E61362464CA5F0065F4E6 /* dab.png in Resources */,
 				451E613F2464CA5F0065F4E6 /* guppy.png in Resources */,
 				451E60252464C8930065F4E6 /* icon-scorpion.png in Resources */,
+				459393A924CDECC80080DE79 /* fish.json in Resources */,
 				451E61E52464CA930065F4E6 /* giantwaterbug.png in Resources */,
 				451E61322464CA5F0065F4E6 /* bitterling.png in Resources */,
 				451E60452464C8930065F4E6 /* icon-emperorbutterfly.png in Resources */,
 				451E62232464CAAC0065F4E6 /* monarchbutterfly.png in Resources */,
+				45DA0F9D24CDFBC2006A1291 /* mussel.png in Resources */,
+				45DA0F9024CDFBC2006A1291 /* snowcrab.png in Resources */,
 				451E62462464CAAC0065F4E6 /* jewelbeetle.png in Resources */,
+				45DA0F8324CDFBC2006A1291 /* whelk.png in Resources */,
 				451E618B2464CA6E0065F4E6 /* sweetfish.png in Resources */,
 				451E62422464CAAC0065F4E6 /* queenalexandrasbirdwing.png in Resources */,
 				451E61882464CA6E0065F4E6 /* piranha.png in Resources */,
+				45DA0F3A24CDFBB0006A1291 /* icon-pearloyster.png in Resources */,
+				45DA0F3524CDFBB0006A1291 /* icon-seaslug.png in Resources */,
+				45DA0F8B24CDFBC2006A1291 /* mantisshrimp.png in Resources */,
 				451E601F2464C8930065F4E6 /* icon-cricket.png in Resources */,
 				451E62352464CAAC0065F4E6 /* tigerbutterfly.png in Resources */,
 				451E61EC2464CA930065F4E6 /* blueweevilbeetle.png in Resources */,
 				451E60E02464C8CA0065F4E6 /* icon-seabutterfly.png in Resources */,
 				451E60DA2464C8CA0065F4E6 /* icon-kingsalmon.png in Resources */,
 				451E60502464C8930065F4E6 /* icon-divingbeetle.png in Resources */,
+				45DA0F8724CDFBC2006A1291 /* seaanemone.png in Resources */,
 				451E60E32464C8CA0065F4E6 /* icon-angelfish.png in Resources */,
 				451E614E2464CA5F0065F4E6 /* goldentrout.png in Resources */,
+				45DA0F3624CDFBB0006A1291 /* icon-abalone.png in Resources */,
 				451E603E2464C8930065F4E6 /* icon-dungbeetle.png in Resources */,
 				451E617F2464CA6E0065F4E6 /* sawshark.png in Resources */,
 				451E60EB2464C8CA0065F4E6 /* icon-bluegill.png in Resources */,
@@ -1681,17 +1982,24 @@
 				451E61482464CA5F0065F4E6 /* gar.png in Resources */,
 				451E60DD2464C8CA0065F4E6 /* icon-catfish.png in Resources */,
 				451E60DB2464C8CA0065F4E6 /* icon-blackbass.png in Resources */,
+				459393A824CDECC80080DE79 /* bugs.json in Resources */,
 				451E61E82464CA930065F4E6 /* hornedelephant.png in Resources */,
+				45DA0F3B24CDFBB0006A1291 /* icon-seaanemone.png in Resources */,
+				45DA0F3C24CDFBB0006A1291 /* icon-giantisopod.png in Resources */,
 				451E61D52464CA930065F4E6 /* giantcicada.png in Resources */,
+				45DA0F8F24CDFBC2006A1291 /* seastar.png in Resources */,
 				451E61302464CA5F0065F4E6 /* clownfish.png in Resources */,
 				451E602E2464C8930065F4E6 /* icon-spider.png in Resources */,
 				451E60CB2464C8CA0065F4E6 /* icon-dorado.png in Resources */,
 				451E60EF2464C8CA0065F4E6 /* icon-oliveflounder.png in Resources */,
+				45DA0F5524CDFBB0006A1291 /* icon-seaweed.png in Resources */,
 				451E619A2464CA6E0065F4E6 /* pike.png in Resources */,
 				451E61E92464CA930065F4E6 /* commonbutterfly.png in Resources */,
 				451E61992464CA6E0065F4E6 /* softshelledturtle.png in Resources */,
+				45DA0F8424CDFBC2006A1291 /* umbrellaoctopus.png in Resources */,
 				451E61F42464CA930065F4E6 /* dungbeetle.png in Resources */,
 				451E60C42464C8CA0065F4E6 /* icon-sweetfish.png in Resources */,
+				45DA0F3E24CDFBB0006A1291 /* icon-mussel.png in Resources */,
 				451E612E2464CA5F0065F4E6 /* arapaima.png in Resources */,
 				451E60C32464C8CA0065F4E6 /* icon-salmon.png in Resources */,
 				451E61E12464CA930065F4E6 /* browncicada.png in Resources */,
@@ -1706,14 +2014,20 @@
 				451E60B82464C8C90065F4E6 /* icon-napoleonfish.png in Resources */,
 				451E603D2464C8930065F4E6 /* icon-scarabbeetle.png in Resources */,
 				451E624A2464CBAB0065F4E6 /* popeyedgoldfish.png in Resources */,
+				45DA0F8124CDFBC2006A1291 /* venusflowerbasket.png in Resources */,
 				451E61812464CA6E0065F4E6 /* ray.png in Resources */,
+				45DA0F3D24CDFBB0006A1291 /* icon-spinylobster.png in Resources */,
+				45DA0F4324CDFBB0006A1291 /* icon-chamberednautilus.png in Resources */,
 				451E61A22464CA6E0065F4E6 /* ribboneel.png in Resources */,
+				45DA0F9924CDFBC2006A1291 /* chamberednautilus.png in Resources */,
 				451E60442464C8930065F4E6 /* icon-grasshopper.png in Resources */,
 				451E61DD2464CA930065F4E6 /* earthboringdungbeetle.png in Resources */,
 				451E61422464CA5F0065F4E6 /* butterflyfish.png in Resources */,
 				451E61D42464CA930065F4E6 /* horneddynastid.png in Resources */,
 				451E60632464C8930065F4E6 /* icon-reddragonfly.png in Resources */,
 				451E60CF2464C8CA0065F4E6 /* icon-greatwhiteshark.png in Resources */,
+				45DA0F8224CDFBC2006A1291 /* spidercrab.png in Resources */,
+				45DA0FA224CDFBC2006A1291 /* seagrapes.png in Resources */,
 				451E605F2464C8930065F4E6 /* icon-paperkitebutterfly.png in Resources */,
 				451E61F12464CA930065F4E6 /* cyclommatusstag.png in Resources */,
 				451E62312464CAAC0065F4E6 /* wasp.png in Resources */,
@@ -1721,6 +2035,7 @@
 				451E60222464C8930065F4E6 /* icon-earthboringdungbeetle.png in Resources */,
 				451E60372464C8930065F4E6 /* icon-greatpurpleemperor.png in Resources */,
 				451E60542464C8930065F4E6 /* icon-pillbug.png in Resources */,
+				45DA0F8C24CDFBC2006A1291 /* vampiresquid.png in Resources */,
 				451E60D62464C8CA0065F4E6 /* icon-ranchugoldfish.png in Resources */,
 				451E603C2464C8930065F4E6 /* icon-jewelbeetle.png in Resources */,
 				451E60F22464C8CA0065F4E6 /* icon-cherrysalmon.png in Resources */,
@@ -1734,6 +2049,7 @@
 				451E60DC2464C8CA0065F4E6 /* icon-tilapia.png in Resources */,
 				451E61A32464CA6E0065F4E6 /* oarfish.png in Resources */,
 				451E60612464C8930065F4E6 /* icon-giantwaterbug.png in Resources */,
+				45DA0F8A24CDFBC2006A1291 /* oyster.png in Resources */,
 				451E60BE2464C8CA0065F4E6 /* icon-stringfish.png in Resources */,
 				451E60492464C8930065F4E6 /* icon-tigerbeetle.png in Resources */,
 				451E61002464C8CA0065F4E6 /* icon-crawfish.png in Resources */,
@@ -1752,39 +2068,55 @@
 				451E60FA2464C8CA0065F4E6 /* icon-seabass.png in Resources */,
 				451E601E2464C8930065F4E6 /* icon-rainbowstag.png in Resources */,
 				451E60E42464C8CA0065F4E6 /* icon-zebraturkeyfish.png in Resources */,
+				45DA0FA524CDFBC2006A1291 /* seacucumber.png in Resources */,
 				451E623C2464CAAC0065F4E6 /* mantis.png in Resources */,
 				451E60D72464C8CA0065F4E6 /* icon-neontetra.png in Resources */,
 				451E603B2464C8930065F4E6 /* icon-bandeddragonfly.png in Resources */,
+				45DA0F5424CDFBB0006A1291 /* icon-slatepencilurchin.png in Resources */,
+				45DA0F3224CDFBB0006A1291 /* icon-seacucumber.png in Resources */,
 				451E60C82464C8CA0065F4E6 /* icon-koi.png in Resources */,
+				45DA0F5724CDFBB0006A1291 /* icon-tigerprawn.png in Resources */,
+				45DA0F8624CDFBC2006A1291 /* giantisopod.png in Resources */,
+				45DA0F4224CDFBB0006A1291 /* icon-snowcrab.png in Resources */,
+				45DA0F4724CDFBB0006A1291 /* icon-octopus.png in Resources */,
 				451E60C62464C8CA0065F4E6 /* icon-char.png in Resources */,
+				45DA0FA424CDFBC2006A1291 /* horseshoecrab.png in Resources */,
 				451E60312464C8930065F4E6 /* icon-walkingleaf.png in Resources */,
 				451E613E2464CA5F0065F4E6 /* bluemarlin.png in Resources */,
+				45DA0F3824CDFBB0006A1291 /* icon-gazamicrab.png in Resources */,
 				451E60F02464C8CA0065F4E6 /* icon-sawshark.png in Resources */,
 				451E60E52464C8CA0065F4E6 /* icon-bluemarlin.png in Resources */,
 				451E619C2464CA6E0065F4E6 /* mittencrab.png in Resources */,
 				451E622C2464CAAC0065F4E6 /* moth.png in Resources */,
 				451E60CD2464C8CA0065F4E6 /* icon-suckerfish.png in Resources */,
+				45DA0F9424CDFBC2006A1291 /* octopus.png in Resources */,
 				451E61DF2464CA930065F4E6 /* dronebeetle.png in Resources */,
 				451E605D2464C8930065F4E6 /* icon-ant.png in Resources */,
 				451E62282464CAAC0065F4E6 /* manfacedstinkbug.png in Resources */,
 				451E602B2464C8930065F4E6 /* icon-ladybug.png in Resources */,
 				451E604F2464C8930065F4E6 /* icon-rosaliabatesibeetle.png in Resources */,
+				45DA0F3724CDFBB0006A1291 /* icon-moonjellyfish.png in Resources */,
 				451E60622464C8930065F4E6 /* icon-monarchbutterfly.png in Resources */,
 				451E603A2464C8930065F4E6 /* icon-giraffestag.png in Resources */,
 				451E60BF2464C8CA0065F4E6 /* icon-morayeel.png in Resources */,
 				451E61E22464CA930065F4E6 /* eveningcicada.png in Resources */,
 				451E61832464CA6E0065F4E6 /* nibblefish.png in Resources */,
+				45DA0F9624CDFBC2006A1291 /* seaslug.png in Resources */,
 				451E62372464CAAC0065F4E6 /* ricegrasshopper.png in Resources */,
 				451E60C92464C8CA0065F4E6 /* icon-dab.png in Resources */,
 				451E61942464CA6E0065F4E6 /* oceansunfish.png in Resources */,
 				451E62262464CAAC0065F4E6 /* rajahbrookesbirdwing.png in Resources */,
+				45DA0F9124CDFBC2006A1291 /* seapineapple.png in Resources */,
+				45DA0F8024CDFBC2006A1291 /* gigasgiantclam.png in Resources */,
 				451E602A2464C8930065F4E6 /* icon-bellcricket.png in Resources */,
 				451E60572464C8930065F4E6 /* icon-orchidmantis.png in Resources */,
 				451E60212464C8930065F4E6 /* icon-pondskater.png in Resources */,
 				451E60462464C8930065F4E6 /* icon-molecricket.png in Resources */,
 				451E60342464C8930065F4E6 /* icon-madagascansunsetmoth.png in Resources */,
+				45DA0FA024CDFBC2006A1291 /* slatepencilurchin.png in Resources */,
 				451E622E2464CAAC0065F4E6 /* tigerbeetle.png in Resources */,
 				451E61F22464CA930065F4E6 /* atlasmoth.png in Resources */,
+				45DA0F4C24CDFBB0006A1291 /* icon-spottedgardeneel.png in Resources */,
 				451E61352464CA5F0065F4E6 /* carp.png in Resources */,
 				451E612D2464CA5F0065F4E6 /* giantsnakehead.png in Resources */,
 				451E60422464C8930065F4E6 /* icon-bagworm.png in Resources */,
