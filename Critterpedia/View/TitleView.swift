@@ -9,7 +9,7 @@
 import UIKit
 
 final class TitleView: UIView {
-    
+
     let critterLabel: UILabel = {
         let label = UILabel()
         label.attributedText = NSAttributedString(string: "", attributes: [NSAttributedString.Key.kern: -0.26])
@@ -24,17 +24,17 @@ final class TitleView: UIView {
         label.adjustsFontSizeToFitWidth = true
         return label
     }()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         commonInit()
     }
-    
+
     fileprivate func commonInit() {
         backgroundColor = .white
         layer.shadowColor = UIColor.black.cgColor
@@ -42,14 +42,14 @@ final class TitleView: UIView {
         layer.shadowOffset = .init(width: -3, height: 3)
         layer.shadowRadius = 2
         transform = transform.rotated(by: CGFloat(-3 * .pi / 180.0))
-        
+
         critterLabel.translatesAutoresizingMaskIntoConstraints = false
         addSubview(critterLabel)
         NSLayoutConstraint.activate([
             critterLabel.heightAnchor.constraint(equalTo: heightAnchor, constant: -8),
             critterLabel.widthAnchor.constraint(equalTo: widthAnchor, constant: -8),
             critterLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            critterLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
+            critterLabel.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }
 }

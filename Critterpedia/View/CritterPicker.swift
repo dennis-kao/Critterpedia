@@ -13,20 +13,20 @@ protocol CritterPickerDelegate {
 }
 
 final class CritterPicker: UIControl {
-    
-    var delegate: CritterPickerDelegate? = nil
-    
+
+    var delegate: CritterPickerDelegate?
+
     var selectedCritter: Critter.Category = .Insect {
         didSet {
             setFillColors()
             delegate?.critterPicked(picked: selectedCritter)
         }
     }
-    
+
     fileprivate let circleFillColor: UIColor = .white
     fileprivate let selectedColor: UIColor = #colorLiteral(red: 0.9764705882, green: 0.7921568627, blue: 0.3921568627, alpha: 1)
     fileprivate let unselectedColor: UIColor = #colorLiteral(red: 0.5176470588, green: 0.4745098039, blue: 0.3960784314, alpha: 1)
-    
+
     fileprivate var circleCenter1 = CGPoint()
     fileprivate var circleCenter2 = CGPoint()
     fileprivate var circleCenter3 = CGPoint()
@@ -43,7 +43,7 @@ final class CritterPicker: UIControl {
         return layer
     }()
     fileprivate let octopusLayer = CAShapeLayer()
-    
+
     fileprivate let insectsTextLayer = CATextLayer()
     fileprivate let fishTextLayer = CATextLayer()
     fileprivate let octopusTextLayer = CATextLayer()
@@ -146,7 +146,7 @@ final class CritterPicker: UIControl {
         shape.close()
         return shape
     }()
-    
+
     fileprivate var fishShape: UIBezierPath = {
         let shape = UIBezierPath()
         shape.move(to: CGPoint(x: 73.3, y: 35.32))
@@ -167,7 +167,7 @@ final class CritterPicker: UIControl {
         shape.close()
         return shape
     }()
-    
+
     fileprivate var octopusShape: UIBezierPath = {
         let path = UIBezierPath()
         path.move(to: CGPoint(x: 21.1, y: 21.6))
@@ -210,12 +210,12 @@ final class CritterPicker: UIControl {
         path.close()
         return path
     }()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         commonInit()
@@ -232,7 +232,7 @@ final class CritterPicker: UIControl {
         layer.addSublayer(octopusLayer)
         layer.addSublayer(octopusTextLayer)
     }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
         updateBackgroundCircleLayer()
@@ -243,9 +243,9 @@ final class CritterPicker: UIControl {
         updateShapeLayer(shape: octopusShape, layer: octopusLayer, circleCenter: CGPoint(x: circleCenter3.x, y: circleCenter3.y))
         updateTextLayer(textLayer: octopusTextLayer, point: CGPoint(x: octopusLayer.frame.midX, y: insectsLayer.frame.maxY + textYOffset), text: NSLocalizedString("Sea", comment: "Critter type Sea"))
     }
-    
+
     fileprivate func updateBackgroundCircleLayer() {
-                
+
         self.radius = min(bounds.width, bounds.height) / 3.5
         let circleGap: CGFloat = self.radius * 0.80
 
@@ -258,7 +258,7 @@ final class CritterPicker: UIControl {
         startAngle: 0,
           endAngle: 360,
          clockwise: true)
-        
+
         let circlePath2 = UIBezierPath(arcCenter: circleCenter2,
             radius: self.radius,
         startAngle: 0,
@@ -276,15 +276,15 @@ final class CritterPicker: UIControl {
         combined.append(circlePath2)
         combined.append(circlePath3)
         combined.usesEvenOddFillRule = false
-                
+
         circleBackgroundLayer.path = combined.cgPath
         circleBackgroundLayer.contentsGravity = .center
         circleBackgroundLayer.frame = bounds
         circleBackgroundLayer.fillColor = circleFillColor.cgColor
     }
-    
+
     fileprivate func setFillColors() {
-        switch(selectedCritter) {
+        switch selectedCritter {
             case .Insect:
                 insectsLayer.fillColor = selectedColor.cgColor
                 insectsTextLayer.foregroundColor = selectedColor.cgColor
@@ -308,20 +308,20 @@ final class CritterPicker: UIControl {
                 insectsTextLayer.foregroundColor = unselectedColor.cgColor
         }
     }
-    
+
     fileprivate func updateShapeLayer(shape: UIBezierPath, layer: CAShapeLayer, circleCenter: CGPoint) {
         let aspectRatio = shape.bounds.width / shape.bounds.height
-        
+
         shape.apply(CGAffineTransform(scaleX: radius / shape.bounds.width, y: radius / shape.bounds.height / aspectRatio))
-        
+
         layer.path = shape.cgPath
         layer.contentsGravity = .center
         layer.frame = CGRect(x: 0, y: 0, width: shape.bounds.width, height: shape.bounds.height)
         layer.position = CGPoint(x: circleCenter.x, y: circleCenter.y + imageYOffset)
     }
-    
+
     fileprivate func updateTextLayer(textLayer: CATextLayer, point: CGPoint, text: String) {
-        
+
         textLayer.frame = CGRect(x: 0, y: 0, width: 80, height: 20)
         textLayer.position = point
         textLayer.string = text
@@ -330,7 +330,7 @@ final class CritterPicker: UIControl {
         textLayer.contentsScale = UIScreen.main.scale
         textLayer.alignmentMode = .center
     }
-    
+
     override func endTracking(_ touch: UITouch?, with event: UIEvent?) {
         func layerFor(_ touch: UITouch) -> CALayer? {
             let touchLocation = touch.location(in: self)
@@ -339,11 +339,11 @@ final class CritterPicker: UIControl {
             let hitPresentationLayer = self.layer.presentation()?.hitTest(locationInView)
             return hitPresentationLayer?.model()
         }
-        
+
         guard let touch = touch, let layer = layerFor(touch) else {
             return
         }
-        
+
         if (layer == insectsLayer || layer == insectsTextLayer) && selectedCritter != .Insect {
             selectedCritter = .Insect
         } else if (layer == fishLayer || layer == fishTextLayer) && selectedCritter != .Fish {

@@ -9,7 +9,7 @@
 import UIKit
 
 final class HemisphereViewController: UIViewController {
-    
+
     fileprivate let whichHemisphereLabel: UILabel = {
         let label = UILabel()
         label.attributedText = NSAttributedString(string: NSLocalizedString("Hemisphere", comment: "Which hemisphere?"), attributes: [NSAttributedString.Key.kern: 1.66])
@@ -21,35 +21,35 @@ final class HemisphereViewController: UIViewController {
         label.adjustsFontSizeToFitWidth = true
         return label
     }()
-    
+
     fileprivate let hemispherePicker = HemispherePicker()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         hemispherePicker.delegate = self
-        
+
         self.view.backgroundColor = #colorLiteral(red: 0.9794296622, green: 0.9611505866, blue: 0.882307291, alpha: 1)
-        
+
         self.title = ""
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.transparent()
-        
+
         view.addSubview(whichHemisphereLabel)
         whichHemisphereLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             whichHemisphereLabel.bottomAnchor.constraint(equalTo: view.centerYAnchor, constant: -50),
             whichHemisphereLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
-            whichHemisphereLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            whichHemisphereLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
-        
+
         view.addSubview(hemispherePicker)
         hemispherePicker.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             hemispherePicker.topAnchor.constraint(equalTo: view.centerYAnchor, constant: 20),
             hemispherePicker.widthAnchor.constraint(equalToConstant: 312),
             hemispherePicker.heightAnchor.constraint(equalToConstant: 130),
-            hemispherePicker.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            hemispherePicker.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
 }

@@ -10,12 +10,12 @@ import XCTest
 @testable import Critterpedia
 
 class CritterParsingTests: XCTestCase {
-    
+
     var parser: CritterParser!
     var passingJSONData: Dictionary<String, Any>!
     var missingMonthArrayJSONData: Dictionary<String, Any>!
     var invalidKeyJSONData: Dictionary<String, Any>!
-    
+
     override func setUp() {
         super.setUp()
         parser = CritterParser()
@@ -24,7 +24,7 @@ class CritterParsingTests: XCTestCase {
             "location": "River",
             "price": 160,
             "times": [
-                "array" : [0, 1, 2, 3, 4,],
+                "array": [0, 1, 2, 3, 4 ],
                 "text": "All day"
             ],
             "months": [
@@ -43,7 +43,7 @@ class CritterParsingTests: XCTestCase {
             "location": "River",
             "price": 160,
             "times": [
-                "array" : [0, 1, 2, 3, 4,],
+                "array": [0, 1, 2, 3, 4 ],
                 "text": "All day"
             ],
             "months": [
@@ -61,7 +61,7 @@ class CritterParsingTests: XCTestCase {
            "location": "River",
            "price": 160,
            "times": [
-               "array" : [0, 1, 2, 3, 4,],
+               "array": [0, 1, 2, 3, 4 ],
                "text": "All day"
            ],
            "months": [
@@ -76,25 +76,25 @@ class CritterParsingTests: XCTestCase {
            ]
        ]
     }
-    
+
     override func tearDown() {
         parser = nil
         super.tearDown()
     }
-    
+
     func testParsing() {
-        
+
         let passingCritter = CritterParser.parse(passingJSONData)
-        
+
         XCTAssert(passingCritter != nil)
         XCTAssert(passingCritter!.name == "Crucian Carp")
         XCTAssert(passingCritter!.location == "River")
         XCTAssert(passingCritter!.price == 160)
         XCTAssert(passingCritter!.timesText == "All day")
-        XCTAssert(passingCritter!.times == [0, 1, 2, 3, 4,])
+        XCTAssert(passingCritter!.times == [0, 1, 2, 3, 4 ])
         XCTAssert(passingCritter!.northernMonths == [ 1, 2, 3, 12 ])
         XCTAssert(passingCritter!.southernMonths == [ 9, 10, 11, 12 ])
-        
+
         XCTAssert(CritterParser.parse(missingMonthArrayJSONData) == nil)
         XCTAssert(CritterParser.parse(invalidKeyJSONData) == nil)
     }

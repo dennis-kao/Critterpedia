@@ -9,7 +9,7 @@
 import UIKit
 
 final class SplashViewController: UIViewController {
-    
+
     fileprivate let leafBackground: UIImageView = {
         let imageView = UIImageView(image: #imageLiteral(resourceName: "SplashScreenBackground.png"))
         imageView.contentMode = .scaleAspectFill
@@ -30,47 +30,47 @@ final class SplashViewController: UIViewController {
         label.font = UIFont(name: "FinkHeavy", size: 50)
         label.textColor = .black
         label.textAlignment = .center
-        label.numberOfLines = 1;
-        label.minimumScaleFactor = 0.7;
-        label.adjustsFontSizeToFitWidth = true;
+        label.numberOfLines = 1
+        label.minimumScaleFactor = 0.7
+        label.adjustsFontSizeToFitWidth = true
         return label
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.view.backgroundColor = #colorLiteral(red: 0.9794296622, green: 0.9611505866, blue: 0.882307291, alpha: 1)
-        
+
         // background
         self.view.addSubview(leafBackground)
         leafBackground.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             leafBackground.heightAnchor.constraint(equalTo: view.heightAnchor),
-            leafBackground.widthAnchor.constraint(equalTo: view.widthAnchor),
+            leafBackground.widthAnchor.constraint(equalTo: view.widthAnchor)
         ])
-        
-        //title
+
+        // title
         self.view.addSubview(critterpediaLabel)
         critterpediaLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             critterpediaLabel.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.2),
             critterpediaLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
             critterpediaLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -50),
-            critterpediaLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            critterpediaLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
-        
-        //button
+
+        // button
         self.view.addSubview(getStartedButton)
         getStartedButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             getStartedButton.heightAnchor.constraint(equalToConstant: 43),
             getStartedButton.widthAnchor.constraint(equalToConstant: 157),
             getStartedButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 40),
-            getStartedButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            getStartedButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         getStartedButton.addTarget(self, action: #selector(goToHemispherePicker), for: .touchUpInside)
     }
-        
+
     @objc func goToHemispherePicker() {
         let navController = UINavigationController(rootViewController: HemisphereViewController())
         navController.modalPresentationStyle = .fullScreen

@@ -9,12 +9,12 @@
 import UIKit
 
 class DetailsView: UIView {
-            
+
     fileprivate lazy var seasonalityLabel: UILabel = setupLabel()
     fileprivate lazy var activeHoursLabel: UILabel = setupLabel()
     fileprivate lazy var locationLabel: UILabel = setupLabel()
     fileprivate lazy var valueLabel: UILabel = setupLabel()
-    
+
     fileprivate let locationValueStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.alignment = .fill
@@ -34,7 +34,7 @@ class DetailsView: UIView {
         view.layer.borderWidth = 1
         return view
     }()
-    
+
     lazy var activeHours: UILabel = setupValueLabel()
     lazy var location: UILabel = {
         let label = setupValueLabel()
@@ -42,7 +42,7 @@ class DetailsView: UIView {
         return label
     }()
     lazy var value: UILabel = setupValueLabel()
-    
+
     fileprivate let labelHeight: CGFloat = 36
 
     let calendarView: UICollectionView = {
@@ -54,61 +54,61 @@ class DetailsView: UIView {
         collectionView.backgroundColor = #colorLiteral(red: 0.6156862745, green: 0.5843137255, blue: 0.4156862745, alpha: 1)
         return collectionView
     }()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
     }
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         commonInit()
     }
-    
+
     fileprivate func commonInit() {
-        
+
         layer.borderWidth = 1
         layer.borderColor = #colorLiteral(red: 0.6156862745, green: 0.5843137255, blue: 0.4156862745, alpha: 1)
-        
+
         seasonalityLabel.text = NSLocalizedString("Seasonality", comment: "Months in which a Critter appears")
         activeHoursLabel.text = NSLocalizedString("ActiveHours", comment: "Hours in which a critter appears")
         locationLabel.text = NSLocalizedString("Location", comment: "Where a critter appears")
         valueLabel.text = NSLocalizedString("Bells", comment: "The in game currency")
-        
+
         addSubview(seasonalityLabel)
         seasonalityLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             seasonalityLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             seasonalityLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 10),
             seasonalityLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.35),
-            seasonalityLabel.heightAnchor.constraint(equalToConstant: labelHeight),
+            seasonalityLabel.heightAnchor.constraint(equalToConstant: labelHeight)
         ])
-        
+
         addSubview(calendarView)
         calendarView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             calendarView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.4),
             calendarView.leftAnchor.constraint(equalTo: seasonalityLabel.leftAnchor),
             calendarView.rightAnchor.constraint(equalTo: rightAnchor, constant: -10),
-            calendarView.topAnchor.constraint(equalTo: seasonalityLabel.bottomAnchor, constant: 10),
+            calendarView.topAnchor.constraint(equalTo: seasonalityLabel.bottomAnchor, constant: 10)
         ])
-        
+
         addSubview(activeHoursLabel)
         activeHoursLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             activeHoursLabel.topAnchor.constraint(equalTo: calendarView.bottomAnchor, constant: 15),
             activeHoursLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 10),
             activeHoursLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.40),
-            activeHoursLabel.heightAnchor.constraint(equalToConstant: labelHeight),
+            activeHoursLabel.heightAnchor.constraint(equalToConstant: labelHeight)
         ])
-        
+
         addSubview(activeHours)
         activeHours.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             activeHours.centerYAnchor.constraint(equalTo: activeHoursLabel.centerYAnchor),
             activeHours.leftAnchor.constraint(equalTo: activeHoursLabel.rightAnchor, constant: 10),
             activeHours.rightAnchor.constraint(equalTo: rightAnchor, constant: -10),
-            activeHours.heightAnchor.constraint(equalTo: activeHoursLabel.heightAnchor),
+            activeHours.heightAnchor.constraint(equalTo: activeHoursLabel.heightAnchor)
         ])
 
         locationValueStackView.addArrangedSubview(locationView)
@@ -120,28 +120,28 @@ class DetailsView: UIView {
             locationValueStackView.bottomAnchor.constraint(equalTo: bottomAnchor),
             locationValueStackView.leftAnchor.constraint(equalTo: leftAnchor),
             locationValueStackView.rightAnchor.constraint(equalTo: rightAnchor),
-            locationValueStackView.topAnchor.constraint(equalTo: activeHoursLabel.bottomAnchor, constant: 10),
+            locationValueStackView.topAnchor.constraint(equalTo: activeHoursLabel.bottomAnchor, constant: 10)
         ])
-        
+
         locationView.translatesAutoresizingMaskIntoConstraints = false
-        
+
         locationView.addSubview(locationLabel)
         locationLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             locationLabel.heightAnchor.constraint(equalToConstant: labelHeight),
             locationLabel.centerYAnchor.constraint(equalTo: locationView.centerYAnchor),
             locationLabel.leftAnchor.constraint(equalTo: locationView.leftAnchor, constant: 10),
-            locationLabel.widthAnchor.constraint(equalTo: locationView.widthAnchor, multiplier: 0.4),
+            locationLabel.widthAnchor.constraint(equalTo: locationView.widthAnchor, multiplier: 0.4)
         ])
-        
+
         locationView.addSubview(location)
         location.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             location.centerYAnchor.constraint(equalTo: locationLabel.centerYAnchor),
             location.leftAnchor.constraint(equalTo: locationLabel.rightAnchor, constant: 10),
-            location.rightAnchor.constraint(equalTo: locationView.rightAnchor, constant: -10),
+            location.rightAnchor.constraint(equalTo: locationView.rightAnchor, constant: -10)
         ])
-        
+
         valueView.translatesAutoresizingMaskIntoConstraints = false
 
         valueView.addSubview(valueLabel)
@@ -150,18 +150,18 @@ class DetailsView: UIView {
             valueLabel.heightAnchor.constraint(equalToConstant: labelHeight),
             valueLabel.centerYAnchor.constraint(equalTo: valueView.centerYAnchor),
             valueLabel.leftAnchor.constraint(equalTo: valueView.leftAnchor, constant: 10),
-            valueLabel.widthAnchor.constraint(equalTo: valueView.widthAnchor, multiplier: 0.4),
+            valueLabel.widthAnchor.constraint(equalTo: valueView.widthAnchor, multiplier: 0.4)
         ])
-        
+
         valueView.addSubview(value)
         value.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             value.centerYAnchor.constraint(equalTo: valueLabel.centerYAnchor),
             value.leftAnchor.constraint(equalTo: valueLabel.rightAnchor, constant: 10),
-            value.rightAnchor.constraint(equalTo: valueView.rightAnchor, constant: -10),
+            value.rightAnchor.constraint(equalTo: valueView.rightAnchor, constant: -10)
         ])
     }
-    
+
     fileprivate func setupLabel() -> UILabel {
         let label = UILabel()
         label.attributedText = NSAttributedString(string: "", attributes: [NSAttributedString.Key.kern: 0.4])
@@ -175,7 +175,7 @@ class DetailsView: UIView {
         label.adjustsFontSizeToFitWidth = true
         return label
     }
-    
+
     fileprivate func setupValueLabel() -> UILabel {
         let label = UILabel()
         label.attributedText = NSAttributedString(string: "", attributes: [NSAttributedString.Key.kern: 0.34])
@@ -187,10 +187,10 @@ class DetailsView: UIView {
         label.adjustsFontSizeToFitWidth = true
         return label
     }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
-        
+
         seasonalityLabel.layer.cornerRadius = 6
         activeHoursLabel.layer.cornerRadius = 6
         locationLabel.layer.cornerRadius = 6

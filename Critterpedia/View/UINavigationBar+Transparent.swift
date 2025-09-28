@@ -9,7 +9,7 @@
 import UIKit
 
 extension UINavigationBar {
-    
+
     func transparent() {
         self.setBackgroundImage(UIImage(), for: .default)
         self.shadowImage = UIImage()
